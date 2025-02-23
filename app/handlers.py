@@ -86,8 +86,15 @@ async def handle_location(message: Message):
                 "label", "Address not specified"
             )
 
-            msg = "URL not found"
-            place_url = closest_place.get("contacts", msg)[0].get("www", msg) #get("value", msg)
+            # Extract the first URL if multiple are present
+            place_url = closest_place.get("contacts", [])
+            if place_url:
+                place_url = place_url[0].get("www", "url_not_found")
+                if isinstance(place_url, list):
+                    place_url = place_url[0].get("value", "url_not_found")
+            else:
+                place_url = "url_not_found"
+
             if place_name == "Unknown Place":
                 await message.answer(
                     "I couldn't identify the nearest tourist attraction."
@@ -95,7 +102,6 @@ async def handle_location(message: Message):
                 return
 
             # Remove the place name from the address
-            # Split the address by commas and remove the first part (place name)
             address_parts = place_address.split(", ")
             if len(address_parts) > 1:
                 place_address = ", ".join(address_parts[1:])  # Join the remaining parts
@@ -107,7 +113,6 @@ async def handle_location(message: Message):
 
             # Search for websites and images
             search_query = f"{place_name} {city}"
-            websites = await yandex_search(search_query, search_type="web")
             images = await yandex_search(search_query, search_type="images")
 
             # Prepare the unified text message
@@ -118,8 +123,6 @@ async def handle_location(message: Message):
                 if place_url != "url_not_found"
                 else "Webpage: Not Found\n\n"
             )
-            if websites:
-                message_text += f"Webpage: {websites[0]}\n\n"  # Webpage (if found)
 
             # Add GPT explanation as a blockquote (using HTML <blockquote>)
             message_text += f"<blockquote expandable>{history}</blockquote>"
