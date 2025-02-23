@@ -3,6 +3,7 @@ import os
 from dotenv import load_dotenv
 import httpx
 from geopy.distance import geodesic
+import xmltodict
 
 # Load environment variables
 load_dotenv()
@@ -12,32 +13,45 @@ YA_MODELURI = os.getenv('YA_MODELURI')
 YA_SPEECHKIT_API_KEY = os.getenv('YA_SPEECHKIT_API_KEY')
 HERE_API_KEY = os.getenv('HERE_API_KEY')
 YA_SEARCH_API_KEY = os.getenv('YA_SEARCH_API_KEY')
+YA_CATALOG_ID = os.getenv('YA_CATALOG_ID')
 
-async def yandex_search(query: str, search_type: str = "web"):
+YA_SEARCH_TYPES = ["web", "images"]
+
+async def yandex_search(query: str, search_type: str = "images"):
     """
     Search for websites or images using Yandex Search API.
     :param query: The search query (e.g., place name).
     :param search_type: The type of search ("web" for websites, "images" for pictures).
     :return: A list of search results (websites or image URLs).
     """
-    url = "https://yandex.com/search/xml"
-    params = {
-        "query": query,
-        "key": YA_SEARCH_API_KEY,
-        "type": search_type,
-        "lr": "en",  # Language: English
+    """
+    https://yandex.cloud/ru/docs/search-api/concepts/pic-search
+    https://yandex.cloud/ru/docs/search-api/concepts/get-request
+    """
+
+    if search_type not in YA_SEARCH_TYPES:
+        return
+
+    images_search_url = "https://yandex.com/images-xml"
+    images_search_params = {
+        "text": query,
+        "folderid": YA_CATALOG_ID,
+        "apikey": YA_SEARCH_API_KEY,
     }
 
     try:
         async with httpx.AsyncClient() as client:
-            response = await client.get(url, params=params)
+            response = await client.get(images_search_url, params=images_search_params)
             if response.status_code == 200:
-                data = response.json()
+                data = xmltodict.parse(response.text)
                 logging.debug(f"Yandex Search API response: {data}")
-                if search_type == "web":
-                    return [result["url"] for result in data.get("results", [])]
-                elif search_type == "images":
-                    return [result["url"] for result in data.get("images", [])]
+                if search_type == "images":
+                    image_groups=data['yandexsearch']['response']['results']['grouping']['group']
+                    print(len(image_groups))
+                    return [result["doc"]["url"] for result in image_groups]
+                elif search_type == "web":
+                    print('Not implemented yet')
+                    return []
             else:
                 logging.error(f"Yandex Search API error: {response.status_code} - {response.text}")
                 return []
