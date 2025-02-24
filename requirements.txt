@@ -1,0 +1,5 @@
+aiogram==2.18
+python-dotenv==0.19.2
+httpx==0.21.1
+geopy==2.2.0
+xmltodict==0.12.0
