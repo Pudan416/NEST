@@ -4,7 +4,7 @@ from aiogram.types import Message, BufferedInputFile
 from aiogram.filters import CommandStart
 from app.generators import (
     yandex_gpt_location_info,
-    here_maps_nearby_places,
+    overpass_nearby_places,
     yandex_speechkit_tts,
 )
 import httpx
@@ -17,11 +17,6 @@ logging.basicConfig(level=logging.DEBUG)
 
 # Define the Nominatim API URL
 NOMINATIM_URL = "https://nominatim.openstreetmap.org/reverse"
-
-# Define categories for tourist attractions
-TOURIST_ATTRACTIONS_CATEGORY = (
-    "tourist_attraction|museum|gallery|monument|park|cathedral|church"
-)
 
 
 @router.message(CommandStart())
@@ -68,9 +63,7 @@ async def handle_location(message: Message):
                 )
                 return
 
-            places = await here_maps_nearby_places(
-                latitude, longitude, TOURIST_ATTRACTIONS_CATEGORY
-            )
+            places = await overpass_nearby_places(latitude, longitude)
             if not places:
                 await message.answer("No tourist attractions found nearby.")
                 return
@@ -86,19 +79,20 @@ async def handle_location(message: Message):
                 "label", "Address not specified"
             )
 
-            msg = "URL not found"
-            place_url = closest_place.get("contacts", msg)[0].get("www", msg) #get("value", msg)
+            # Extract the first URL if multiple are present
+            place_url = closest_place.get("contacts", [])
+            if place_url:
+                place_url = place_url[0].get("www", "url_not_found")
+                if isinstance(place_url, list):
+                    place_url = place_url[0].get("value", "url_not_found")
+            else:
+                place_url = "url_not_found"
+
             if place_name == "Unknown Place":
                 await message.answer(
                     "I couldn't identify the nearest tourist attraction."
                 )
                 return
-
-            # Remove the place name from the address
-            # Split the address by commas and remove the first part (place name)
-            address_parts = place_address.split(", ")
-            if len(address_parts) > 1:
-                place_address = ", ".join(address_parts[1:])  # Join the remaining parts
 
             # Generate historical info
             history = await yandex_gpt_location_info(
@@ -107,19 +101,15 @@ async def handle_location(message: Message):
 
             # Search for websites and images
             search_query = f"{place_name} {city}"
-            websites = await yandex_search(search_query, search_type="web")
             images = await yandex_search(search_query, search_type="images")
 
             # Prepare the unified text message
             message_text = f"<b>{place_name.upper()}</b>\n"  # Name of the place in CAPITALS and bold
-            message_text += f"<code>{place_address}</code>\n\n"  # Address in monospace (using HTML <code>)
-            message_text += (
-                f"Webpage: {place_url}\n\n"
-                if place_url != "url_not_found"
-                else "Webpage: Not Found\n\n"
-            )
-            if websites:
-                message_text += f"Webpage: {websites[0]}\n\n"  # Webpage (if found)
+            message_text += f"📍 <b>Address:</b> <code>{place_address}</code>\n\n"  # Address in monospace (using HTML <code>)
+            if place_url != "url_not_found":
+                message_text += f"🌐 <b>Webpage:</b> <a href='{place_url}'>{place_url}</a>\n\n"  # Webpage as a clickable link
+            else:
+                message_text += "🌐 <b>Webpage:</b> Not Found\n\n"
 
             # Add GPT explanation as a blockquote (using HTML <blockquote>)
             message_text += f"<blockquote expandable>{history}</blockquote>"
