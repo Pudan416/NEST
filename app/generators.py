@@ -25,11 +25,6 @@ async def yandex_search(query: str, search_type: str = "images"):
     :param search_type: The type of search ("web" for websites, "images" for pictures).
     :return: A list of search results (websites or image URLs).
     """
-    """
-    https://yandex.cloud/ru/docs/search-api/concepts/pic-search
-    https://yandex.cloud/ru/docs/search-api/concepts/get-request
-    """
-
     if search_type not in YA_SEARCH_TYPES:
         return
 
@@ -88,54 +83,77 @@ async def yandex_gpt_request(payload):
         return f"Error: {str(e)}"
 
 
-async def here_maps_geocode(address: str):
-    """Convert an address into geographic coordinates using HERE Geocoding API."""
-    url = "https://geocode.search.hereapi.com/v1/geocode"
-    params = {"q": address, "apiKey": HERE_API_KEY}
+async def overpass_nearby_places(latitude: float, longitude: float, radius: int = 5000):
+    """Fetch nearby tourist destinations using Overpass API, excluding hotels, hostels, information centers, picnic sites, and motels."""
+    overpass_url = "https://overpass-api.de/api/interpreter"
+    overpass_query = f"""
+    [out:json];
+    (
+      node["tourism"]["tourism"!~"hotel|hostel|information|picnic_site|motel"](around:{radius},{latitude},{longitude});
+      node["historic"](around:{radius},{latitude},{longitude});
+      node["religious"](around:{radius},{latitude},{longitude});
+      node["natural"](around:{radius},{latitude},{longitude});
+      node["building"](around:{radius},{latitude},{longitude});
+    );
+    out body;
+    >;
+    out skel qt;
+    """
 
     try:
         async with httpx.AsyncClient() as client:
-            response = await client.get(url, params=params)
+            response = await client.post(overpass_url, data=overpass_query)
             if response.status_code == 200:
-                items = response.json().get("items", [])
-                return items[0]["position"] if items else None
-            print(f"HERE Geocoding API error: {response.status_code} - {response.text}")
-            return None
+                data = response.json()
+                elements = data.get("elements", [])
+                places = []
+                for element in elements:
+                    tags = element.get("tags", {})
+                    address_parts = []
+
+                    # Extract address components
+                    if "addr:street" in tags:
+                        address_parts.append(tags["addr:street"])
+                        if "addr:housenumber" in tags:
+                            address_parts[-1] += f" {tags['addr:housenumber']}"
+                    if "addr:city" in tags:
+                        address_parts.append(tags["addr:city"])
+                    if "addr:postcode" in tags:
+                        address_parts.append(tags["addr:postcode"])
+                    if "addr:country" in tags:
+                        address_parts.append(tags["addr:country"])
+
+                    # Construct the full address
+                    address = (
+                        ", ".join(address_parts)
+                        if address_parts
+                        else "Address not specified"
+                    )
+
+                    place = {
+                        "title": tags.get("name", "Unknown Place"),
+                        "position": {
+                            "lat": element.get("lat"),
+                            "lng": element.get("lon"),
+                        },
+                        "address": {
+                            "label": address,
+                        },
+                        "contacts": [
+                            {
+                                "www": tags.get("website", "url_not_found"),
+                            }
+                        ],
+                    }
+                    places.append(place)
+                return places
+            else:
+                logging.error(
+                    f"Overpass API error: {response.status_code} - {response.text}"
+                )
+                return []
     except Exception as e:
-        print(f"Exception in HERE Geocoding API: {str(e)}")
-        return None
-
-
-async def here_maps_nearby_places(
-    latitude: float, longitude: float, category: str, radius: int = 1000
-):
-    """Fetch nearby places of a specific category using HERE Maps API."""
-    url = "https://discover.search.hereapi.com/v1/discover"
-    params = {
-        "q": category,
-        "in": f"circle:{latitude},{longitude};r={radius}",
-        "apiKey": HERE_API_KEY,
-        "lang": "en",  # Ensure results are in English
-    }
-
-    try:
-        async with httpx.AsyncClient() as client:
-            response = await client.get(url, params=params)
-            if response.status_code == 200:
-                items = response.json().get("items", [])
-                return [
-                    item
-                    for item in items
-                    if geodesic(
-                        (latitude, longitude),
-                        (item["position"]["lat"], item["position"]["lng"]),
-                    ).meters
-                    <= radius
-                ]
-            print(f"HERE Maps API error: {response.status_code} - {response.text}")
-            return []
-    except Exception as e:
-        print(f"Exception in HERE Maps API: {str(e)}")
+        logging.error(f"Exception in Overpass API: {str(e)}")
         return []
 
 
