@@ -1,0 +1,1624 @@
+2025-03-11 14:53:00,921 - root - INFO - Database initialized successfully
+2025-03-11 14:53:01,762 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-11 14:53:01,910 - tourist_bot - INFO - Bot is running...
+2025-03-11 14:53:01,910 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 14:53:02,054 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 14:53:02,788 - root - INFO - Database initialized successfully
+2025-03-11 14:53:02,788 - tourist_bot - INFO - Starting admin bot...
+2025-03-11 14:53:02,908 - tourist_bot - INFO - Admin bot started as @street_spirit_admin_bot (ID: 7851967492)
+2025-03-11 14:53:02,940 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 14:53:02,973 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 14:53:17,945 - tourist_bot - INFO - Received location from user 113872890: 44.799804, 20.452679
+2025-03-11 14:53:17,946 - root - INFO - Added new user: 113872890
+2025-03-11 14:53:19,337 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.799804&lon=20.452679&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 14:53:20,542 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 14:53:28,641 - tourist_bot - INFO - Admin bot: Start command received from user 113872890
+2025-03-11 14:53:29,114 - aiogram.event - INFO - Update id=221670253 is handled. Duration 473 ms by bot id=7851967492
+2025-03-11 14:53:34,096 - tourist_bot - INFO - Admin bot: Stats command from user 113872890
+2025-03-11 14:53:34,238 - aiogram.event - INFO - Update id=221670254 is handled. Duration 142 ms by bot id=7851967492
+2025-03-11 14:53:34,239 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 54] Connection reset by peer
+2025-03-11 14:53:34,239 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7851967492)
+2025-03-11 14:53:34,493 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 14:53:41,059 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7851967492)
+2025-03-11 14:53:41,063 - tourist_bot - INFO - Admin bot: Users command from user 113872890
+2025-03-11 14:53:41,298 - aiogram.event - INFO - Update id=221670255 is handled. Duration 236 ms by bot id=7851967492
+2025-03-11 14:53:46,670 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-11 14:53:48,125 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.7993961&lon=20.4512873&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 14:53:48,564 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 14:53:51,656 - tourist_bot - INFO - Admin bot: Help command from user 113872890
+2025-03-11 14:53:51,726 - aiogram.event - INFO - Update id=221670256 is handled. Duration 72 ms by bot id=7851967492
+2025-03-11 14:54:00,852 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 14:54:08,411 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 14:54:32,498 - httpx - INFO - HTTP Request: GET https://yandex.com/images-xml?text=Memorial+Fountain+of+Jasmina+Jovanovi%C4%87+Belgrade&folderid=b1gjn47rcuokgs8tfom5&apikey=AQVN0GhYlqH4YY82x63RQ4ZB_G-ATIqp96RVvHVY "HTTP/1.1 200 Ok"
+2025-03-11 14:54:33,961 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-11 14:54:39,227 - aiogram.event - INFO - Update id=935111571 is handled. Duration 81282 ms by bot id=7656254605
+2025-03-11 14:56:17,390 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 14:56:17,391 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-11 14:56:17,391 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 14:56:17,391 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 14:56:17,391 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 14:56:17,392 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 14:56:17,392 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 14:56:28,789 - root - INFO - Database initialized successfully
+2025-03-11 14:56:29,174 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-11 14:56:29,213 - tourist_bot - INFO - Bot is running...
+2025-03-11 14:56:29,214 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 14:56:29,254 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 14:56:30,625 - root - INFO - Database initialized successfully
+2025-03-11 14:56:30,625 - tourist_bot - INFO - Starting admin bot...
+2025-03-11 14:56:30,776 - tourist_bot - INFO - Admin bot started as @street_spirit_admin_bot (ID: 7851967492)
+2025-03-11 14:56:30,825 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 14:56:30,864 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 14:56:59,888 - tourist_bot - INFO - Received location from user 113872890: 44.809843, 20.462547
+2025-03-11 14:57:00,909 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.809843&lon=20.462547&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 14:57:01,296 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 14:57:11,198 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 14:57:17,056 - tourist_bot - INFO - Admin bot: Stats command from user 113872890
+2025-03-11 14:57:17,555 - aiogram.event - INFO - Update id=221670257 is handled. Duration 499 ms by bot id=7851967492
+2025-03-11 14:57:26,335 - tourist_bot - INFO - Admin bot: Debug command from user 113872890
+2025-03-11 14:57:26,410 - aiogram.event - INFO - Update id=221670258 is handled. Duration 77 ms by bot id=7851967492
+2025-03-11 14:57:30,944 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-11 14:57:32,466 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.8100298&lon=20.4621801&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 14:57:32,930 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 14:57:43,024 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 14:57:50,391 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 14:58:08,528 - httpx - INFO - HTTP Request: GET https://yandex.com/images-xml?text=Monument+to+Tsar+Nicholas+II+Belgrade&folderid=b1gjn47rcuokgs8tfom5&apikey=AQVN0GhYlqH4YY82x63RQ4ZB_G-ATIqp96RVvHVY "HTTP/1.1 200 Ok"
+2025-03-11 14:58:09,454 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-11 14:58:13,945 - aiogram.event - INFO - Update id=935111572 is handled. Duration 74067 ms by bot id=7656254605
+2025-03-11 15:00:12,809 - tourist_bot - INFO - Received '/start' command from user: 1001049048
+2025-03-11 15:00:12,812 - root - INFO - Added new user: 1001049048
+2025-03-11 15:00:13,014 - aiogram.event - INFO - Update id=935111573 is handled. Duration 204 ms by bot id=7656254605
+2025-03-11 15:00:23,638 - tourist_bot - INFO - Received '/help' command from user: 1001049048
+2025-03-11 15:00:23,854 - aiogram.event - INFO - Update id=935111574 is handled. Duration 216 ms by bot id=7656254605
+2025-03-11 15:00:29,521 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:00:38,839 - tourist_bot - INFO - DeepSeek connection test result: Hello! Yes, I'm here and ready to
+2025-03-11 15:00:38,985 - aiogram.event - INFO - Update id=935111575 is handled. Duration 10059 ms by bot id=7656254605
+2025-03-11 15:02:34,955 - tourist_bot - INFO - Received location from user 1001049048: 44.811972, 20.474879
+2025-03-11 15:02:35,584 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.811972&lon=20.474879&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 15:02:35,994 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:02:42,803 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:02:54,074 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-11 15:02:55,743 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.8110568&lon=20.4758783&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 15:02:56,287 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:03:03,576 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:03:12,740 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:03:28,040 - tourist_bot - INFO - Admin bot: Stats command from user 113872890
+2025-03-11 15:03:28,113 - aiogram.event - INFO - Update id=221670259 is handled. Duration 73 ms by bot id=7851967492
+2025-03-11 15:03:35,337 - httpx - INFO - HTTP Request: GET https://yandex.com/images-xml?text=Ra%C5%A1e+Popova+Belgrade&folderid=b1gjn47rcuokgs8tfom5&apikey=AQVN0GhYlqH4YY82x63RQ4ZB_G-ATIqp96RVvHVY "HTTP/1.1 200 Ok"
+2025-03-11 15:03:36,286 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-11 15:03:37,246 - tourist_bot - INFO - Admin bot: Users command from user 113872890
+2025-03-11 15:03:37,421 - aiogram.event - INFO - Update id=221670260 is handled. Duration 176 ms by bot id=7851967492
+2025-03-11 15:03:42,405 - aiogram.event - INFO - Update id=935111576 is handled. Duration 67450 ms by bot id=7656254605
+2025-03-11 15:03:49,956 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 15:03:49,956 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 15:03:49,956 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-11 15:03:49,957 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 15:03:49,957 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 15:03:49,957 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 15:03:49,957 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 15:04:41,932 - root - INFO - Database initialized successfully
+2025-03-11 15:04:42,906 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-11 15:04:43,121 - tourist_bot - INFO - Bot is running...
+2025-03-11 15:04:43,121 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 15:04:43,263 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 15:04:43,792 - root - INFO - Database initialized successfully
+2025-03-11 15:04:43,792 - tourist_bot - INFO - Starting admin bot...
+2025-03-11 15:04:43,947 - tourist_bot - INFO - Admin bot started as @street_spirit_admin_bot (ID: 7851967492)
+2025-03-11 15:04:43,986 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 15:04:44,027 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 15:05:27,820 - tourist_bot - INFO - Received location from user 113872890: 44.813072, 20.473916
+2025-03-11 15:05:28,372 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.813072&lon=20.473916&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 15:05:29,108 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:05:37,044 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:05:46,946 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-11 15:05:48,533 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.8139126&lon=20.4725718&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 15:05:49,008 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:06:02,346 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:06:10,836 - tourist_bot - INFO - Admin bot: Start command received from user 113872890
+2025-03-11 15:06:11,369 - aiogram.event - INFO - Update id=221670261 is handled. Duration 533 ms by bot id=7851967492
+2025-03-11 15:06:14,095 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:06:16,888 - tourist_bot - INFO - Admin bot: Popular places command from user 113872890
+2025-03-11 15:06:16,956 - aiogram.event - INFO - Update id=221670262 is handled. Duration 69 ms by bot id=7851967492
+2025-03-11 15:06:32,883 - tourist_bot - INFO - Admin bot: Backup command from user 113872890
+2025-03-11 15:06:32,886 - root - INFO - Database backup created at bot_stats.db.backup_20250311_150632
+2025-03-11 15:06:33,021 - aiogram.event - INFO - Update id=221670263 is handled. Duration 138 ms by bot id=7851967492
+2025-03-11 15:06:40,743 - httpx - INFO - HTTP Request: GET https://yandex.com/images-xml?text=The+Bust+of+Vuk+Karad%C5%BEi%C4%87+Belgrade&folderid=b1gjn47rcuokgs8tfom5&apikey=AQVN0GhYlqH4YY82x63RQ4ZB_G-ATIqp96RVvHVY "HTTP/1.1 200 Ok"
+2025-03-11 15:06:41,618 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-11 15:06:47,614 - aiogram.event - INFO - Update id=935111577 is handled. Duration 79795 ms by bot id=7656254605
+2025-03-11 15:07:51,067 - tourist_bot - INFO - Admin bot: Debug command from user 113872890
+2025-03-11 15:07:51,133 - aiogram.event - INFO - Update id=221670264 is handled. Duration 66 ms by bot id=7851967492
+2025-03-11 15:08:11,539 - tourist_bot - INFO - Admin bot: Stats command from user 113872890
+2025-03-11 15:08:11,764 - aiogram.event - INFO - Update id=221670265 is handled. Duration 226 ms by bot id=7851967492
+2025-03-11 15:09:30,970 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 15:09:30,970 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 15:09:30,970 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-11 15:09:30,970 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 15:09:30,970 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 15:09:30,970 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 15:09:30,970 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 15:13:45,159 - tourist_bot - INFO - Added 'city' column to searches table
+2025-03-11 15:13:45,159 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 15:13:46,407 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-11 15:13:46,564 - tourist_bot - INFO - Bot is running...
+2025-03-11 15:13:46,565 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 15:13:46,713 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 15:13:46,958 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 15:13:46,959 - tourist_bot - INFO - Starting admin bot...
+2025-03-11 15:13:47,103 - tourist_bot - INFO - Admin bot started as @street_spirit_admin_bot (ID: 7851967492)
+2025-03-11 15:13:47,148 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 15:13:47,188 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 15:14:06,833 - tourist_bot - INFO - Received location from user 113872890: 44.810238, 20.477014
+2025-03-11 15:14:07,985 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.810238&lon=20.477014&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 15:14:08,679 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:14:11,669 - tourist_bot - INFO - Admin bot: Start command received from user 113872890
+2025-03-11 15:14:12,182 - aiogram.event - INFO - Update id=221670266 is handled. Duration 513 ms by bot id=7851967492
+2025-03-11 15:14:16,332 - tourist_bot - INFO - Admin bot: Stats command from user 113872890
+2025-03-11 15:14:16,412 - aiogram.event - INFO - Update id=221670267 is handled. Duration 81 ms by bot id=7851967492
+2025-03-11 15:14:16,479 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:14:18,510 - tourist_bot - INFO - Admin bot: Cities command from user 113872890
+2025-03-11 15:14:18,689 - aiogram.event - INFO - Update id=221670268 is handled. Duration 180 ms by bot id=7851967492
+2025-03-11 15:14:32,968 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-11 15:14:34,546 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.8110568&lon=20.4758783&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 15:14:35,075 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:14:41,866 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:14:51,696 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:15:15,219 - httpx - INFO - HTTP Request: GET https://yandex.com/images-xml?text=Ra%C5%A1e+Popova+Belgrade&folderid=b1gjn47rcuokgs8tfom5&apikey=AQVN0GhYlqH4YY82x63RQ4ZB_G-ATIqp96RVvHVY "HTTP/1.1 200 Ok"
+2025-03-11 15:15:16,343 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-11 15:15:22,835 - aiogram.event - INFO - Update id=935111578 is handled. Duration 76002 ms by bot id=7656254605
+2025-03-11 15:16:00,675 - tourist_bot - INFO - Admin bot: Cities command from user 113872890
+2025-03-11 15:16:00,740 - aiogram.event - INFO - Update id=221670269 is handled. Duration 65 ms by bot id=7851967492
+2025-03-11 15:25:47,641 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 15:25:47,641 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 15:25:47,642 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-11 15:25:47,642 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 15:25:47,642 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 15:25:47,642 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 15:25:47,642 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 15:26:24,869 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 15:26:26,058 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-11 15:26:26,208 - tourist_bot - INFO - Bot is running...
+2025-03-11 15:26:26,208 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 15:26:26,354 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 15:37:09,955 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 15:37:09,957 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 15:37:09,957 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 15:38:17,477 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 15:38:18,238 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-11 15:38:18,384 - tourist_bot - INFO - Bot is running...
+2025-03-11 15:38:18,385 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 15:38:18,531 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 15:38:19,293 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 15:38:19,294 - tourist_bot - INFO - Starting admin bot...
+2025-03-11 15:38:19,439 - tourist_bot - INFO - Admin bot started as @street_spirit_admin_bot (ID: 7851967492)
+2025-03-11 15:38:19,484 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 15:38:19,532 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 15:38:37,314 - tourist_bot - INFO - Received location from user 113872890: 44.809706, 20.482306
+2025-03-11 15:38:38,663 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.809706&lon=20.482306&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 15:38:39,609 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:38:54,853 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:39:07,725 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-11 15:39:09,354 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.8088978&lon=20.4830577&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 15:39:09,738 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:39:23,953 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:39:41,517 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:40:01,285 - httpx - INFO - HTTP Request: GET https://yandex.com/images-xml?text=Catch-22+Belgrade&folderid=b1gjn47rcuokgs8tfom5&apikey=AQVN0GhYlqH4YY82x63RQ4ZB_G-ATIqp96RVvHVY "HTTP/1.1 200 Ok"
+2025-03-11 15:40:02,298 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-11 15:40:07,941 - aiogram.event - INFO - Update id=935111579 is handled. Duration 90627 ms by bot id=7656254605
+2025-03-11 15:40:35,608 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 15:40:35,608 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 15:40:35,609 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 15:40:35,609 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-11 15:40:35,609 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 15:40:35,609 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 15:40:35,609 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 15:40:42,520 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 15:40:42,903 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-11 15:40:42,952 - tourist_bot - INFO - Bot is running...
+2025-03-11 15:40:42,953 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 15:40:42,990 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 15:40:44,386 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 15:40:44,387 - tourist_bot - INFO - Starting admin bot...
+2025-03-11 15:40:44,549 - tourist_bot - INFO - Admin bot started as @street_spirit_admin_bot (ID: 7851967492)
+2025-03-11 15:40:44,589 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 15:40:44,661 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 15:40:51,923 - tourist_bot - INFO - Received location from user 113872890: 44.814271, 20.46845
+2025-03-11 15:40:53,051 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.814271&lon=20.46845&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 15:40:53,485 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:41:01,186 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:41:19,427 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-11 15:41:21,048 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.8143055&lon=20.4681686&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 15:41:21,872 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:41:30,502 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:41:41,019 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:42:00,990 - httpx - INFO - HTTP Request: GET https://yandex.com/images-xml?text=Studio+212+Belgrade&folderid=b1gjn47rcuokgs8tfom5&apikey=AQVN0GhYlqH4YY82x63RQ4ZB_G-ATIqp96RVvHVY "HTTP/1.1 200 Ok"
+2025-03-11 15:42:01,969 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-11 15:42:05,977 - aiogram.event - INFO - Update id=935111580 is handled. Duration 74053 ms by bot id=7656254605
+2025-03-11 15:46:30,145 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 15:46:30,145 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 15:46:30,146 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-11 15:46:30,146 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 15:46:30,146 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 15:46:30,147 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 15:46:30,147 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 15:47:16,411 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 15:47:17,320 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-11 15:47:17,463 - tourist_bot - INFO - Bot is running...
+2025-03-11 15:47:17,463 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 15:47:17,605 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 15:47:18,288 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 15:47:18,288 - tourist_bot - INFO - Starting admin bot...
+2025-03-11 15:47:18,466 - tourist_bot - INFO - Admin bot started as @street_spirit_admin_bot (ID: 7851967492)
+2025-03-11 15:47:18,500 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 15:47:18,533 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 15:47:28,521 - tourist_bot - INFO - Received location from user 113872890: 44.816281, 20.472311
+2025-03-11 15:47:29,285 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.816281&lon=20.472311&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 15:47:29,951 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:47:44,202 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:47:58,083 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-11 15:48:01,035 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.8171096&lon=20.4716171&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 15:48:01,661 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:48:11,661 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:48:22,345 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:48:22,444 - httpx - INFO - HTTP Request: GET https://yandex.com/images-xml?text=Monument+to+Despot+Stefan+Lazarevi%C4%87+Belgrade&folderid=b1gjn47rcuokgs8tfom5&apikey=AQVN0GhYlqH4YY82x63RQ4ZB_G-ATIqp96RVvHVY "HTTP/1.1 200 Ok"
+2025-03-11 15:48:37,692 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-11 15:48:41,306 - aiogram.event - INFO - Update id=935111581 is handled. Duration 72785 ms by bot id=7656254605
+2025-03-11 15:55:21,140 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 15:55:21,140 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-11 15:55:21,140 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 15:55:21,141 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 15:55:21,141 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 15:55:21,141 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 15:55:21,141 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 15:55:25,419 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 15:55:25,932 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-11 15:55:26,053 - tourist_bot - INFO - Bot is running...
+2025-03-11 15:55:26,055 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 15:55:26,094 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 15:55:27,207 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 15:55:27,207 - tourist_bot - INFO - Starting admin bot...
+2025-03-11 15:55:27,328 - tourist_bot - INFO - Admin bot started as @street_spirit_admin_bot (ID: 7851967492)
+2025-03-11 15:55:27,431 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 15:55:27,461 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 15:55:38,751 - tourist_bot - INFO - Received location from user 113872890: 44.816655, 20.467707
+2025-03-11 15:55:40,121 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.816655&lon=20.467707&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 15:55:41,549 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:55:54,544 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:56:11,647 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-11 15:56:12,694 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.8159669&lon=20.4684747&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 15:56:13,205 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:56:21,399 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:56:34,400 - httpx - INFO - HTTP Request: GET https://yandex.com/images-xml?text=Kopitareva+Garden+Park+Belgrade&folderid=b1gjn47rcuokgs8tfom5&apikey=AQVN0GhYlqH4YY82x63RQ4ZB_G-ATIqp96RVvHVY "HTTP/1.1 200 Ok"
+2025-03-11 15:56:34,411 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:57:02,843 - tourist_bot - ERROR - Failed to send image: HTTP Client says - ClientOSError: [Errno 54] Connection reset by peer
+2025-03-11 15:57:03,224 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-11 15:57:06,396 - aiogram.event - INFO - Update id=935111582 is handled. Duration 87643 ms by bot id=7656254605
+2025-03-11 15:57:14,457 - tourist_bot - INFO - Received location from user 113872890: 44.801925, 20.457437
+2025-03-11 15:57:14,895 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.801925&lon=20.457437&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 15:57:15,257 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:57:24,070 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:57:39,369 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-11 15:57:40,445 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.8015053&lon=20.4571826&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 15:57:40,951 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:57:56,782 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:58:16,419 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 15:58:16,568 - httpx - INFO - HTTP Request: GET https://yandex.com/images-xml?text=Theater+78+Belgrade&folderid=b1gjn47rcuokgs8tfom5&apikey=AQVN0GhYlqH4YY82x63RQ4ZB_G-ATIqp96RVvHVY "HTTP/1.1 200 Ok"
+2025-03-11 15:58:35,858 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-11 15:58:39,473 - aiogram.event - INFO - Update id=935111583 is handled. Duration 85093 ms by bot id=7656254605
+2025-03-11 16:00:45,147 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 16:00:45,147 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 16:00:45,149 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-11 16:00:45,149 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 16:00:45,149 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 16:00:45,149 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 16:00:45,149 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 16:01:42,684 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 16:01:43,682 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-11 16:01:43,825 - tourist_bot - INFO - Bot is running...
+2025-03-11 16:01:43,825 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 16:01:43,968 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 16:01:44,495 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 16:01:44,496 - tourist_bot - INFO - Starting admin bot...
+2025-03-11 16:01:44,637 - tourist_bot - INFO - Admin bot started as @street_spirit_admin_bot (ID: 7851967492)
+2025-03-11 16:01:44,675 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 16:01:44,712 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 16:01:54,691 - tourist_bot - INFO - Received location from user 113872890: 44.804993, 20.458805
+2025-03-11 16:01:55,414 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.804993&lon=20.458805&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 16:01:55,939 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:02:05,147 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:02:35,126 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-11 16:02:38,680 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.8059127&lon=20.4580979&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 16:02:39,581 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:02:46,562 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:02:54,344 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:02:54,419 - httpx - INFO - HTTP Request: GET https://yandex.com/images-xml?text=Railway+Museum+Belgrade&folderid=b1gjn47rcuokgs8tfom5&apikey=AQVN0GhYlqH4YY82x63RQ4ZB_G-ATIqp96RVvHVY "HTTP/1.1 200 Ok"
+2025-03-11 16:03:11,049 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-11 16:03:15,471 - aiogram.event - INFO - Update id=935111584 is handled. Duration 80780 ms by bot id=7656254605
+2025-03-11 16:07:18,117 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 16:07:18,117 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 16:07:18,118 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-11 16:07:18,119 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 16:07:18,119 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 16:07:18,119 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 16:07:18,119 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 16:07:21,382 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 16:07:21,749 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-11 16:07:21,789 - tourist_bot - INFO - Bot is running...
+2025-03-11 16:07:21,789 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 16:07:21,833 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 16:07:23,601 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 16:07:23,602 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 16:07:23,602 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 16:07:27,683 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 16:07:27,962 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-11 16:07:28,019 - tourist_bot - INFO - Bot is running...
+2025-03-11 16:07:28,019 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 16:07:28,055 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 16:07:29,665 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 16:07:29,665 - tourist_bot - INFO - Starting admin bot...
+2025-03-11 16:07:29,803 - tourist_bot - INFO - Admin bot started as @street_spirit_admin_bot (ID: 7851967492)
+2025-03-11 16:07:29,845 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 16:07:29,905 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 16:07:43,872 - tourist_bot - INFO - Received location from user 113872890: 44.814108, 20.474602
+2025-03-11 16:07:44,880 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.814108&lon=20.474602&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 16:07:45,441 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:07:54,451 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:08:18,824 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-11 16:08:19,916 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.8149034&lon=20.4739116&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 16:08:20,595 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:08:28,053 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:08:35,579 - httpx - INFO - HTTP Request: GET https://yandex.com/images-xml?text=Bista+Nedeljka+Koshanina+Belgrade&folderid=b1gjn47rcuokgs8tfom5&apikey=AQVN0GhYlqH4YY82x63RQ4ZB_G-ATIqp96RVvHVY "HTTP/1.1 200 Ok"
+2025-03-11 16:08:35,753 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:08:52,147 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-11 16:08:55,712 - aiogram.event - INFO - Update id=935111585 is handled. Duration 71839 ms by bot id=7656254605
+2025-03-11 16:12:52,862 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 16:12:52,862 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 16:12:52,863 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-11 16:12:52,863 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 16:12:52,863 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 16:12:52,863 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 16:12:52,863 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 16:13:20,969 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 16:13:21,392 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-11 16:13:21,428 - tourist_bot - INFO - Bot is running...
+2025-03-11 16:13:21,429 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 16:13:21,467 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 16:13:22,855 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 16:13:22,855 - tourist_bot - INFO - Starting admin bot...
+2025-03-11 16:13:22,988 - tourist_bot - INFO - Admin bot started as @street_spirit_admin_bot (ID: 7851967492)
+2025-03-11 16:13:23,023 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 16:13:23,056 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 16:13:33,097 - tourist_bot - INFO - Received location from user 113872890: 44.817029, 20.463103
+2025-03-11 16:13:34,741 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.817029&lon=20.463103&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 16:13:35,257 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:13:44,487 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:14:07,106 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-11 16:14:08,900 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.8173417&lon=20.4639506&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 16:14:09,319 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:14:17,692 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:14:27,253 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:14:27,335 - httpx - INFO - HTTP Request: GET https://yandex.com/images-xml?text=Monument+to+Toma+Zdravkovi%C4%87+Belgrade&folderid=b1gjn47rcuokgs8tfom5&apikey=AQVN0GhYlqH4YY82x63RQ4ZB_G-ATIqp96RVvHVY "HTTP/1.1 200 Ok"
+2025-03-11 16:14:54,634 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-11 16:15:00,224 - aiogram.event - INFO - Update id=935111586 is handled. Duration 87111 ms by bot id=7656254605
+2025-03-11 16:16:56,883 - tourist_bot - INFO - Admin bot: Cities command from user 113872890
+2025-03-11 16:16:57,336 - aiogram.event - INFO - Update id=221670270 is handled. Duration 454 ms by bot id=7851967492
+2025-03-11 16:17:02,737 - tourist_bot - INFO - Admin bot: Stats command from user 113872890
+2025-03-11 16:17:02,801 - aiogram.event - INFO - Update id=221670271 is handled. Duration 65 ms by bot id=7851967492
+2025-03-11 16:24:55,947 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 16:24:55,947 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 16:24:55,948 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-11 16:24:55,949 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 16:24:55,949 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 16:24:55,949 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 16:24:55,949 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 16:25:03,485 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 16:25:03,975 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-11 16:25:04,014 - tourist_bot - INFO - Bot is running...
+2025-03-11 16:25:04,014 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 16:25:04,053 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 16:25:05,331 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 16:25:05,332 - tourist_bot - INFO - Starting admin bot...
+2025-03-11 16:25:05,477 - tourist_bot - INFO - Admin bot started as @street_spirit_admin_bot (ID: 7851967492)
+2025-03-11 16:25:05,517 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 16:25:05,556 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 16:25:20,821 - tourist_bot - INFO - Received location from user 113872890: 44.819552, 20.478168
+2025-03-11 16:25:21,892 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.819552&lon=20.478168&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 16:25:22,831 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:25:40,182 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:26:05,871 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-11 16:26:07,084 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.8194466&lon=20.4744697&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 16:26:07,464 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:26:16,441 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:26:28,653 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:26:28,787 - httpx - INFO - HTTP Request: GET https://yandex.com/images-xml?text=Old+flip+phone+Belgrade&folderid=b1gjn47rcuokgs8tfom5&apikey=AQVN0GhYlqH4YY82x63RQ4ZB_G-ATIqp96RVvHVY "HTTP/1.1 200 Ok"
+2025-03-11 16:26:43,806 - tourist_bot - ERROR - Error in location handler: cannot access local variable 'message_text' where it is not associated with a value
+Traceback (most recent call last):
+  File "/Users/kpudan/dev/street spirit/app/handlers.py", line 270, in handle_location
+    message_text += f"<blockquote expandable>{history}</blockquote>"
+    ^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'message_text' where it is not associated with a value
+2025-03-11 16:26:44,118 - aiogram.event - INFO - Update id=935111587 is handled. Duration 83297 ms by bot id=7656254605
+2025-03-11 16:29:12,773 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 16:29:12,773 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 16:29:12,775 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-11 16:29:12,775 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 16:29:12,775 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 16:29:12,776 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 16:29:12,776 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 16:29:18,316 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 16:29:18,684 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-11 16:29:18,719 - tourist_bot - INFO - Bot is running...
+2025-03-11 16:29:18,720 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 16:29:18,756 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 16:29:20,165 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 16:29:20,165 - tourist_bot - INFO - Starting admin bot...
+2025-03-11 16:29:20,304 - tourist_bot - INFO - Admin bot started as @street_spirit_admin_bot (ID: 7851967492)
+2025-03-11 16:29:20,336 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 16:29:20,366 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 16:29:35,599 - tourist_bot - INFO - Received location from user 113872890: 44.81302, 20.473924
+2025-03-11 16:29:36,477 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.81302&lon=20.473924&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 16:29:36,875 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:29:44,719 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:30:14,536 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-11 16:30:15,578 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.8139126&lon=20.4725718&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 16:30:16,058 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:30:25,176 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:30:33,761 - httpx - INFO - HTTP Request: GET https://yandex.com/images-xml?text=The+Bust+of+Vuk+Karad%C5%BEi%C4%87+Belgrade&folderid=b1gjn47rcuokgs8tfom5&apikey=AQVN0GhYlqH4YY82x63RQ4ZB_G-ATIqp96RVvHVY "HTTP/1.1 200 Ok"
+2025-03-11 16:30:33,769 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:30:52,310 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-11 16:30:56,974 - aiogram.event - INFO - Update id=935111588 is handled. Duration 81373 ms by bot id=7656254605
+2025-03-11 16:32:35,609 - tourist_bot - INFO - Received location from user 113872890: 44.804976, 20.470882
+2025-03-11 16:32:36,877 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.804976&lon=20.470882&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 16:32:37,573 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:32:45,656 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:33:16,899 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-11 16:33:18,078 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.8051459&lon=20.4707535&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 16:33:18,450 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:33:29,227 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:33:43,782 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:33:43,949 - httpx - INFO - HTTP Request: GET https://yandex.com/images-xml?text=Nikola+Tesla+Museum+Belgrade&folderid=b1gjn47rcuokgs8tfom5&apikey=AQVN0GhYlqH4YY82x63RQ4ZB_G-ATIqp96RVvHVY "HTTP/1.1 200 Ok"
+2025-03-11 16:34:01,109 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-11 16:34:09,835 - aiogram.event - INFO - Update id=935111589 is handled. Duration 94225 ms by bot id=7656254605
+2025-03-11 16:36:03,109 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 16:36:03,109 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 16:36:03,110 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-11 16:36:03,110 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 16:36:03,110 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 16:36:03,110 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 16:36:03,110 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 16:36:08,661 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 16:36:09,383 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-11 16:36:09,524 - tourist_bot - INFO - Bot is running...
+2025-03-11 16:36:09,524 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 16:36:09,664 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 16:36:10,466 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 16:36:10,467 - tourist_bot - INFO - Starting admin bot...
+2025-03-11 16:36:10,655 - tourist_bot - INFO - Admin bot started as @street_spirit_admin_bot (ID: 7851967492)
+2025-03-11 16:36:10,691 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 16:36:10,726 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 16:36:23,131 - tourist_bot - INFO - Received location from user 113872890: 44.806296, 20.470876
+2025-03-11 16:36:23,866 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.806296&lon=20.470876&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 16:36:24,881 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:36:36,121 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:37:16,761 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-11 16:37:18,290 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.8051459&lon=20.4707535&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 16:37:20,057 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:37:28,735 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:37:42,304 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:37:42,365 - httpx - INFO - HTTP Request: GET https://yandex.com/images-xml?text=Nikola+Tesla+Museum+Belgrade&folderid=b1gjn47rcuokgs8tfom5&apikey=AQVN0GhYlqH4YY82x63RQ4ZB_G-ATIqp96RVvHVY "HTTP/1.1 200 Ok"
+2025-03-11 16:37:59,645 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-11 16:38:06,271 - aiogram.event - INFO - Update id=935111590 is handled. Duration 103140 ms by bot id=7656254605
+2025-03-11 16:43:37,843 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 16:43:37,843 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 16:43:37,845 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-11 16:43:37,846 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 16:43:37,846 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 16:43:37,846 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 16:43:37,846 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 16:43:41,807 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 16:43:42,770 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-11 16:43:42,808 - tourist_bot - INFO - Bot is running...
+2025-03-11 16:43:42,809 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 16:43:42,851 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 16:43:43,658 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 16:43:43,658 - tourist_bot - INFO - Starting admin bot...
+2025-03-11 16:43:43,800 - tourist_bot - INFO - Admin bot started as @street_spirit_admin_bot (ID: 7851967492)
+2025-03-11 16:43:43,839 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 16:43:43,876 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 16:44:00,729 - tourist_bot - INFO - Received location from user 113872890: 44.807773, 20.468395
+2025-03-11 16:44:01,939 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.807773&lon=20.468395&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 16:44:03,098 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:44:14,732 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:44:50,313 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-11 16:44:52,180 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.8075965&lon=20.467348&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 16:44:53,155 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:45:01,332 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:45:09,181 - httpx - INFO - HTTP Request: GET https://yandex.com/images-xml?text=Church+of+Christ+the+King+Belgrade&folderid=b1gjn47rcuokgs8tfom5&apikey=AQVN0GhYlqH4YY82x63RQ4ZB_G-ATIqp96RVvHVY "HTTP/1.1 200 Ok"
+2025-03-11 16:45:09,225 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:45:38,970 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-11 16:45:42,355 - aiogram.event - INFO - Update id=935111591 is handled. Duration 101619 ms by bot id=7656254605
+2025-03-11 16:50:11,443 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 16:50:11,443 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 16:50:11,444 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-11 16:50:11,444 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 16:50:11,444 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 16:50:11,444 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 16:50:11,444 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 16:50:15,891 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 16:50:16,315 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-11 16:50:16,351 - tourist_bot - INFO - Bot is running...
+2025-03-11 16:50:16,352 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 16:50:16,388 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 16:50:17,713 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 16:50:17,713 - tourist_bot - INFO - Starting admin bot...
+2025-03-11 16:50:17,859 - tourist_bot - INFO - Admin bot started as @street_spirit_admin_bot (ID: 7851967492)
+2025-03-11 16:50:17,898 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 16:50:17,939 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 16:50:34,957 - tourist_bot - INFO - Received location from user 113872890: 44.805205, 20.470302
+2025-03-11 16:50:36,102 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.805205&lon=20.470302&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 16:50:36,613 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:50:48,056 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:51:44,379 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 504 Gateway Timeout"
+2025-03-11 16:51:44,383 - tourist_bot - ERROR - Overpass API error: 504 - <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" lang="en"/>
+  <title>OSM3S Response</title>
+</head>
+<body>
+
+<p>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</p>
+<p><strong style="color:#FF0000">Error</strong>: runtime error: open64: 0 Success /osm3s_osm_base Dispatcher_Client::request_read_and_idx::timeout. The server is probably too busy to handle your request. </p>
+
+</body>
+</html>
+
+2025-03-11 16:51:45,133 - tourist_bot - ERROR - Exception in Overpass API: Server disconnected without sending a response.
+Traceback (most recent call last):
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/httpcore/_async/http11.py", line 136, in handle_async_request
+    raise exc
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/httpcore/_async/http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/httpcore/_async/http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/httpcore/_async/http11.py", line 231, in _receive_event
+    raise RemoteProtocolError(msg)
+httpcore.RemoteProtocolError: Server disconnected without sending a response.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kpudan/dev/street spirit/app/generators.py", line 265, in overpass_nearby_places
+    response = await client.post(overpass_url, data=overpass_query, timeout=60.0)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/httpx/_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<13 lines>...
+    )
+    ^
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.RemoteProtocolError: Server disconnected without sending a response.
+2025-03-11 16:51:50,829 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-11 16:51:52,247 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.8051459&lon=20.4707535&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 16:51:52,711 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:52:03,429 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:52:14,096 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:52:14,117 - httpx - INFO - HTTP Request: GET https://yandex.com/images-xml?text=Nikola+Tesla+Museum+Belgrade&folderid=b1gjn47rcuokgs8tfom5&apikey=AQVN0GhYlqH4YY82x63RQ4ZB_G-ATIqp96RVvHVY "HTTP/1.1 200 Ok"
+2025-03-11 16:52:29,081 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-11 16:52:32,021 - aiogram.event - INFO - Update id=935111592 is handled. Duration 117063 ms by bot id=7656254605
+2025-03-11 16:55:05,114 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 16:55:05,114 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 16:55:05,115 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-11 16:55:05,116 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 16:55:05,116 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 16:55:05,116 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 16:55:05,116 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 16:55:09,385 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 16:55:09,874 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-11 16:55:09,930 - tourist_bot - INFO - Bot is running...
+2025-03-11 16:55:09,930 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 16:55:10,003 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 16:55:11,285 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 16:55:11,286 - tourist_bot - INFO - Starting admin bot...
+2025-03-11 16:55:11,461 - tourist_bot - INFO - Admin bot started as @street_spirit_admin_bot (ID: 7851967492)
+2025-03-11 16:55:11,525 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 16:55:11,587 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 16:55:21,905 - tourist_bot - INFO - Received location from user 113872890: 44.813492, 20.46867
+2025-03-11 16:55:23,545 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.813492&lon=20.46867&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 16:55:24,551 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:55:34,252 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:56:22,588 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 504 Gateway Timeout"
+2025-03-11 16:56:22,592 - tourist_bot - ERROR - Overpass API error: 504 - <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" lang="en"/>
+  <title>OSM3S Response</title>
+</head>
+<body>
+
+<p>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</p>
+<p><strong style="color:#FF0000">Error</strong>: runtime error: open64: 0 Success /osm3s_osm_base Dispatcher_Client::request_read_and_idx::timeout. The server is probably too busy to handle your request. </p>
+
+</body>
+</html>
+
+2025-03-11 16:56:51,646 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-11 16:56:53,079 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.8143055&lon=20.4681686&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 16:56:53,512 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:57:03,042 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:57:12,036 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 16:57:12,147 - httpx - INFO - HTTP Request: GET https://yandex.com/images-xml?text=Studio+212+Belgrade&folderid=b1gjn47rcuokgs8tfom5&apikey=AQVN0GhYlqH4YY82x63RQ4ZB_G-ATIqp96RVvHVY "HTTP/1.1 200 Ok"
+2025-03-11 16:57:28,470 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-11 16:57:32,169 - aiogram.event - INFO - Update id=935111593 is handled. Duration 130263 ms by bot id=7656254605
+2025-03-11 17:06:46,565 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 17:06:46,565 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 17:06:46,566 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-11 17:06:46,567 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 17:06:46,567 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 17:06:46,567 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 17:06:46,568 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 17:06:53,914 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 17:06:54,529 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-11 17:06:54,567 - tourist_bot - INFO - Bot is running...
+2025-03-11 17:06:54,567 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 17:06:54,607 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 17:06:55,755 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 17:06:55,756 - tourist_bot - INFO - Starting admin bot...
+2025-03-11 17:06:55,884 - tourist_bot - INFO - Admin bot started as @street_spirit_admin_bot (ID: 7851967492)
+2025-03-11 17:06:55,922 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 17:06:55,956 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 17:07:11,986 - tourist_bot - INFO - Received location from user 113872890: 44.810911, 20.466402
+2025-03-11 17:07:13,265 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.810911&lon=20.466402&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 17:07:13,854 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 17:07:31,879 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 17:07:45,674 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-11 17:07:49,172 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.811326&lon=20.4655871&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 17:07:49,649 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 17:07:57,320 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 17:08:09,491 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 17:08:09,869 - httpx - INFO - HTTP Request: GET https://yandex.com/images-xml?text=Black+horses+were+playing.+Belgrade&folderid=b1gjn47rcuokgs8tfom5&apikey=AQVN0GhYlqH4YY82x63RQ4ZB_G-ATIqp96RVvHVY "HTTP/1.1 200 Ok"
+2025-03-11 17:08:29,667 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-11 17:08:33,726 - aiogram.event - INFO - Update id=935111594 is handled. Duration 81740 ms by bot id=7656254605
+2025-03-11 17:39:51,913 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 17:39:51,913 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 17:39:51,915 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-11 17:39:51,915 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 17:39:51,915 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 17:39:51,915 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 17:39:51,915 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 17:50:01,612 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 17:50:02,652 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-11 17:50:02,793 - tourist_bot - INFO - Bot is running...
+2025-03-11 17:50:02,793 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 17:50:02,934 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 17:50:03,468 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 17:50:03,469 - tourist_bot - INFO - Starting admin bot...
+2025-03-11 17:50:03,607 - tourist_bot - INFO - Admin bot started as @street_spirit_admin_bot (ID: 7851967492)
+2025-03-11 17:50:03,646 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 17:50:03,683 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 17:51:10,079 - tourist_bot - INFO - Received '/start' command from user: 113872890
+2025-03-11 17:51:10,246 - aiogram.event - INFO - Update id=935111595 is handled. Duration 166 ms by bot id=7656254605
+2025-03-11 17:51:57,432 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 17:51:57,432 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 17:51:57,433 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-11 17:51:57,433 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 17:51:57,433 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 17:51:57,433 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 17:51:57,433 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 17:52:01,318 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 17:52:01,604 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-11 17:52:01,671 - tourist_bot - INFO - Bot is running...
+2025-03-11 17:52:01,671 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 17:52:01,747 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 17:52:03,156 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 17:52:03,157 - tourist_bot - INFO - Starting admin bot...
+2025-03-11 17:52:03,291 - tourist_bot - INFO - Admin bot started as @street_spirit_admin_bot (ID: 7851967492)
+2025-03-11 17:52:03,327 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 17:52:03,360 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 17:52:07,020 - tourist_bot - INFO - Received '/start' command from user: 113872890
+2025-03-11 17:52:07,518 - aiogram.event - INFO - Update id=935111596 is handled. Duration 498 ms by bot id=7656254605
+2025-03-11 17:52:18,795 - tourist_bot - INFO - Received location from user 113872890: 44.804653, 20.469661
+2025-03-11 17:52:19,877 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.804653&lon=20.469661&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 17:52:20,667 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 17:52:30,312 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 17:53:11,519 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-11 17:53:12,216 - tourist_bot - ERROR - Error in location handler: name 'number' is not defined
+Traceback (most recent call last):
+  File "/Users/kpudan/dev/street spirit/app/handlers.py", line 146, in handle_location
+    places_count_message = f"🐦 Spotted {number} cool perches nearby! Swooping down to the closest one..."
+                                         ^^^^^^
+NameError: name 'number' is not defined
+2025-03-11 17:53:12,484 - aiogram.event - INFO - Update id=935111597 is handled. Duration 53690 ms by bot id=7656254605
+2025-03-11 17:54:27,503 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 17:54:27,503 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 17:54:27,504 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-11 17:54:27,505 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 17:54:27,505 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 17:54:27,505 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 17:54:27,505 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 17:54:36,627 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 17:54:37,432 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-11 17:54:37,573 - tourist_bot - INFO - Bot is running...
+2025-03-11 17:54:37,574 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 17:54:37,712 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 17:54:38,512 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 17:54:38,513 - tourist_bot - INFO - Starting admin bot...
+2025-03-11 17:54:38,642 - tourist_bot - INFO - Admin bot started as @street_spirit_admin_bot (ID: 7851967492)
+2025-03-11 17:54:38,678 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 17:54:38,712 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 17:54:45,684 - tourist_bot - INFO - Received location from user 113872890: 44.809584, 20.469628
+2025-03-11 17:54:46,405 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.809584&lon=20.469628&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 17:54:46,875 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 17:54:58,256 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 17:55:21,766 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-11 17:55:22,577 - tourist_bot - ERROR - Error in location handler: name 'number' is not defined
+Traceback (most recent call last):
+  File "/Users/kpudan/dev/street spirit/app/handlers.py", line 146, in handle_location
+    places_count_message = f"🐦 Spotted {number} cool perches nearby! Swooping down to the closest one..."
+                                         ^^^^^^
+NameError: name 'number' is not defined
+2025-03-11 17:55:22,731 - aiogram.event - INFO - Update id=935111598 is handled. Duration 37047 ms by bot id=7656254605
+2025-03-11 17:56:16,751 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 17:56:16,751 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 17:56:16,752 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-11 17:56:16,753 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 17:56:16,753 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 17:56:16,753 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 17:56:16,753 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 17:56:20,991 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 17:56:21,492 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-11 17:56:21,528 - tourist_bot - INFO - Bot is running...
+2025-03-11 17:56:21,529 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 17:56:21,564 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 17:56:22,845 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 17:56:22,846 - tourist_bot - INFO - Starting admin bot...
+2025-03-11 17:56:22,988 - tourist_bot - INFO - Admin bot started as @street_spirit_admin_bot (ID: 7851967492)
+2025-03-11 17:56:23,027 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 17:56:23,080 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 17:56:38,115 - tourist_bot - INFO - Received location from user 113872890: 44.799834, 20.45266
+2025-03-11 17:56:39,129 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.799834&lon=20.45266&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 17:56:40,107 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 17:56:46,760 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 17:57:25,167 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-11 17:57:26,506 - tourist_bot - ERROR - Error in location handler: name 'number' is not defined
+Traceback (most recent call last):
+  File "/Users/kpudan/dev/street spirit/app/handlers.py", line 146, in handle_location
+    places_count_message = f"🐦 Spotted {number} cool perches nearby! Swooping down to the closest one..."
+                                         ^^^^^^
+NameError: name 'number' is not defined
+2025-03-11 17:57:26,770 - aiogram.event - INFO - Update id=935111599 is handled. Duration 48656 ms by bot id=7656254605
+2025-03-11 18:00:00,260 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 18:00:00,260 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 18:00:00,262 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-11 18:00:00,262 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 18:00:00,262 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 18:00:00,262 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 18:00:00,262 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 18:00:04,617 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 18:00:04,922 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-11 18:00:04,962 - tourist_bot - INFO - Bot is running...
+2025-03-11 18:00:04,963 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 18:00:05,001 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-11 18:00:06,475 - tourist_bot - INFO - Database initialized successfully
+2025-03-11 18:00:06,476 - tourist_bot - INFO - Starting admin bot...
+2025-03-11 18:00:06,617 - tourist_bot - INFO - Admin bot started as @street_spirit_admin_bot (ID: 7851967492)
+2025-03-11 18:00:06,658 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 18:00:06,697 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 18:00:15,564 - tourist_bot - INFO - Received location from user 113872890: 44.810092, 20.475501
+2025-03-11 18:00:17,080 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.810092&lon=20.475501&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 18:00:17,515 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 18:00:40,760 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 18:01:42,406 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 504 Gateway Timeout"
+2025-03-11 18:01:42,409 - tourist_bot - ERROR - Overpass API error: 504 - <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" lang="en"/>
+  <title>OSM3S Response</title>
+</head>
+<body>
+
+<p>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</p>
+<p><strong style="color:#FF0000">Error</strong>: runtime error: open64: 0 Success /osm3s_osm_base Dispatcher_Client::request_read_and_idx::timeout. The server is probably too busy to handle your request. </p>
+
+</body>
+</html>
+
+2025-03-11 18:02:09,552 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-11 18:02:14,129 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.810461&lon=20.4749976&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-11 18:02:15,114 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 18:02:24,799 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 18:02:40,983 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-11 18:02:41,171 - httpx - INFO - HTTP Request: GET https://yandex.com/images-xml?text=Monument+to+Rashi+Popov+Belgrade&folderid=b1gjn47rcuokgs8tfom5&apikey=AQVN0GhYlqH4YY82x63RQ4ZB_G-ATIqp96RVvHVY "HTTP/1.1 200 Ok"
+2025-03-11 18:03:00,565 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-11 18:03:04,123 - aiogram.event - INFO - Update id=935111600 is handled. Duration 168558 ms by bot id=7656254605
+2025-03-11 18:58:38,696 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-11 18:58:38,698 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7851967492)
+2025-03-11 18:59:06,591 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-11 18:59:06,592 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7656254605)
+2025-03-11 18:59:37,864 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7851967492)
+2025-03-11 19:18:12,975 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-11 19:18:12,977 - aiogram.dispatcher - WARNING - Sleep for 1.338340 seconds and try again... (tryings = 1, bot id = 7656254605)
+2025-03-11 19:18:56,302 - aiogram.dispatcher - INFO - Connection established (tryings = 2, bot id = 7656254605)
+2025-03-11 19:36:19,703 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-11 19:36:19,706 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7851967492)
+2025-03-11 19:56:06,372 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-11 19:56:06,374 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7656254605)
+2025-03-11 20:12:14,226 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-11 20:12:14,227 - aiogram.dispatcher - WARNING - Sleep for 1.210266 seconds and try again... (tryings = 1, bot id = 7851967492)
+2025-03-11 20:12:25,558 - aiogram.dispatcher - INFO - Connection established (tryings = 2, bot id = 7851967492)
+2025-03-11 20:30:05,187 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-11 20:30:05,187 - aiogram.dispatcher - WARNING - Sleep for 1.330000 seconds and try again... (tryings = 1, bot id = 7656254605)
+2025-03-11 20:49:17,067 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-11 20:49:17,067 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7851967492)
+2025-03-11 20:49:28,230 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7851967492)
+2025-03-11 21:05:17,848 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-11 21:05:17,849 - aiogram.dispatcher - WARNING - Sleep for 1.720456 seconds and try again... (tryings = 2, bot id = 7656254605)
+2025-03-11 21:33:26,088 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-11 21:33:26,089 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7851967492)
+2025-03-11 21:34:05,037 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-11 21:34:05,038 - aiogram.dispatcher - WARNING - Sleep for 2.310132 seconds and try again... (tryings = 3, bot id = 7656254605)
+2025-03-11 21:34:07,491 - aiogram.dispatcher - INFO - Connection established (tryings = 4, bot id = 7656254605)
+2025-03-11 21:34:07,493 - tourist_bot - INFO - Received '/start' command from user: 148921789
+2025-03-11 21:34:07,495 - tourist_bot - INFO - Added new user: 148921789
+2025-03-11 21:34:07,497 - tourist_bot - INFO - Received '/start' command from user: 148921789
+2025-03-11 21:34:07,693 - aiogram.event - INFO - Update id=935111602 is handled. Duration 195 ms by bot id=7656254605
+2025-03-11 21:34:07,711 - aiogram.event - INFO - Update id=935111601 is handled. Duration 218 ms by bot id=7656254605
+2025-03-11 21:34:08,603 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7851967492)
+2025-03-11 22:03:32,363 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-11 22:03:32,365 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7851967492)
+2025-03-11 22:04:44,169 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-11 22:04:44,170 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7656254605)
+2025-03-11 22:17:52,695 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7851967492)
+2025-03-11 22:36:45,412 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-11 22:36:45,414 - aiogram.dispatcher - WARNING - Sleep for 1.193356 seconds and try again... (tryings = 1, bot id = 7656254605)
+2025-03-11 22:38:22,569 - aiogram.dispatcher - INFO - Connection established (tryings = 2, bot id = 7656254605)
+2025-03-11 22:56:45,471 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-11 22:56:45,471 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7851967492)
+2025-03-11 23:12:19,035 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 60] Operation timed out
+2025-03-11 23:12:19,036 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7656254605)
+2025-03-11 23:13:21,069 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2025-03-11 23:13:21,070 - aiogram.dispatcher - WARNING - Sleep for 1.223730 seconds and try again... (tryings = 1, bot id = 7656254605)
+2025-03-11 23:34:58,998 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-11 23:34:58,999 - aiogram.dispatcher - WARNING - Sleep for 1.435915 seconds and try again... (tryings = 1, bot id = 7851967492)
+2025-03-11 23:36:34,682 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-11 23:36:34,683 - aiogram.dispatcher - WARNING - Sleep for 1.796223 seconds and try again... (tryings = 2, bot id = 7656254605)
+2025-03-11 23:36:48,359 - aiogram.dispatcher - INFO - Connection established (tryings = 3, bot id = 7656254605)
+2025-03-11 23:53:56,510 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-11 23:53:56,512 - aiogram.dispatcher - WARNING - Sleep for 1.978841 seconds and try again... (tryings = 2, bot id = 7851967492)
+2025-03-12 00:13:10,122 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-12 00:13:10,123 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7656254605)
+2025-03-12 00:20:22,945 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-12 00:20:22,946 - aiogram.dispatcher - WARNING - Sleep for 2.467140 seconds and try again... (tryings = 3, bot id = 7851967492)
+2025-03-12 00:21:26,954 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7656254605)
+2025-03-12 01:12:02,396 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-12 01:12:02,397 - aiogram.dispatcher - WARNING - Sleep for 3.125357 seconds and try again... (tryings = 4, bot id = 7851967492)
+2025-03-12 01:12:39,328 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-12 01:12:39,329 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7656254605)
+2025-03-12 01:13:07,608 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7656254605)
+2025-03-12 01:47:45,949 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-12 01:47:45,949 - aiogram.dispatcher - WARNING - Sleep for 3.995319 seconds and try again... (tryings = 5, bot id = 7851967492)
+2025-03-12 01:47:57,952 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-12 01:47:57,953 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7656254605)
+2025-03-12 01:48:00,091 - aiogram.dispatcher - INFO - Connection established (tryings = 6, bot id = 7851967492)
+2025-03-12 02:21:56,273 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-12 02:21:56,275 - aiogram.dispatcher - WARNING - Sleep for 1.392726 seconds and try again... (tryings = 1, bot id = 7656254605)
+2025-03-12 02:21:57,272 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-12 02:21:57,272 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7851967492)
+2025-03-12 02:58:14,126 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-12 02:58:14,129 - aiogram.dispatcher - WARNING - Sleep for 1.915580 seconds and try again... (tryings = 2, bot id = 7656254605)
+2025-03-12 03:13:40,229 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-12 03:13:40,230 - aiogram.dispatcher - WARNING - Sleep for 1.128517 seconds and try again... (tryings = 1, bot id = 7851967492)
+2025-03-12 03:14:54,785 - aiogram.dispatcher - INFO - Connection established (tryings = 3, bot id = 7656254605)
+2025-03-12 03:14:55,812 - aiogram.dispatcher - INFO - Connection established (tryings = 2, bot id = 7851967492)
+2025-03-12 03:50:55,399 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-12 03:50:55,402 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7656254605)
+2025-03-12 03:50:58,399 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-12 03:50:58,399 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7851967492)
+2025-03-12 04:12:20,567 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-12 04:12:20,568 - aiogram.dispatcher - WARNING - Sleep for 1.203477 seconds and try again... (tryings = 1, bot id = 7656254605)
+2025-03-12 04:12:23,566 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-12 04:12:23,566 - aiogram.dispatcher - WARNING - Sleep for 1.242819 seconds and try again... (tryings = 1, bot id = 7851967492)
+2025-03-12 04:47:45,425 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-12 04:47:45,427 - aiogram.dispatcher - WARNING - Sleep for 1.463508 seconds and try again... (tryings = 2, bot id = 7656254605)
+2025-03-12 04:47:48,427 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-12 04:47:48,427 - aiogram.dispatcher - WARNING - Sleep for 1.622165 seconds and try again... (tryings = 2, bot id = 7851967492)
+2025-03-12 04:47:57,027 - aiogram.dispatcher - INFO - Connection established (tryings = 3, bot id = 7656254605)
+2025-03-12 04:48:00,297 - aiogram.dispatcher - INFO - Connection established (tryings = 3, bot id = 7851967492)
+2025-03-12 05:38:08,027 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-12 05:38:08,029 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7656254605)
+2025-03-12 05:38:11,025 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-12 05:38:11,026 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7851967492)
+2025-03-12 06:13:05,229 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-12 06:13:05,230 - aiogram.dispatcher - WARNING - Sleep for 1.345360 seconds and try again... (tryings = 1, bot id = 7656254605)
+2025-03-12 06:13:08,232 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-12 06:13:08,233 - aiogram.dispatcher - WARNING - Sleep for 1.368704 seconds and try again... (tryings = 1, bot id = 7851967492)
+2025-03-12 06:33:08,788 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-12 06:33:08,790 - aiogram.dispatcher - WARNING - Sleep for 1.747175 seconds and try again... (tryings = 2, bot id = 7656254605)
+2025-03-12 06:33:11,790 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-12 06:33:11,791 - aiogram.dispatcher - WARNING - Sleep for 1.743659 seconds and try again... (tryings = 2, bot id = 7851967492)
+2025-03-12 07:06:55,318 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-12 07:06:55,320 - aiogram.dispatcher - WARNING - Sleep for 2.063203 seconds and try again... (tryings = 3, bot id = 7656254605)
+2025-03-12 07:06:58,323 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-12 07:06:58,323 - aiogram.dispatcher - WARNING - Sleep for 2.351760 seconds and try again... (tryings = 3, bot id = 7851967492)
+2025-03-12 07:46:03,620 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-12 07:46:03,622 - aiogram.dispatcher - WARNING - Sleep for 2.507195 seconds and try again... (tryings = 4, bot id = 7656254605)
+2025-03-12 07:46:31,514 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-12 07:46:31,515 - aiogram.dispatcher - WARNING - Sleep for 3.038094 seconds and try again... (tryings = 4, bot id = 7851967492)
+2025-03-12 07:46:41,603 - aiogram.dispatcher - INFO - Connection established (tryings = 5, bot id = 7656254605)
+2025-03-12 07:46:44,692 - aiogram.dispatcher - INFO - Connection established (tryings = 5, bot id = 7851967492)
+2025-03-12 08:16:13,324 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-12 08:16:13,326 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7656254605)
+2025-03-12 08:16:40,070 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7656254605)
+2025-03-12 08:16:42,165 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-12 08:16:42,166 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7851967492)
+2025-03-12 08:51:54,135 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-12 08:51:54,138 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7656254605)
+2025-03-12 08:51:58,135 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-12 08:51:58,135 - aiogram.dispatcher - WARNING - Sleep for 1.248711 seconds and try again... (tryings = 1, bot id = 7851967492)
+2025-03-12 08:52:25,992 - aiogram.dispatcher - INFO - Connection established (tryings = 2, bot id = 7851967492)
+2025-03-12 08:52:37,764 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7656254605)
+2025-03-12 09:31:31,391 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-12 09:31:31,392 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7851967492)
+2025-03-12 09:31:57,345 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-12 09:31:57,345 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7656254605)
+2025-03-12 09:56:26,954 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-12 09:56:26,954 - aiogram.dispatcher - WARNING - Sleep for 1.265401 seconds and try again... (tryings = 1, bot id = 7851967492)
+2025-03-12 09:56:27,956 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-12 09:56:27,957 - aiogram.dispatcher - WARNING - Sleep for 1.284651 seconds and try again... (tryings = 1, bot id = 7656254605)
+2025-03-12 09:56:38,376 - aiogram.dispatcher - INFO - Connection established (tryings = 2, bot id = 7851967492)
+2025-03-12 09:56:39,768 - aiogram.dispatcher - INFO - Connection established (tryings = 2, bot id = 7656254605)
+2025-03-12 10:22:20,999 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-12 10:22:20,999 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-12 10:22:21,001 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-12 10:22:21,002 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-12 10:22:21,002 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-12 10:22:21,002 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-12 10:22:21,002 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-12 10:22:30,638 - tourist_bot - INFO - Database initialized successfully
+2025-03-12 10:22:31,456 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-12 10:22:31,601 - tourist_bot - INFO - Bot is running...
+2025-03-12 10:22:31,602 - aiogram.dispatcher - INFO - Start polling
+2025-03-12 10:22:31,746 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-12 10:22:32,394 - tourist_bot - INFO - Database initialized successfully
+2025-03-12 10:22:32,394 - tourist_bot - INFO - Starting admin bot...
+2025-03-12 10:22:32,541 - tourist_bot - INFO - Admin bot started as @street_spirit_admin_bot (ID: 7851967492)
+2025-03-12 10:22:32,579 - aiogram.dispatcher - INFO - Start polling
+2025-03-12 10:22:32,617 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-12 10:22:47,937 - tourist_bot - INFO - Received location from user 113872890: 44.809663, 20.472613
+2025-03-12 10:22:48,870 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.809663&lon=20.472613&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-12 10:22:49,432 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-12 10:23:01,128 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-12 10:23:12,842 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-12 10:23:16,940 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.8087047&lon=20.4719459&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-12 10:23:17,874 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-12 10:23:25,244 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-12 10:23:45,713 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-12 10:23:45,854 - httpx - INFO - HTTP Request: GET https://yandex.com/images-xml?text=Monument+to+Milorad+Pavi%C4%87+Belgrade&folderid=b1gjn47rcuokgs8tfom5&apikey=AQVN0GhYlqH4YY82x63RQ4ZB_G-ATIqp96RVvHVY "HTTP/1.1 200 Ok"
+2025-03-12 10:24:05,241 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-12 10:24:10,567 - aiogram.event - INFO - Update id=935111603 is handled. Duration 82632 ms by bot id=7656254605
+2025-03-12 11:44:04,909 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-12 11:44:04,909 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-12 11:44:04,911 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-12 11:44:04,912 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-12 11:44:04,912 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-12 11:44:04,912 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-12 11:44:04,912 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-12 11:44:29,798 - tourist_bot - INFO - Database initialized successfully
+2025-03-12 11:44:29,799 - tourist_bot - INFO - Starting admin bot...
+2025-03-12 11:44:30,262 - tourist_bot - ERROR - Admin bot error: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connection reset by peer]
+Traceback (most recent call last):
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/aiohttp/connector.py", line 1122, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs, sock=sock)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py", line 1188, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        ssl_shutdown_timeout=ssl_shutdown_timeout)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py", line 1221, in _create_connection_transport
+    await waiter
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/selector_events.py", line 980, in _read_ready__get_buffer
+    nbytes = self._sock.recv_into(buf)
+ConnectionResetError: [Errno 54] Connection reset by peer
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/aiogram/client/session/aiohttp.py", line 177, in make_request
+    async with session.post(
+               ~~~~~~~~~~~~^
+        url, data=form, timeout=self.timeout if timeout is None else timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as resp:
+    ^
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/aiohttp/client.py", line 1425, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/aiohttp/client.py", line 703, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/aiohttp/connector.py", line 548, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/aiohttp/connector.py", line 1056, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/aiohttp/connector.py", line 1400, in _create_direct_connection
+    raise last_exc
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/aiohttp/connector.py", line 1369, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/aiohttp/connector.py", line 1130, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connection reset by peer]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/kpudan/dev/street spirit/admin_bot.py", line 339, in main
+    me = await bot.get_me()
+         ^^^^^^^^^^^^^^^^^^
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/aiogram/client/bot.py", line 1874, in get_me
+    return await self(call, request_timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/aiogram/client/bot.py", line 498, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/aiogram/client/session/aiohttp.py", line 184, in make_request
+    raise TelegramNetworkError(method=method, message=f"{type(e).__name__}: {e}")
+aiogram.exceptions.TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Connection reset by peer]
+2025-03-12 11:44:30,342 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x10a267770>
+2025-03-12 11:44:40,760 - tourist_bot - INFO - Database initialized successfully
+2025-03-12 11:44:40,761 - tourist_bot - INFO - Starting admin bot...
+2025-03-12 11:44:40,903 - tourist_bot - INFO - Admin bot started as @street_spirit_admin_bot (ID: 7851967492)
+2025-03-12 11:44:40,943 - aiogram.dispatcher - INFO - Start polling
+2025-03-12 11:44:40,992 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-12 11:45:03,518 - tourist_bot - INFO - Admin bot: Stats command from user 113872890
+2025-03-12 11:45:04,020 - aiogram.event - INFO - Update id=221670272 is handled. Duration 502 ms by bot id=7851967492
+2025-03-12 11:45:17,019 - tourist_bot - INFO - Admin bot: Users command from user 113872890
+2025-03-12 11:45:17,241 - aiogram.event - INFO - Update id=221670273 is handled. Duration 222 ms by bot id=7851967492
+2025-03-12 11:56:35,383 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-12 11:56:35,386 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-12 11:56:35,386 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-12 11:56:35,387 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-12 11:56:47,845 - tourist_bot - INFO - Database initialized successfully
+2025-03-12 11:56:47,845 - tourist_bot - INFO - Starting admin bot...
+2025-03-12 11:56:48,146 - tourist_bot - INFO - Admin bot started as @street_spirit_admin_bot (ID: 7851967492)
+2025-03-12 11:56:48,179 - aiogram.dispatcher - INFO - Start polling
+2025-03-12 11:56:48,212 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-12 11:57:14,017 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-12 11:57:14,018 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-12 11:57:14,019 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-12 11:57:14,019 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-12 11:57:19,238 - tourist_bot - INFO - Database initialized successfully
+2025-03-12 11:57:19,930 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-12 11:57:20,092 - tourist_bot - INFO - Bot is running...
+2025-03-12 11:57:20,092 - aiogram.dispatcher - INFO - Start polling
+2025-03-12 11:57:20,237 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-12 11:57:21,067 - tourist_bot - INFO - Database initialized successfully
+2025-03-12 11:57:21,068 - tourist_bot - INFO - Starting admin bot...
+2025-03-12 11:57:21,220 - tourist_bot - INFO - Admin bot started as @street_spirit_admin_bot (ID: 7851967492)
+2025-03-12 11:57:21,260 - aiogram.dispatcher - INFO - Start polling
+2025-03-12 11:57:21,300 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-12 11:57:27,419 - tourist_bot - INFO - Received location from user 113872890: 44.803888, 20.457909
+2025-03-12 11:57:28,509 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.803888&lon=20.457909&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-12 11:57:29,422 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-12 11:57:50,894 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-12 11:58:12,847 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-12 11:58:18,765 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.8032338&lon=20.4566928&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-12 11:58:19,093 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-12 11:58:29,856 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-12 11:58:39,627 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-12 11:58:39,849 - httpx - INFO - HTTP Request: GET https://yandex.com/images-xml?text=Italian+Cultural+Center+Belgrade&folderid=b1gjn47rcuokgs8tfom5&apikey=AQVN0GhYlqH4YY82x63RQ4ZB_G-ATIqp96RVvHVY "HTTP/1.1 200 Ok"
+2025-03-12 11:59:07,952 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-12 11:59:11,429 - aiogram.event - INFO - Update id=935111606 is handled. Duration 104011 ms by bot id=7656254605
+2025-03-12 12:15:27,827 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 54] Connection reset by peer
+2025-03-12 12:15:27,828 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7851967492)
+2025-03-12 12:15:38,958 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7851967492)
+2025-03-12 13:36:07,090 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 54] Connection reset by peer
+2025-03-12 13:36:07,092 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7656254605)
+2025-03-12 13:36:18,223 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7656254605)
+2025-03-12 15:02:18,810 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 54] Connection reset by peer
+2025-03-12 15:02:18,811 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7656254605)
+2025-03-12 15:02:30,021 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7656254605)
+2025-03-12 15:03:45,026 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 54] Connection reset by peer
+2025-03-12 15:03:45,030 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7851967492)
+2025-03-12 15:03:56,143 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7851967492)
+2025-03-12 15:19:05,861 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 54] Connection reset by peer
+2025-03-12 15:19:05,864 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7656254605)
+2025-03-12 15:19:16,986 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7656254605)
+2025-03-12 15:39:05,164 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 54] Connection reset by peer
+2025-03-12 15:39:05,165 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7656254605)
+2025-03-12 15:39:16,275 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7656254605)
+2025-03-12 15:51:07,878 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-12 15:51:07,879 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-12 15:51:07,881 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-12 15:51:07,881 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-12 15:51:07,881 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-12 15:51:07,881 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-12 15:51:07,882 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-12 15:51:11,481 - tourist_bot - INFO - Database initialized successfully
+2025-03-12 15:51:12,413 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-12 15:51:12,563 - tourist_bot - INFO - Bot is running...
+2025-03-12 15:51:12,564 - aiogram.dispatcher - INFO - Start polling
+2025-03-12 15:51:12,705 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-12 15:51:13,296 - tourist_bot - INFO - Database initialized successfully
+2025-03-12 15:51:13,296 - tourist_bot - INFO - Starting admin bot...
+2025-03-12 15:51:13,440 - tourist_bot - INFO - Admin bot started as @street_spirit_admin_bot (ID: 7851967492)
+2025-03-12 15:51:13,478 - aiogram.dispatcher - INFO - Start polling
+2025-03-12 15:51:13,515 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-12 15:51:57,500 - tourist_bot - INFO - Received location from user 113872890: 44.799826, 20.452691
+2025-03-12 15:51:58,427 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.799826&lon=20.452691&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-12 15:51:59,188 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-12 15:52:07,328 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-12 15:52:21,048 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-12 15:52:25,448 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.7993961&lon=20.4512873&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-12 15:52:25,791 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-12 15:52:34,644 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-12 15:52:43,560 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-12 15:52:43,729 - httpx - INFO - HTTP Request: GET https://yandex.com/images-xml?text=Memorial+Fountain+of+Jasmina+Jovanovi%C4%87+Belgrade&folderid=b1gjn47rcuokgs8tfom5&apikey=AQVN0GhYlqH4YY82x63RQ4ZB_G-ATIqp96RVvHVY "HTTP/1.1 200 Ok"
+2025-03-12 15:52:59,143 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-12 15:53:02,833 - aiogram.event - INFO - Update id=935111607 is handled. Duration 65333 ms by bot id=7656254605
+2025-03-12 15:54:48,178 - tourist_bot - INFO - Received location from user 113872890: 44.810272, 20.465996
+2025-03-12 15:54:48,777 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.810272&lon=20.465996&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-12 15:54:49,094 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-12 15:55:08,648 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-12 15:55:21,257 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-12 15:55:25,842 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.8104126&lon=20.46549&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-12 15:55:26,158 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-12 15:55:37,517 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-12 15:55:52,041 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-12 15:55:52,216 - httpx - INFO - HTTP Request: GET https://yandex.com/images-xml?text=Observer+of+the+Serbian+High+Command+at+Kajmak%C4%8Dalan+Belgrade&folderid=b1gjn47rcuokgs8tfom5&apikey=AQVN0GhYlqH4YY82x63RQ4ZB_G-ATIqp96RVvHVY "HTTP/1.1 200 Ok"
+2025-03-12 15:56:11,303 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-12 15:56:14,919 - aiogram.event - INFO - Update id=935111608 is handled. Duration 86742 ms by bot id=7656254605
+2025-03-12 15:56:53,471 - tourist_bot - INFO - Admin bot: Cities command from user 113872890
+2025-03-12 15:56:53,989 - aiogram.event - INFO - Update id=221670274 is handled. Duration 520 ms by bot id=7851967492
+2025-03-12 15:57:04,320 - tourist_bot - INFO - Admin bot: Stats command from user 113872890
+2025-03-12 15:57:04,492 - aiogram.event - INFO - Update id=221670275 is handled. Duration 173 ms by bot id=7851967492
+2025-03-12 16:55:51,485 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-12 16:55:51,485 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-12 16:55:51,488 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-12 16:55:51,488 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-12 16:55:51,488 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-12 16:55:51,488 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-12 16:55:51,489 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-12 16:55:54,768 - tourist_bot - INFO - Database initialized successfully
+2025-03-12 16:55:55,673 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-12 16:55:55,845 - tourist_bot - INFO - Bot is running...
+2025-03-12 16:55:55,846 - aiogram.dispatcher - INFO - Start polling
+2025-03-12 16:55:56,031 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-12 16:55:56,661 - tourist_bot - INFO - Database initialized successfully
+2025-03-12 16:55:56,662 - tourist_bot - INFO - Starting admin bot...
+2025-03-12 16:55:56,896 - tourist_bot - INFO - Admin bot started as @street_spirit_admin_bot (ID: 7851967492)
+2025-03-12 16:55:56,939 - aiogram.dispatcher - INFO - Start polling
+2025-03-12 16:55:56,975 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-12 16:56:32,474 - tourist_bot - INFO - Received location from user 113872890: 44.807543, 20.460251
+2025-03-12 16:56:33,589 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.807543&lon=20.460251&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-12 16:56:35,810 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-12 16:56:52,122 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-12 16:57:03,439 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-12 16:57:08,041 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.8076455&lon=20.4602235&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-12 16:57:08,474 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-12 16:57:15,986 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-12 16:57:24,838 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-12 16:57:25,068 - httpx - INFO - HTTP Request: GET https://yandex.com/images-xml?text=I+have+Prince+Milo%C5%A1.+Belgrade&folderid=b1gjn47rcuokgs8tfom5&apikey=AQVN0GhYlqH4YY82x63RQ4ZB_G-ATIqp96RVvHVY "HTTP/1.1 200 Ok"
+2025-03-12 16:57:44,245 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-12 16:57:47,059 - aiogram.event - INFO - Update id=935111609 is handled. Duration 74586 ms by bot id=7656254605
+2025-03-12 16:58:15,800 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-12 16:58:15,800 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-12 16:58:15,801 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-12 16:58:15,801 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-12 16:58:15,801 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-12 16:58:15,801 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-12 16:58:15,801 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-13 10:48:56,724 - tourist_bot - INFO - Database initialized successfully
+2025-03-13 10:48:57,674 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-13 10:48:57,820 - tourist_bot - INFO - Bot is running...
+2025-03-13 10:48:57,821 - aiogram.dispatcher - INFO - Start polling
+2025-03-13 10:48:58,010 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-13 10:48:58,520 - tourist_bot - INFO - Database initialized successfully
+2025-03-13 10:48:58,520 - tourist_bot - INFO - Starting admin bot...
+2025-03-13 10:48:58,654 - tourist_bot - INFO - Admin bot started as @street_spirit_admin_bot (ID: 7851967492)
+2025-03-13 10:48:58,691 - aiogram.dispatcher - INFO - Start polling
+2025-03-13 10:48:58,726 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-13 10:49:26,520 - tourist_bot - INFO - Received location from user 113872890: 44.809326, 20.475764
+2025-03-13 10:49:27,517 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.809326&lon=20.475764&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-13 10:49:28,727 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 10:49:44,307 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 10:49:58,923 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-13 10:50:03,447 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.810461&lon=20.4749976&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-13 10:50:03,828 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 10:50:10,764 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 10:50:18,594 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 10:50:41,648 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-13 10:50:45,606 - aiogram.event - INFO - Update id=935111610 is handled. Duration 79088 ms by bot id=7656254605
+2025-03-13 11:06:15,716 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 54] Connection reset by peer
+2025-03-13 11:06:15,718 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7851967492)
+2025-03-13 11:06:26,849 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7851967492)
+2025-03-13 11:58:25,135 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 54] Connection reset by peer
+2025-03-13 11:58:25,136 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7656254605)
+2025-03-13 11:58:36,263 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7656254605)
+2025-03-13 12:16:42,355 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 54] Connection reset by peer
+2025-03-13 12:16:42,356 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7656254605)
+2025-03-13 12:16:53,472 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7656254605)
+2025-03-13 12:28:52,562 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-13 12:28:52,562 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-13 12:28:52,563 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-13 12:28:52,563 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-13 12:28:52,563 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-13 12:28:52,563 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-13 12:28:52,564 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-13 12:28:57,908 - tourist_bot - INFO - Database initialized successfully
+2025-03-13 12:28:58,311 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-13 12:28:58,348 - tourist_bot - INFO - Bot is running...
+2025-03-13 12:28:58,349 - aiogram.dispatcher - INFO - Start polling
+2025-03-13 12:28:58,382 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-13 12:28:58,848 - tourist_bot - INFO - Database initialized successfully
+2025-03-13 12:28:58,848 - tourist_bot - INFO - Starting admin bot...
+2025-03-13 12:28:58,985 - tourist_bot - INFO - Admin bot started as @street_spirit_admin_bot (ID: 7851967492)
+2025-03-13 12:28:59,020 - aiogram.dispatcher - INFO - Start polling
+2025-03-13 12:28:59,055 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-13 12:29:13,947 - tourist_bot - INFO - Received '/start' command from user: 113872890
+2025-03-13 12:29:14,413 - tourist_bot - ERROR - Error in '/start' command handler: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={'row_width': 2}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+Traceback (most recent call last):
+  File "/Users/kpudan/dev/street spirit/app/handlers.py", line 116, in cmd_start
+    await show_filter_options(message)
+  File "/Users/kpudan/dev/street spirit/app/handlers.py", line 73, in show_filter_options
+    keyboard = InlineKeyboardMarkup(row_width=2)
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/pydantic/main.py", line 214, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={'row_width': 2}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+2025-03-13 12:29:14,613 - aiogram.event - INFO - Update id=935111611 is handled. Duration 667 ms by bot id=7656254605
+2025-03-13 12:29:46,181 - tourist_bot - INFO - Received '/start' command from user: 113872890
+2025-03-13 12:29:46,346 - tourist_bot - ERROR - Error in '/start' command handler: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={'row_width': 2}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+Traceback (most recent call last):
+  File "/Users/kpudan/dev/street spirit/app/handlers.py", line 116, in cmd_start
+    await show_filter_options(message)
+  File "/Users/kpudan/dev/street spirit/app/handlers.py", line 73, in show_filter_options
+    keyboard = InlineKeyboardMarkup(row_width=2)
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/pydantic/main.py", line 214, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={'row_width': 2}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+2025-03-13 12:29:46,518 - aiogram.event - INFO - Update id=935111612 is handled. Duration 337 ms by bot id=7656254605
+2025-03-13 12:29:51,818 - tourist_bot - INFO - Admin bot: Stats command from user 113872890
+2025-03-13 12:29:52,312 - aiogram.event - INFO - Update id=221670276 is handled. Duration 497 ms by bot id=7851967492
+2025-03-13 12:30:07,798 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-13 12:30:07,798 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-13 12:30:07,800 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-13 12:30:07,800 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-13 12:30:07,800 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-13 12:30:07,800 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-13 12:30:07,800 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-13 12:30:27,049 - tourist_bot - INFO - Database initialized successfully
+2025-03-13 12:30:27,340 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-13 12:30:27,378 - tourist_bot - INFO - Bot is running...
+2025-03-13 12:30:27,379 - aiogram.dispatcher - INFO - Start polling
+2025-03-13 12:30:27,414 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-13 12:30:31,771 - tourist_bot - INFO - Received '/start' command from user: 113872890
+2025-03-13 12:30:32,256 - aiogram.event - INFO - Update id=935111613 is handled. Duration 484 ms by bot id=7656254605
+2025-03-13 12:32:43,995 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-13 12:32:43,997 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-13 12:32:43,997 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-13 12:33:03,009 - tourist_bot - INFO - Database initialized successfully
+2025-03-13 12:33:03,280 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-13 12:33:03,320 - tourist_bot - INFO - Bot is running...
+2025-03-13 12:33:03,321 - aiogram.dispatcher - INFO - Start polling
+2025-03-13 12:33:03,365 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-13 12:33:08,336 - tourist_bot - INFO - Received '/start' command from user: 113872890
+2025-03-13 12:33:08,792 - tourist_bot - ERROR - Error in '/start' command handler: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={'row_width': 2}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+Traceback (most recent call last):
+  File "/Users/kpudan/dev/street spirit/app/handlers.py", line 122, in cmd_start
+    keyboard = InlineKeyboardMarkup(row_width=2)
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/pydantic/main.py", line 214, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={'row_width': 2}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+2025-03-13 12:33:08,971 - aiogram.event - INFO - Update id=935111614 is handled. Duration 635 ms by bot id=7656254605
+2025-03-13 12:33:31,272 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-13 12:33:31,273 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-13 12:33:31,273 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-13 12:33:53,026 - tourist_bot - INFO - Database initialized successfully
+2025-03-13 12:33:53,784 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-13 12:33:53,934 - tourist_bot - INFO - Bot is running...
+2025-03-13 12:33:53,935 - aiogram.dispatcher - INFO - Start polling
+2025-03-13 12:33:54,083 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-13 12:33:57,917 - tourist_bot - INFO - Received '/start' command from user: 113872890
+2025-03-13 12:33:58,067 - aiogram.event - INFO - Update id=935111615 is handled. Duration 149 ms by bot id=7656254605
+2025-03-13 12:34:09,523 - tourist_bot - INFO - Received location from user 113872890: 44.813329, 20.472194
+2025-03-13 12:34:10,602 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.813329&lon=20.472194&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-13 12:34:11,232 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 12:34:21,415 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 12:34:34,272 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-13 12:34:38,758 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.8139126&lon=20.4725718&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-13 12:34:39,660 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 12:34:57,288 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 12:35:13,659 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 12:35:30,692 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-13 12:35:34,141 - aiogram.event - INFO - Update id=935111616 is handled. Duration 84618 ms by bot id=7656254605
+2025-03-13 13:05:40,987 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 54] Connection reset by peer
+2025-03-13 13:05:40,990 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7656254605)
+2025-03-13 13:05:52,165 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7656254605)
+2025-03-13 14:13:36,001 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-13 14:13:36,001 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7656254605)
+2025-03-13 14:13:47,123 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7656254605)
+2025-03-13 14:30:03,207 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-13 14:30:03,209 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7656254605)
+2025-03-13 14:30:14,691 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7656254605)
+2025-03-13 14:33:51,853 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-13 14:33:51,855 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-13 14:33:51,856 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-13 14:33:55,326 - tourist_bot - INFO - Database initialized successfully
+2025-03-13 14:33:55,602 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-13 14:33:55,644 - tourist_bot - INFO - Bot is running...
+2025-03-13 14:33:55,644 - aiogram.dispatcher - INFO - Start polling
+2025-03-13 14:33:55,682 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-13 14:34:06,763 - tourist_bot - INFO - Received location from user 113872890: 44.799856, 20.452672
+2025-03-13 14:34:08,140 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.799856&lon=20.452672&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-13 14:34:09,253 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 14:34:17,975 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 14:34:28,023 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-13 14:34:30,284 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.7993961&lon=20.4512873&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-13 14:34:31,214 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 14:34:46,859 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 14:35:07,248 - aiogram.event - INFO - Update id=935111617 is handled. Duration 60488 ms by bot id=7656254605
+2025-03-13 14:35:17,308 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.7994575&lon=20.4506852&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-13 14:35:17,729 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 14:35:26,836 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 14:35:34,152 - aiogram.event - INFO - Update id=935111618 is handled. Duration 17422 ms by bot id=7656254605
+2025-03-13 14:35:45,039 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.798639&lon=20.4554076&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-13 14:35:46,714 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 14:35:56,023 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 14:36:06,873 - aiogram.event - INFO - Update id=935111619 is handled. Duration 22513 ms by bot id=7656254605
+2025-03-13 14:36:16,654 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 14:36:44,682 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-13 14:36:48,622 - aiogram.event - INFO - Update id=935111620 is handled. Duration 33256 ms by bot id=7656254605
+2025-03-13 14:36:59,400 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.8011654&lon=20.4553443&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-13 14:36:59,833 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 14:37:10,349 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 14:37:19,403 - aiogram.event - INFO - Update id=935111621 is handled. Duration 20685 ms by bot id=7656254605
+2025-03-13 14:37:23,518 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 14:37:43,021 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-13 14:37:47,636 - aiogram.event - INFO - Update id=935111622 is handled. Duration 24811 ms by bot id=7656254605
+2025-03-13 14:37:58,676 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.8026828&lon=20.4540447&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-13 14:37:59,620 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 14:38:10,163 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 14:38:18,599 - aiogram.event - INFO - Update id=935111623 is handled. Duration 20623 ms by bot id=7656254605
+2025-03-13 14:42:23,125 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-13 14:42:23,127 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-13 14:42:23,127 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-13 14:45:11,673 - tourist_bot - INFO - Database initialized successfully
+2025-03-13 14:45:12,535 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-13 14:45:12,681 - tourist_bot - INFO - Bot is running...
+2025-03-13 14:45:12,683 - aiogram.dispatcher - INFO - Start polling
+2025-03-13 14:45:12,824 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-13 14:45:32,164 - tourist_bot - INFO - Received location from user 113872890: 44.809052, 20.474358
+2025-03-13 14:45:33,319 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.809052&lon=20.474358&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-13 14:45:34,442 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-13 14:45:35,629 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 14:45:36,692 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 14:45:44,140 - aiogram.event - INFO - Update id=935111624 is handled. Duration 11975 ms by bot id=7656254605
+2025-03-13 14:45:52,915 - aiogram.event - INFO - Update id=935111625 is handled. Duration 351 ms by bot id=7656254605
+2025-03-13 14:45:56,058 - aiogram.event - INFO - Update id=935111626 is handled. Duration 213 ms by bot id=7656254605
+2025-03-13 14:46:48,850 - aiogram.event - INFO - Update id=935111627 is handled. Duration 292 ms by bot id=7656254605
+2025-03-13 14:46:55,938 - aiogram.event - INFO - Update id=935111628 is handled. Duration 571 ms by bot id=7656254605
+2025-03-13 14:46:59,598 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 14:47:21,187 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-13 14:47:25,531 - aiogram.event - INFO - Update id=935111629 is handled. Duration 27562 ms by bot id=7656254605
+2025-03-13 14:58:39,720 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-13 14:58:39,723 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-13 14:58:39,724 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-13 14:59:57,848 - tourist_bot - INFO - Database initialized successfully
+2025-03-13 14:59:58,855 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-13 14:59:59,009 - tourist_bot - INFO - Bot is running...
+2025-03-13 14:59:59,011 - aiogram.dispatcher - INFO - Start polling
+2025-03-13 14:59:59,177 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-13 15:00:06,400 - tourist_bot - INFO - Received location from user 113872890: 44.79984, 20.452733
+2025-03-13 15:00:07,365 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.79984&lon=20.452733&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-13 15:00:08,876 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-13 15:00:11,183 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 15:00:12,152 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 15:00:24,772 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.7993961&lon=20.4512873&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-13 15:00:25,131 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 15:00:25,145 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 15:00:37,865 - aiogram.event - INFO - Update id=935111630 is handled. Duration 31470 ms by bot id=7656254605
+2025-03-13 15:00:43,357 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.7994575&lon=20.4506852&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-13 15:00:44,383 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 15:00:44,752 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 15:00:56,186 - aiogram.event - INFO - Update id=935111631 is handled. Duration 13455 ms by bot id=7656254605
+2025-03-13 16:01:18,796 - tourist_bot - INFO - Received location from user 113872890: 44.79984, 20.452733
+2025-03-13 16:01:20,343 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.79984&lon=20.452733&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-13 16:01:21,485 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-13 16:01:23,003 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 16:01:23,077 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 16:01:35,540 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.7993961&lon=20.4512873&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-13 16:01:35,958 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 16:01:35,968 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-13 16:01:49,883 - aiogram.event - INFO - Update id=935111632 is handled. Duration 31089 ms by bot id=7656254605
+2025-03-13 17:11:33,040 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 54] Connection reset by peer
+2025-03-13 17:11:33,042 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7656254605)
+2025-03-13 17:11:44,148 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7656254605)
+2025-03-13 18:02:02,663 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-13 18:02:02,665 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7656254605)
+2025-03-13 18:05:46,065 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-13 18:05:46,067 - aiogram.dispatcher - WARNING - Sleep for 1.134745 seconds and try again... (tryings = 1, bot id = 7656254605)
+2025-03-13 18:05:57,321 - aiogram.dispatcher - INFO - Connection established (tryings = 2, bot id = 7656254605)
+2025-03-13 18:10:16,963 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-13 18:10:16,966 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-13 18:10:16,966 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-14 11:56:17,672 - tourist_bot - INFO - Database initialized successfully
+2025-03-14 11:56:18,536 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-14 11:56:18,680 - tourist_bot - INFO - Bot is running...
+2025-03-14 11:56:18,680 - aiogram.dispatcher - INFO - Start polling
+2025-03-14 11:56:18,824 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-14 11:56:19,454 - tourist_bot - INFO - Database initialized successfully
+2025-03-14 11:56:19,455 - tourist_bot - INFO - Starting admin bot...
+2025-03-14 11:56:19,589 - tourist_bot - INFO - Admin bot started as @street_spirit_admin_bot (ID: 7851967492)
+2025-03-14 11:56:19,629 - aiogram.dispatcher - INFO - Start polling
+2025-03-14 11:56:19,663 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-14 11:56:44,600 - tourist_bot - INFO - Received location from user 113872890: 44.806953, 20.461727
+2025-03-14 11:56:45,585 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.806953&lon=20.461727&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-14 11:56:46,926 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-14 11:56:47,721 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-14 11:56:47,732 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-14 11:56:57,122 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.8076452&lon=20.4617714&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-14 11:56:57,406 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-14 11:56:57,415 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-14 11:57:07,724 - aiogram.event - INFO - Update id=935111634 is handled. Duration 23124 ms by bot id=7656254605
+2025-03-14 11:57:20,786 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 54] Connection reset by peer
+2025-03-14 11:57:20,788 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7656254605)
+2025-03-14 11:57:21,360 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.8067677&lon=20.4607122&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-14 11:57:21,772 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-14 11:57:21,776 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-14 11:57:30,341 - aiogram.event - INFO - Update id=935111635 is handled. Duration 9697 ms by bot id=7656254605
+2025-03-14 11:57:31,908 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7656254605)
+2025-03-14 11:59:42,500 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-14 11:59:50,455 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-14 12:00:01,362 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-14 12:00:04,507 - aiogram.event - INFO - Update id=935111636 is handled. Duration 22741 ms by bot id=7656254605
+2025-03-14 12:00:10,985 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-14 12:00:15,421 - aiogram.event - INFO - Update id=935111637 is handled. Duration 25579 ms by bot id=7656254605
+2025-03-14 12:08:24,171 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-14 12:08:24,172 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-14 12:08:24,173 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-14 12:08:24,173 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-14 12:08:24,173 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-14 12:08:24,173 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-14 12:08:24,173 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-14 12:08:32,767 - tourist_bot - INFO - Database initialized successfully
+2025-03-14 12:08:33,265 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-14 12:08:33,305 - tourist_bot - INFO - Bot is running...
+2025-03-14 12:08:33,305 - aiogram.dispatcher - INFO - Start polling
+2025-03-14 12:08:33,339 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'Streetspirittest'
+2025-03-14 12:08:34,576 - tourist_bot - INFO - Database initialized successfully
+2025-03-14 12:08:34,577 - tourist_bot - INFO - Starting admin bot...
+2025-03-14 12:08:34,728 - tourist_bot - INFO - Admin bot started as @street_spirit_admin_bot (ID: 7851967492)
+2025-03-14 12:08:34,763 - aiogram.dispatcher - INFO - Start polling
+2025-03-14 12:08:34,802 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-14 12:08:52,758 - tourist_bot - INFO - Received location from user 113872890: 44.810074, 20.474441
+2025-03-14 12:08:54,205 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.810074&lon=20.474441&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-14 12:08:55,251 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-14 12:08:55,807 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-14 12:08:55,808 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-14 12:09:08,232 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.810461&lon=20.4749976&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-14 12:09:08,508 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-14 12:09:08,534 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-14 12:09:24,606 - aiogram.event - INFO - Update id=935111638 is handled. Duration 31849 ms by bot id=7656254605
+2025-03-14 12:09:52,976 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.8110568&lon=20.4758783&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-14 12:09:53,458 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-14 12:09:53,459 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-14 12:10:07,272 - aiogram.event - INFO - Update id=935111639 is handled. Duration 15244 ms by bot id=7656254605
+2025-03-14 12:10:09,512 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.8110568&lon=20.4758783&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-14 12:10:09,811 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-14 12:10:09,826 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-14 12:10:11,099 - aiogram.event - INFO - Update id=935111641 is handled. Duration 43 ms by bot id=7656254605
+2025-03-14 12:10:26,322 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-14 12:10:44,632 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-14 12:10:48,740 - aiogram.event - INFO - Update id=935111640 is handled. Duration 39945 ms by bot id=7656254605
+2025-03-14 12:11:03,198 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.8110568&lon=20.4758783&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-14 12:11:03,517 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-14 12:11:03,697 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-14 12:11:15,376 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.8084956&lon=20.4726268&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-14 12:11:15,664 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-14 12:11:15,691 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-14 12:11:21,341 - aiogram.event - INFO - Update id=935111642 is handled. Duration 18648 ms by bot id=7656254605
+2025-03-14 12:11:25,701 - aiogram.event - INFO - Update id=935111644 is handled. Duration 46 ms by bot id=7656254605
+2025-03-14 12:11:30,893 - aiogram.event - INFO - Update id=935111643 is handled. Duration 17000 ms by bot id=7656254605
+2025-03-14 13:14:00,385 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-14 13:14:00,385 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-14 13:14:00,388 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7851967492)
+2025-03-14 13:14:00,388 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7656254605)
+2025-03-14 13:14:01,842 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 54] Connection reset by peer
+2025-03-14 13:14:01,843 - aiogram.dispatcher - WARNING - Sleep for 1.387881 seconds and try again... (tryings = 1, bot id = 7851967492)
+2025-03-14 13:14:11,503 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7656254605)
+2025-03-14 13:14:13,350 - aiogram.dispatcher - INFO - Connection established (tryings = 2, bot id = 7851967492)
+2025-03-14 13:43:25,523 - tourist_bot - INFO - Admin bot: Stats command from user 113872890
+2025-03-14 13:43:26,109 - aiogram.event - INFO - Update id=221670277 is handled. Duration 587 ms by bot id=7851967492
+2025-03-14 13:43:31,662 - tourist_bot - INFO - Admin bot: Help command from user 113872890
+2025-03-14 13:43:31,807 - aiogram.event - INFO - Update id=221670278 is handled. Duration 144 ms by bot id=7851967492
+2025-03-14 13:43:33,998 - tourist_bot - INFO - Admin bot: Users command from user 113872890
+2025-03-14 13:43:34,228 - aiogram.event - INFO - Update id=221670279 is handled. Duration 230 ms by bot id=7851967492
+2025-03-14 13:43:43,495 - aiogram.event - INFO - Update id=221670280 is not handled. Duration 0 ms by bot id=7851967492
+2025-03-14 13:43:57,455 - tourist_bot - INFO - Admin bot: Cities command from user 113872890
+2025-03-14 13:43:57,572 - aiogram.event - INFO - Update id=221670281 is handled. Duration 117 ms by bot id=7851967492

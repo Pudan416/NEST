@@ -1,125 +1,115 @@
+"""
+API integration generators and utilities for the tourist guide bot.
+"""
+
 import logging
 import os
 import asyncio
-from dotenv import load_dotenv
 import httpx
 from geopy.distance import geodesic
 import xmltodict
+from app import logger
 
-# Load environment variables
-load_dotenv()
-
-DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
-YA_SPEECHKIT_API_KEY = os.getenv("YA_SPEECHKIT_API_KEY")
-YA_SEARCH_API_KEY = os.getenv("YA_SEARCH_API_KEY")
-YA_CATALOG_ID = os.getenv("YA_CATALOG_ID")
-
-YA_SEARCH_TYPES = ["web", "images"]
+# Global HTTP client for reuse
+_http_client = None
 
 
-async def yandex_search(query: str, search_type: str = "images"):
-    """
-    Search for websites or images using Yandex Search API.
-    :param query: The search query (e.g., place name).
-    :param search_type: The type of search ("web" for websites, "images" for pictures).
-    :return: A list of search results (websites or image URLs).
-    """
-    if search_type not in YA_SEARCH_TYPES:
-        return []
+async def init_http_client():
+    """Initialize a global HTTP client for reuse across API calls."""
+    global _http_client
+    if _http_client is None:
+        _http_client = httpx.AsyncClient(timeout=30.0)
+    return _http_client
 
-    images_search_url = "https://yandex.com/images-xml"
-    images_search_params = {
-        "text": query,
-        "folderid": YA_CATALOG_ID,
-        "apikey": YA_SEARCH_API_KEY,
-    }
 
-    try:
-        async with httpx.AsyncClient() as client:
-            response = await client.get(images_search_url, params=images_search_params)
-            if response.status_code == 200:
-                data = xmltodict.parse(response.text)
-                logging.debug(f"Yandex Search API response: {data}")
-                if search_type == "images":
-                    image_groups = data["yandexsearch"]["response"]["results"][
-                        "grouping"
-                    ]["group"]
-                    return [result["doc"]["url"] for result in image_groups]
-                elif search_type == "web":
-                    return []
-            else:
-                logging.error(
-                    f"Yandex Search API error: {response.status_code} - {response.text}"
-                )
-                return []
-    except Exception as e:
-        logging.error(f"Exception in Yandex Search API: {str(e)}")
-        return []
+async def close_http_client():
+    """Close the global HTTP client."""
+    global _http_client
+    if _http_client is not None:
+        await _http_client.aclose()
+        _http_client = None
+
+
+async def get_http_client():
+    """Get the global HTTP client, initializing if necessary."""
+    global _http_client
+    if _http_client is None:
+        _http_client = await init_http_client()
+    return _http_client
+
+
+def _get_api_key(key_name):
+    """Get API key from environment, with error handling."""
+    api_key = os.getenv(key_name)
+    if not api_key:
+        logger.error(f"{key_name} is not set in environment variables")
+    return api_key
 
 
 async def deepseek_request(payload, max_retries=3):
     """Send a request to DeepSeek with retry logic and improved error handling."""
     url = "https://api.deepseek.com/v1/chat/completions"
+    DEEPSEEK_API_KEY = _get_api_key("DEEPSEEK_API_KEY")
+
+    if not DEEPSEEK_API_KEY:
+        return "Error: DeepSeek API key is not configured. Please check your environment variables."
+
     headers = {
         "Content-Type": "application/json",
         "Authorization": f"Bearer {DEEPSEEK_API_KEY}",
     }
 
-    if not DEEPSEEK_API_KEY:
-        logging.error("DEEPSEEK_API_KEY is not set in environment variables")
-        return "Error: DeepSeek API key is not configured. Please check your environment variables."
-
     for attempt in range(max_retries):
         try:
-            async with httpx.AsyncClient(timeout=30.0) as client:
-                logging.debug(
-                    f"Sending request to DeepSeek API (attempt {attempt+1}/{max_retries})"
-                )
+            client = await get_http_client()
+            logger.debug(
+                f"Sending request to DeepSeek API (attempt {attempt+1}/{max_retries})"
+            )
 
-                response = await client.post(url, headers=headers, json=payload)
-                logging.debug(f"DeepSeek API response status: {response.status_code}")
+            response = await client.post(url, headers=headers, json=payload)
+            logger.debug(f"DeepSeek API response status: {response.status_code}")
 
-                # Check for specific error status codes
-                if response.status_code == 401:
-                    logging.error("Authentication error: Invalid API key")
-                    return "Error: Invalid API key. Please check your API credentials."
+            # Check for specific error status codes
+            if response.status_code == 401:
+                logger.error("Authentication error: Invalid API key")
+                return "Error: Invalid API key. Please check your API credentials."
 
-                elif response.status_code == 429:
-                    if attempt < max_retries - 1:
-                        retry_after = int(response.headers.get("retry-after", 1))
-                        logging.warning(
-                            f"Rate limited. Retrying after {retry_after} seconds"
-                        )
-                        await asyncio.sleep(retry_after)
-                        continue
-                    else:
-                        return "Error: Rate limit exceeded. Please try again later."
-
-                elif response.status_code == 200:
-                    response_data = response.json()
-
-                    # Extract content from the choices array
-                    if "choices" in response_data and response_data["choices"]:
-                        message = response_data["choices"][0].get("message", {})
-                        content = message.get("content", "")
-                        if content:
-                            return content
-                        else:
-                            logging.error("No content found in DeepSeek response")
-                            return "No content found in response."
-                    else:
-                        logging.error(f"Unexpected response format: {response_data}")
-                        return "Error: Unexpected response format."
+            elif response.status_code == 429:
+                if attempt < max_retries - 1:
+                    retry_after = int(response.headers.get("retry-after", 1))
+                    logger.warning(
+                        f"Rate limited. Retrying after {retry_after} seconds"
+                    )
+                    await asyncio.sleep(retry_after)
+                    continue
                 else:
-                    error_msg = f"API error: {response.status_code} - {response.text}"
-                    logging.error(error_msg)
-                    if attempt < max_retries - 1:
-                        await asyncio.sleep(2**attempt)  # Exponential backoff
-                        continue
-                    return f"Error: {error_msg}"
+                    return "Error: Rate limit exceeded. Please try again later."
+
+            elif response.status_code == 200:
+                response_data = response.json()
+
+                # Extract content from the choices array
+                if "choices" in response_data and response_data["choices"]:
+                    message = response_data["choices"][0].get("message", {})
+                    content = message.get("content", "")
+                    if content:
+                        return content
+                    else:
+                        logger.error("No content found in DeepSeek response")
+                        return "No content found in response."
+                else:
+                    logger.error(f"Unexpected response format: {response_data}")
+                    return "Error: Unexpected response format."
+            else:
+                error_msg = f"API error: {response.status_code} - {response.text}"
+                logger.error(error_msg)
+                if attempt < max_retries - 1:
+                    await asyncio.sleep(2**attempt)  # Exponential backoff
+                    continue
+                return f"Error: {error_msg}"
 
         except httpx.ConnectTimeout:
-            logging.error(
+            logger.error(
                 f"Connection timeout to DeepSeek API (attempt {attempt+1}/{max_retries})"
             )
             if attempt < max_retries - 1:
@@ -128,7 +118,7 @@ async def deepseek_request(payload, max_retries=3):
             return "Error: Connection timeout. The API service might be unavailable."
 
         except httpx.ReadTimeout:
-            logging.error(
+            logger.error(
                 f"Read timeout from DeepSeek API (attempt {attempt+1}/{max_retries})"
             )
             if attempt < max_retries - 1:
@@ -138,7 +128,7 @@ async def deepseek_request(payload, max_retries=3):
 
         except Exception as e:
             error_msg = f"Exception in DeepSeek API request: {str(e)}"
-            logging.error(error_msg)
+            logger.error(error_msg, exc_info=True)
             if attempt < max_retries - 1:
                 await asyncio.sleep(2**attempt)
                 continue
@@ -155,7 +145,7 @@ async def test_deepseek_connection():
         "max_tokens": 10,
     }
     result = await deepseek_request(simple_payload)
-    logging.info(f"DeepSeek connection test result: {result}")
+    logger.info(f"DeepSeek connection test result: {result}")
     return result
 
 
@@ -222,83 +212,83 @@ async def overpass_nearby_places(latitude: float, longitude: float, radius: int 
     """
 
     try:
-        async with httpx.AsyncClient(timeout=30.0) as client:
-            response = await client.post(overpass_url, data=overpass_query)
-            if response.status_code == 200:
-                data = response.json()
-                elements = data.get("elements", [])
-                places = []
+        client = await get_http_client()
+        response = await client.post(overpass_url, data=overpass_query, timeout=60.0)
 
-                for element in elements:
-                    # Extract tags
-                    tags = element.get("tags", {})
+        if response.status_code == 200:
+            data = response.json()
+            elements = data.get("elements", [])
+            places = []
 
-                    # Get coordinates
-                    if element.get("type") == "node":
-                        lat, lon = element.get("lat"), element.get("lon")
-                    elif "center" in element:
-                        lat, lon = element.get("center", {}).get("lat"), element.get(
-                            "center", {}
-                        ).get("lon")
-                    else:
-                        continue  # Skip if no coordinates
+            for element in elements:
+                # Extract tags
+                tags = element.get("tags", {})
 
-                    # Get place name
-                    name = tags.get("name") or tags.get("name:en")
-                    # Skip places without a name
-                    if not name:
-                        continue
+                # Get coordinates
+                if element.get("type") == "node":
+                    lat, lon = element.get("lat"), element.get("lon")
+                elif "center" in element:
+                    lat, lon = element.get("center", {}).get("lat"), element.get(
+                        "center", {}
+                    ).get("lon")
+                else:
+                    continue  # Skip if no coordinates
 
-                    # Get place type
-                    place_type = (
-                        tags.get("tourism")
-                        or tags.get("historic")
-                        or tags.get("amenity")
-                        or tags.get("natural")
-                        or tags.get("leisure")
-                        or "point of interest"
-                    )
+                # Get place name
+                name = tags.get("name") or tags.get("name:en")
+                # Skip places without a name
+                if not name:
+                    continue
 
-                    # Create place object
-                    place = {
-                        "id": element.get("id"),
-                        "title": name,
-                        "type": place_type,
-                        "position": {
-                            "lat": lat,
-                            "lng": lon,
-                        },
-                        "address": {"label": "Address will be fetched"},  # Placeholder
-                        "contacts": [{"www": tags.get("website", "url_not_found")}],
-                        "original_name": name,  # Store original name for reference
-                    }
-                    places.append(place)
-
-                # Remove duplicates and unknown places
-                unique_places = []
-                seen = set()
-                for place in places:
-                    # Skip places with "Unknown" in the title
-                    if "Unknown" in place["title"]:
-                        continue
-
-                    key = (
-                        place["title"],
-                        place["position"]["lat"],
-                        place["position"]["lng"],
-                    )
-                    if key not in seen:
-                        seen.add(key)
-                        unique_places.append(place)
-
-                return unique_places
-            else:
-                logging.error(
-                    f"Overpass API error: {response.status_code} - {response.text}"
+                # Get place type
+                place_type = (
+                    tags.get("tourism")
+                    or tags.get("historic")
+                    or tags.get("amenity")
+                    or tags.get("natural")
+                    or tags.get("leisure")
+                    or "point of interest"
                 )
-                return []
+
+                # Create place object
+                place = {
+                    "id": element.get("id"),
+                    "title": name,
+                    "type": place_type,
+                    "position": {
+                        "lat": lat,
+                        "lng": lon,
+                    },
+                    "address": {"label": "Address will be fetched"},  # Placeholder
+                    "contacts": [{"www": tags.get("website", "url_not_found")}],
+                }
+                places.append(place)
+
+            # Remove duplicates and unknown places
+            unique_places = []
+            seen = set()
+            for place in places:
+                # Skip places with "Unknown" in the title
+                if "Unknown" in place["title"]:
+                    continue
+
+                key = (
+                    place["title"],
+                    place["position"]["lat"],
+                    place["position"]["lng"],
+                )
+                if key not in seen:
+                    seen.add(key)
+                    unique_places.append(place)
+
+            return unique_places
+        else:
+            logger.error(
+                f"Overpass API error: {response.status_code} - {response.text}"
+            )
+            return []
     except Exception as e:
-        logging.error(f"Exception in Overpass API: {str(e)}")
+        logger.error(f"Exception in Overpass API: {str(e)}", exc_info=True)
         return []
 
 
@@ -316,42 +306,41 @@ async def get_detailed_address(latitude: float, longitude: float):
     try:
         # Use a custom User-Agent to be polite to the Nominatim service
         headers = {"User-Agent": "TouristGuideBot/1.0"}
-        async with httpx.AsyncClient() as client:
-            response = await client.get(nominatim_url, params=params, headers=headers)
-            if response.status_code == 200:
-                data = response.json()
-                address = data.get("address", {})
+        client = await get_http_client()
+        response = await client.get(nominatim_url, params=params, headers=headers)
 
-                # Format a complete address
-                parts = []
-                if "house_number" in address:
-                    parts.append(address["house_number"])
-                if "road" in address:
-                    parts.append(address["road"])
-                if "suburb" in address:
-                    parts.append(address["suburb"])
-                if "city" in address or "town" in address or "village" in address:
-                    parts.append(
-                        address.get("city")
-                        or address.get("town")
-                        or address.get("village")
-                    )
-                if "county" in address:
-                    parts.append(address["county"])
-                if "postcode" in address:
-                    parts.append(address["postcode"])
-                if "country" in address:
-                    parts.append(address["country"])
+        if response.status_code == 200:
+            data = response.json()
+            address = data.get("address", {})
 
-                formatted_address = ", ".join(parts)
-                return formatted_address, data
-            else:
-                logging.error(
-                    f"Nominatim API error: {response.status_code} - {response.text}"
+            # Format a complete address
+            parts = []
+            if "house_number" in address:
+                parts.append(address["house_number"])
+            if "road" in address:
+                parts.append(address["road"])
+            if "suburb" in address:
+                parts.append(address["suburb"])
+            if "city" in address or "town" in address or "village" in address:
+                parts.append(
+                    address.get("city") or address.get("town") or address.get("village")
                 )
-                return "Address not available", {}
+            if "county" in address:
+                parts.append(address["county"])
+            if "postcode" in address:
+                parts.append(address["postcode"])
+            if "country" in address:
+                parts.append(address["country"])
+
+            formatted_address = ", ".join(parts)
+            return formatted_address, data
+        else:
+            logger.error(
+                f"Nominatim API error: {response.status_code} - {response.text}"
+            )
+            return "Address not available", {}
     except Exception as e:
-        logging.error(f"Exception in Nominatim API: {str(e)}")
+        logger.error(f"Exception in Nominatim API: {str(e)}", exc_info=True)
         return "Address not available", {}
 
 
@@ -380,7 +369,7 @@ async def translate_to_english(text: str):
 
     result = await deepseek_request(payload)
     if result.startswith("Error:"):
-        logging.error(f"Translation error: {result}")
+        logger.error(f"Translation error: {result}")
         return text  # Return original text if translation fails
 
     return result
@@ -417,16 +406,15 @@ async def deepseek_location_info(
         payload = {
             "model": model,
             "temperature": 0.7,
-            "max_tokens": 1000,
+            "max_tokens": 500,  # Reduced from 1000 to improve response time
             "messages": [
                 {
                     "role": "system",
-                    "content": f"You are a historian and professional city guide in {city}. "
+                    "content": f"You are a time traveller that has seen the past and knows everything about the {city}. "
                     f"Provide a concise historical overview of {poi_name}, located at {poi_address}. {context}"
                     f"Structure your response as follows: First make a short yet catchy explanation of the place, that teases what you will talk about later. "
                     f"Then follow this structure in your response: describe its appearance and key features; then tell proven historical facts about the place (if they exist), "
-                    f"then share a verified historical detail; then explain its original purpose or significance; then describe its current role or use. "
-                    f"Keep the response under 200 words, engaging, and informative. Use your imagination and creativity to bring the story to life. "
+                    f"Keep the response under 150 words, engaging, and informative. Use your imagination and creativity to bring the story to life. "
                     f"Use only English language throughout the entire response.",
                 },
                 {
@@ -440,7 +428,7 @@ async def deepseek_location_info(
         if not result.startswith("Error:"):
             return result
 
-        logging.warning(f"Failed with model {model}, trying next model if available")
+        logger.warning(f"Failed with model {model}, trying next model if available")
 
     # If all models failed, return the last error
     return result
@@ -449,19 +437,31 @@ async def deepseek_location_info(
 async def yandex_speechkit_tts(text: str):
     """Convert text to speech using Yandex SpeechKit."""
     url = "https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize"
+
+    YA_SPEECHKIT_API_KEY = _get_api_key("YA_SPEECHKIT_API_KEY")
+    if not YA_SPEECHKIT_API_KEY:
+        logger.error("YA_SPEECHKIT_API_KEY not found in environment variables")
+        return None
+
     headers = {"Authorization": f"Api-Key {YA_SPEECHKIT_API_KEY}"}
     data = {
         "text": text,
-        "lang": "en-US",  # Changed to English since our content is now in English
+        "lang": "en-US",  # English since our content is in English
         "voice": "john",
         "format": "mp3",
-        "folderId": "b1gjn47rcuokgs8tfom5",
+        "folderId": os.getenv("YA_CATALOG_ID", "b1gjn47rcuokgs8tfom5"),
     }
 
     try:
-        async with httpx.AsyncClient() as client:
-            response = await client.post(url, headers=headers, data=data)
-            return response.content if response.status_code == 200 else None
+        client = await get_http_client()
+        response = await client.post(url, headers=headers, data=data)
+        if response.status_code == 200:
+            return response.content
+        else:
+            logger.error(
+                f"SpeechKit TTS error: {response.status_code} - {response.text}"
+            )
+            return None
     except Exception as e:
-        logging.error(f"Exception in SpeechKit TTS: {str(e)}")
+        logger.error(f"Exception in SpeechKit TTS: {str(e)}", exc_info=True)
         return None

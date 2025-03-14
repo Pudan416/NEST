@@ -1,0 +1,16 @@
+2025-03-11 14:38:03,498 - admin_bot - INFO - Admin bot started
+2025-03-11 14:38:03,498 - admin_bot - WARNING - Database file not found at bot_stats.db. Stats will be unavailable until the main bot creates it.
+2025-03-11 14:38:03,630 - admin_bot - INFO - Bot started as @street_spirit_admin_bot
+2025-03-11 14:38:03,667 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 14:38:03,701 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 14:38:30,906 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 14:38:30,908 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 14:38:30,908 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-11 14:38:54,716 - admin_bot - INFO - Admin bot started
+2025-03-11 14:38:54,716 - admin_bot - WARNING - Database file not found at bot_stats.db. Stats will be unavailable until the main bot creates it.
+2025-03-11 14:38:55,237 - admin_bot - INFO - Bot started as @street_spirit_admin_bot
+2025-03-11 14:38:55,398 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 14:38:55,546 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 14:39:41,761 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-11 14:39:41,762 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'street_spirit_admin'
+2025-03-11 14:39:41,763 - aiogram.dispatcher - INFO - Polling stopped
