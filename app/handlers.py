@@ -1,153 +1,633 @@
 import logging
-from aiogram import Router, F
-from aiogram.types import Message, BufferedInputFile
-from aiogram.filters import CommandStart
+from aiogram import Router, F, BaseMiddleware
+from aiogram.types import Message, BufferedInputFile, CallbackQuery
+from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from aiogram.filters import CommandStart, Command
 from app.generators import (
-    yandex_gpt_location_info,
+    deepseek_location_info,
     overpass_nearby_places,
     yandex_speechkit_tts,
+    test_deepseek_connection,
+    get_detailed_address,
+    translate_to_english,
 )
+from typing import Dict, Any, Callable, Awaitable
 import httpx
-from app.generators import yandex_search
 from geopy.distance import geodesic
 import asyncio
+from app import logger
 
 router = Router()
-logging.basicConfig(level=logging.DEBUG)
 
-# Define the Nominatim API URL
-NOMINATIM_URL = "https://nominatim.openstreetmap.org/reverse"
+# Store user data
+user_data = {}
+
+# Store active DeepSeek requests to prevent duplicates
+active_deepseek_requests = {}
+
+
+# Database middleware
+class DatabaseMiddleware(BaseMiddleware):
+    """Middleware for injecting database into handler data."""
+
+    async def __call__(
+        self,
+        handler: Callable[[Message, Dict[str, Any]], Awaitable[Any]],
+        event: Message,
+        data: Dict[str, Any],
+    ) -> Any:
+        # The database is expected to be passed from dispatcher to router
+        # We don't modify data here, just pass it through
+        return await handler(event, data)
+
+
+# Apply middleware to router
+router.message.middleware(DatabaseMiddleware())
 
 
 @router.message(CommandStart())
-async def handle_start_command(message: Message):
+async def handle_start_command(message: Message, db=None):
     """Handle the /start command."""
     try:
-        logging.debug(f"Received '/start' command from user: {message.from_user.id}")
+        user_id = message.from_user.id
+        username = message.from_user.username
+        first_name = message.from_user.first_name
+        last_name = message.from_user.last_name
+
+        logger.info(f"Received '/start' command from user: {user_id}")
+
+        # Update user info in database if available
+        if db:
+            db.add_or_update_user(user_id, username, first_name, last_name)
+
         await message.answer(
-            "Welcome! Please share your location to find nearby tourist attractions."
+            "🐦 Coo-coo! Street Spirit at your service! \n\n"
+            "I'm the pigeon who knows every nook and cranny in this concrete jungle!\n"
+            "Been on these streets since forever, seen it all! \n\n"
+            "📍 Just drop your location pin and I'll flap over to scout the area!\n\n"
+            "Let's spread our wings and explore together!"
         )
     except Exception as e:
-        logging.error(f"Error in '/start' command handler: {e}")
+        logger.error(f"Error in '/start' command handler: {e}", exc_info=True)
         await message.answer("An error occurred. Please try again later.")
 
 
 @router.message(F.location)
-async def handle_location(message: Message):
+async def handle_location(message: Message, db=None):
     """Handle location messages and provide information about nearby tourist attractions."""
     try:
+        user_id = message.from_user.id
         latitude, longitude = message.location.latitude, message.location.longitude
-        params = {
-            "lat": latitude,
-            "lon": longitude,
-            "format": "json",
-            "addressdetails": 1,
+        logger.info(f"Received location from user {user_id}: {latitude}, {longitude}")
+
+        # Update user's last active timestamp
+        if db:
+            db.add_or_update_user(
+                user_id,
+                message.from_user.username,
+                message.from_user.first_name,
+                message.from_user.last_name,
+            )
+
+        # Send initial status message and store the message object to edit it later
+        status_message = await message.answer("🐦 Taking off to scout the area!")
+
+        # Get user's current location details and start Overpass search in parallel
+        tasks = [
+            get_detailed_address(latitude, longitude),
+            # Start with a small radius for faster initial results
+            overpass_nearby_places(latitude, longitude, radius=1000),
+        ]
+
+        # Execute both tasks concurrently
+        results = await asyncio.gather(*tasks)
+        address_result, places = results[0], results[1]
+
+        address, address_data = address_result
+        address_parts = address_data.get("address", {})
+        street = address_parts.get("road", "Unknown Street")
+        city = address_parts.get(
+            "city",
+            address_parts.get("town", address_parts.get("village", "Unknown City")),
+        )
+
+        # Start translating while potentially doing additional searches
+        translation_tasks = [translate_to_english(street), translate_to_english(city)]
+
+        # If we didn't find enough places with the small radius, start a wider search
+        # but don't wait for it to complete before proceeding with what we have
+        wider_search_task = None
+        if len(places) < 5:
+            await status_message.edit_text(
+                "🐦 Found a few spots nearby, but searching wider for more options..."
+            )
+            wider_search_task = asyncio.create_task(
+                overpass_nearby_places(latitude, longitude, radius=5000)
+            )
+
+        # Get translation results
+        english_street, english_city = await asyncio.gather(*translation_tasks)
+
+        logger.debug(f"Current location: {street}, {city}")
+        logger.debug(f"Translated location: {english_street}, {english_city}")
+
+        # Initial filtering of places we've found so far
+        valid_places = []
+        for place in places:
+            if "unknown" in place["title"].lower():
+                continue
+
+            place["distance"] = geodesic(
+                (latitude, longitude),
+                (place["position"]["lat"], place["position"]["lng"]),
+            ).meters
+            valid_places.append(place)
+
+        # If we started a wider search, check if it's complete
+        if wider_search_task:
+            # Wait for up to 3 seconds to get more results
+            done, pending = await asyncio.wait([wider_search_task], timeout=3)
+
+            if done:
+                # Wider search completed in time, process the results
+                wider_places = wider_search_task.result()
+
+                # Process wider search results
+                for place in wider_places:
+                    if "unknown" in place["title"].lower():
+                        continue
+
+                    # Check if this place is already in our list (by ID)
+                    if not any(p["id"] == place["id"] for p in valid_places):
+                        place["distance"] = geodesic(
+                            (latitude, longitude),
+                            (place["position"]["lat"], place["position"]["lng"]),
+                        ).meters
+                        valid_places.append(place)
+            else:
+                # Wider search is taking too long, cancel it
+                wider_search_task.cancel()
+                try:
+                    await wider_search_task
+                except asyncio.CancelledError:
+                    logger.debug("Cancelled wider search to maintain responsiveness")
+
+        # If we still don't have enough places, try one more wider search
+        # but only if we've found very few places so far
+        if len(valid_places) < 2:
+            await status_message.edit_text(
+                "🐦 Just a few more seconds while I search farther away..."
+            )
+            try:
+                widest_places = await asyncio.wait_for(
+                    overpass_nearby_places(latitude, longitude, radius=10000),
+                    timeout=4,  # strict timeout
+                )
+
+                # Process widest search results
+                for place in widest_places:
+                    if "unknown" in place["title"].lower():
+                        continue
+
+                    # Check if this place is already in our list (by ID)
+                    if not any(p["id"] == place["id"] for p in valid_places):
+                        place["distance"] = geodesic(
+                            (latitude, longitude),
+                            (place["position"]["lat"], place["position"]["lng"]),
+                        ).meters
+                        valid_places.append(place)
+            except asyncio.TimeoutError:
+                logger.debug("Widest search timed out, continuing with what we have")
+
+        if not valid_places:
+            await status_message.edit_text(
+                "🐦 Well... Even us city birds don't hang around here much. Try dropping your pin somewhere else!"
+            )
+            return
+
+        # Sort places by distance to get the 5 closest ones
+        valid_places.sort(key=lambda x: x["distance"])
+
+        # Take only the closest 5 places
+        closest_places = valid_places[:5] if len(valid_places) >= 5 else valid_places
+
+        # Store user data for callback handling
+        user_data[user_id] = {
+            "places": closest_places,
+            "current_index": 0,
+            "latitude": latitude,
+            "longitude": longitude,
+            "street": english_street,
+            "city": english_city,
+            "db": db,
         }
 
-        async with httpx.AsyncClient() as client:
-            response = await client.get(NOMINATIM_URL, params=params)
-            if response.status_code != 200:
-                await message.answer(
-                    "Unable to determine your location. Please try again."
-                )
-                return
+        # Update the status message with the count of places found
+        places_count_message = f"🐦 Spotted {len(closest_places)} cool spots nearby! Swooping down to check them out..."
+        await status_message.edit_text(places_count_message)
 
-            data = response.json()
-            address = data.get("address", {})
-            street = address.get("road", "Unknown Street")
-            city = address.get("city", address.get("town", "Unknown City"))
+        # Show the first (closest) place immediately
+        await show_place(message, user_id, 0)
 
-            if street == "Unknown Street":
-                await message.answer(
-                    "I couldn't identify the street. Please provide a more precise location or specify the street and city."
-                )
-                return
+    except Exception as e:
+        logger.error(f"Error in location handler: {e}", exc_info=True)
+        await message.answer(f"🐦 Squawk! Please try again later.")
 
-            places = await overpass_nearby_places(latitude, longitude)
-            if not places:
-                await message.answer("No tourist attractions found nearby.")
-                return
 
-            closest_place = min(
-                places,
-                key=lambda x: geodesic(
-                    (latitude, longitude), (x["position"]["lat"], x["position"]["lng"])
-                ).meters,
+async def show_place(message, user_id, place_index):
+    """Show information about a place with optimized data retrieval."""
+    try:
+        # Get user data
+        if user_id not in user_data:
+            await message.answer(
+                "🐦 Sorry, I lost track of our journey! Can you share your location again?"
             )
-            place_name = closest_place.get("title", "Unknown Place")
-            place_address = closest_place.get("address", {}).get(
-                "label", "Address not specified"
+            return
+
+        data = user_data[user_id]
+        places = data["places"]
+
+        # Check if index is valid
+        if place_index < 0 or place_index >= len(places):
+            place_index = 0  # Reset to the first place
+
+        # Update current index
+        data["current_index"] = place_index
+
+        # Get place data
+        place = places[place_index]
+
+        # Get place details
+        place_lat = place["position"]["lat"]
+        place_lng = place["position"]["lng"]
+
+        # Check if address is still a placeholder or if we need translations
+        needs_processing = (
+            not "original_title" in place  # Never processed
+            or place["address"].get("label")
+            == "Address will be fetched"  # Address not fetched
+            or "title" in place
+            and place["title"] == place.get("original_title")  # Not translated
+        )
+
+        if needs_processing:
+            # Create a progress message while processing
+            processing_message = await message.answer(
+                "🐦 Reading the signposts and street names..."
             )
 
-            # Extract the first URL if multiple are present
-            place_url = closest_place.get("contacts", [])
-            if place_url:
-                place_url = place_url[0].get("www", "url_not_found")
-                if isinstance(place_url, list):
-                    place_url = place_url[0].get("value", "url_not_found")
-            else:
-                place_url = "url_not_found"
+            # Get detailed address
+            detailed_address, _ = await get_detailed_address(place_lat, place_lng)
 
-            if place_name == "Unknown Place":
-                await message.answer(
-                    "I couldn't identify the nearest tourist attraction."
-                )
-                return
+            # Store original values
+            if not "original_title" in place:
+                place["original_title"] = place["title"]
+            place["original_address"] = detailed_address
 
-            # Generate historical info
-            history = await yandex_gpt_location_info(
-                city, street, place_name, place_address
+            # Translate both place name and address concurrently
+            translation_tasks = [
+                translate_to_english(place["original_title"]),
+                translate_to_english(detailed_address),
+            ]
+
+            # Wait for both translations
+            english_name, english_address = await asyncio.gather(*translation_tasks)
+
+            # Store the translated values
+            place["title"] = english_name
+            place["address"] = {"label": english_address}
+
+            # Delete the processing message
+            try:
+                await processing_message.delete()
+            except Exception:
+                # Ignore any error if message can't be deleted
+                pass
+
+        # Format with proper styling and emojis
+        place_name = place["title"]
+        original_name = place.get("original_title", place_name)
+        place_address = place["address"]["label"]
+
+        # Calculate distance in km
+        distance_km = place["distance"] / 1000
+
+        # Get place type
+        place_type = place.get("type", "point of interest")
+
+        # Create navigation buttons
+        keyboard = InlineKeyboardMarkup(
+            inline_keyboard=[
+                [
+                    InlineKeyboardButton(
+                        text="💬 Tell me more", callback_data=f"more_{place_index}"
+                    ),
+                ],
+                [
+                    InlineKeyboardButton(
+                        text=(
+                            "➡️ Next location"
+                            if place_index < len(places) - 1
+                            else "🔄 Back to first"
+                        ),
+                        callback_data=f"next_{(place_index + 1) % len(places)}",
+                    )
+                ],
+            ]
+        )
+
+        # Log the search in the database only once per place
+        if data.get("db") and not place.get("logged", False):
+            db = data["db"]
+            db.log_search(
+                user_id, place_name, place_type, place_lat, place_lng, data["city"]
             )
+            place["logged"] = True
 
-            # Search for websites and images
-            search_query = f"{place_name} {city}"
-            images = await yandex_search(search_query, search_type="images")
+        # Format message
+        message_text = f"<b>{place_name.upper()}</b> ({place_index + 1}/{len(places)})"
 
-            # Prepare the unified text message
-            message_text = f"<b>{place_name.upper()}</b>\n"  # Name of the place in CAPITALS and bold
-            message_text += f"📍 <b>Address:</b> <code>{place_address}</code>\n\n"  # Address in monospace (using HTML <code>)
+        # Show original name if different from translated name
+        if original_name != place_name:
+            message_text += f" (<i>{original_name}</i>)"
+
+        message_text += f"\n📍 <b>Address:</b> <code>{place_address}</code>\n"
+        message_text += f"🚶 <b>Distance:</b> {distance_km:.1f} km\n"
+        message_text += f"🏷️ <b>Type:</b> {place_type}"
+
+        # Add website if available
+        place_url = place.get("contacts", [])
+        if place_url:
+            place_url = place_url[0].get("www", "url_not_found")
+            if isinstance(place_url, list) and place_url:
+                place_url = place_url[0].get("value", "url_not_found")
+
             if place_url != "url_not_found":
-                message_text += f"🌐 <b>Webpage:</b> <a href='{place_url}'>{place_url}</a>\n\n"  # Webpage as a clickable link
-            else:
-                message_text += "🌐 <b>Webpage:</b> Not Found\n\n"
+                message_text += f"\n🌐 <b>Website:</b> {place_url}"
 
-            # Add GPT explanation as a blockquote (using HTML <blockquote>)
-            message_text += f"<blockquote expandable>{history}</blockquote>"
+        # Send message
+        await message.answer(message_text, parse_mode="HTML", reply_markup=keyboard)
 
-            # Send the unified text message using HTML formatting
-            await message.answer(message_text, parse_mode="HTML")
+    except Exception as e:
+        logger.error(f"Error in show_place: {e}", exc_info=True)
+        await message.answer(
+            "🐦 Squawk! There was an error showing this place. Please try again."
+        )
 
-            # Convert GPT part to speech and send as audio
+
+@router.callback_query(F.data.startswith("next_"))
+async def handle_next_place(callback: CallbackQuery):
+    """Handle 'next location' button press."""
+    try:
+        user_id = callback.from_user.id
+
+        # Parse the index from callback data
+        _, index = callback.data.split("_")
+        index = int(index)
+
+        # Acknowledge the callback
+        await callback.answer()
+
+        # Show the next place
+        await show_place(callback.message, user_id, index)
+
+    except Exception as e:
+        logger.error(f"Error in next place handler: {e}", exc_info=True)
+        await callback.message.answer(
+            "🐦 Squawk! There was an error showing the next place. Please try again."
+        )
+
+
+@router.callback_query(F.data.startswith("more_"))
+async def handle_tell_more(callback: CallbackQuery):
+    """Handle 'tell me more' button press with rate limiting."""
+    try:
+        user_id = callback.from_user.id
+
+        # Parse the index from callback data
+        _, index = callback.data.split("_")
+        index = int(index)
+
+        # Get user data
+        if user_id not in user_data:
+            await callback.answer(
+                "I lost track of our journey! Please share your location again.",
+                show_alert=True,
+            )
+            return
+
+        # Create a unique key for this request to prevent duplicates
+        request_key = f"{user_id}_{index}"
+
+        # Check if there's already an active request for this place
+        if request_key in active_deepseek_requests:
+            # Check if the request is still active
+            if active_deepseek_requests[request_key]["active"]:
+                # Inform the user that a request is already in progress
+                await callback.answer(
+                    "I'm still thinking about this place! Please wait a moment...",
+                    show_alert=True,
+                )
+                return
+
+            # Check cooldown period (300 seconds)
+            last_request_time = active_deepseek_requests[request_key]["timestamp"]
+            current_time = asyncio.get_event_loop().time()
+
+            if current_time - last_request_time < 300:
+                # Within cooldown period - don't allow new request
+                remaining = int(300 - (current_time - last_request_time))
+                await callback.answer(
+                    f"I just told you about this place! Try again in {remaining} seconds.",
+                    show_alert=True,
+                )
+                return
+
+        # Acknowledge the callback
+        await callback.answer("Let me gather my thoughts about this place...")
+
+        data = user_data[user_id]
+        place = data["places"][index]
+
+        # Mark this request as active
+        active_deepseek_requests[request_key] = {
+            "active": True,
+            "timestamp": asyncio.get_event_loop().time(),
+        }
+
+        # Check if place has properly translated information
+        if (
+            not "title" in place
+            or place["title"] == place.get("original_title")
+            or place["address"].get("label") == "Address will be fetched"
+        ):
+            # Need to fetch and translate information first
+            status_msg = await callback.message.answer(
+                "🐦 Wait, let me check the details first..."
+            )
+
+            # Get place details
+            place_lat = place["position"]["lat"]
+            place_lng = place["position"]["lng"]
+
+            # Get detailed address
+            detailed_address, _ = await get_detailed_address(place_lat, place_lng)
+
+            # Store original values
+            if not "original_title" in place:
+                place["original_title"] = place["title"]
+            place["original_address"] = detailed_address
+
+            # Translate both place name and address concurrently
+            translation_tasks = [
+                translate_to_english(place["original_title"]),
+                translate_to_english(detailed_address),
+            ]
+
+            # Wait for both translations
+            english_name, english_address = await asyncio.gather(*translation_tasks)
+
+            # Store the translated values
+            place["title"] = english_name
+            place["address"] = {"label": english_address}
+
+            # Delete status message
+            try:
+                await status_msg.delete()
+            except:
+                pass
+
+        # Get place details
+        place_name = place["title"]
+        original_name = place.get("original_title", place_name)
+        place_address = place["address"]["label"]
+
+        # Check if we already have history for this place
+        if "history" in place and place["history"]:
+            # Use cached history instead of making a new request
+            history = place["history"]
+            history_msg = await callback.message.answer(
+                "🐦 I remember telling you about this place..."
+            )
+        else:
+            # Get deepseek information
+            history_msg = await callback.message.answer(
+                "🐦 Digging into my memories about this place..."
+            )
+            history = await deepseek_location_info(
+                data["city"], data["street"], place_name, place_address, original_name
+            )
+            # Cache the history for future requests
+            place["history"] = history
+
+        # Send history message
+        history_message = f"<b>About {place_name}</b>\n\n<blockquote expandable>{history}</blockquote>"
+        await callback.message.answer(history_message, parse_mode="HTML")
+
+        # Try to delete the "digging into memories" message to keep chat clean
+        try:
+            await history_msg.delete()
+        except:
+            pass
+
+        # Generate audio and send if not already cached
+        if not "audio_sent" in place or not place["audio_sent"]:
             audio_bytes = await yandex_speechkit_tts(history)
+
+            # Send audio description
             if audio_bytes:
                 if len(audio_bytes) > 50 * 1024 * 1024:
-                    await message.answer("The audio message is too large to send.")
+                    await callback.message.answer(
+                        "The audio message is too large to send."
+                    )
                 else:
                     for attempt in range(3):
                         try:
                             audio_file = BufferedInputFile(
                                 audio_bytes, filename="voice_message.mp3"
                             )
-                            await message.answer_voice(voice=audio_file)
+                            await callback.message.answer_voice(voice=audio_file)
+                            place["audio_sent"] = True
                             break
                         except Exception as e:
                             if attempt == 2:
-                                logging.error(
+                                logger.error(
                                     f"Failed to send audio after 3 attempts: {e}"
                                 )
-                                await message.answer(
-                                    "Failed to send the audio message. Please try again later."
+                                await callback.message.answer(
+                                    "🐦 My vocal cords are tired from all this cooing! Try again when my voice recovers!"
                                 )
                             await asyncio.sleep(2)
-            else:
-                await message.answer("Failed to generate the audio message.")
 
-            # Send the first image if found
-            if images:
-                await message.answer_photo(images[0])
-            else:
-                await message.answer("No pictures found for this place.")
+        # Mark request as completed
+        active_deepseek_requests[request_key]["active"] = False
 
     except Exception as e:
-        logging.error(f"Error in location handler: {e}")
+        # Make sure to mark request as inactive even if an error occurs
+        if "request_key" in locals():
+            active_deepseek_requests[request_key] = {
+                "active": False,
+                "timestamp": asyncio.get_event_loop().time(),
+            }
+
+        logger.error(f"Error in tell more handler: {e}", exc_info=True)
+        await callback.message.answer(
+            "🐦 Squawk! I forgot what I was going to say. Please try again."
+        )
+
+        # Send history message
+        history_message = f"<b>About {place_name}</b>\n\n<blockquote expandable>{history}</blockquote>"
+        await callback.message.answer(history_message, parse_mode="HTML")
+
+        # Generate audio and send
+        audio_bytes = await yandex_speechkit_tts(history)
+
+        # Send audio description
+        if audio_bytes:
+            if len(audio_bytes) > 50 * 1024 * 1024:
+                await callback.message.answer("The audio message is too large to send.")
+            else:
+                for attempt in range(3):
+                    try:
+                        audio_file = BufferedInputFile(
+                            audio_bytes, filename="voice_message.mp3"
+                        )
+                        await callback.message.answer_voice(voice=audio_file)
+                        break
+                    except Exception as e:
+                        if attempt == 2:
+                            logger.error(f"Failed to send audio after 3 attempts: {e}")
+                            await callback.message.answer(
+                                "🐦 My vocal cords are tired from all this cooing! Try again when my voice recovers!"
+                            )
+                        await asyncio.sleep(2)
+
+    except Exception as e:
+        logger.error(f"Error in tell more handler: {e}", exc_info=True)
+        await callback.message.answer(
+            "🐦 Squawk! I forgot what I was going to say. Please try again."
+        )
+
+
+# Handle unknown commands or text messages
+@router.message()
+async def handle_unknown(message: Message, db=None):
+    """Handle any other messages."""
+    try:
+        user_id = message.from_user.id
+
+        # Update user's last active timestamp
+        if db:
+            db.add_or_update_user(
+                user_id,
+                message.from_user.username,
+                message.from_user.first_name,
+                message.from_user.last_name,
+            )
+
+        await message.answer(
+            "🐦 I need coordinates to fly to, friend! Share your location or coo '/start' to begin our urban adventure!"
+        )
+    except Exception as e:
+        logger.error(f"Error in unknown message handler: {e}", exc_info=True)
         await message.answer("An error occurred. Please try again later.")

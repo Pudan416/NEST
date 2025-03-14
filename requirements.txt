@@ -1,5 +1,8 @@
-aiogram==2.18
-python-dotenv==0.19.2
-httpx==0.21.1
-geopy==2.2.0
-xmltodict==0.12.0
+aiogram>=3.0.0
+python-dotenv>=1.0.0
+httpx>=0.24.0
+geopy>=2.3.0
+xmltodict>=0.13.0
+matplotlib>=3.7.2
+aiohttp>=3.8.4
+asyncio>=3.4.3

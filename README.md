@@ -1,62 +1,143 @@
-# Street Spirit
+# Tourist Guide Bot
 
-## Description
-Street Spirit is a Telegram bot designed to provide guided tours. Users can share their location or specify an address, and the bot will provide information about nearby tourist attractions, including historical information, websites, images, and even audio descriptions.
+A Telegram bot that helps users discover interesting places nearby. The bot includes a separate admin interface for monitoring usage statistics.
 
 ## Features
-- Responds to the `/start` command with a welcome message.
-- Handles location messages to find nearby tourist attractions.
-- Provides detailed information about the nearest tourist attraction, including:
-  - Name and address
-  - Historical information generated using Yandex GPT
-  - Relevant websites and images
-  - Audio description generated using Yandex SpeechKit
+
+### Main Bot
+- Discover nearby tourist attractions, landmarks, and points of interest
+- Get detailed information about places including:
+  - Historical descriptions
+  - Audio narration
+  - Images
+  - Distance information
+  - Address details
+- Automatic translation of place names and descriptions to English
+- Support for various tourist attraction types (museums, monuments, parks, etc.)
+
+### Admin Bot
+- Monitor bot usage statistics
+- View active users
+- See which cities the bot has been used in
+- Create database backups
+- Test API connections
+- Debug system information
+
+## Project Structure
+
+```
+/tourist_guide_bot
+  /app
+    __init__.py               # Initialize app package
+    database.py               # Shared database functionality
+    generators.py             # API integrations & data generation
+    handlers.py               # Main bot message handlers
+  run.py                      # Main bot entry point
+  admin_bot.py                # Admin bot entry point
+  run_all.py                  # Script to run both bots together
+  requirements.txt            # Project dependencies
+  .env                        # Shared environment variables (not in repo)
+```
 
 ## Installation
 
 1. Clone the repository:
-    ```sh
-    git clone https://github.com/yourusername/street-spirit.git
-    cd street-spirit
-    ```
+   ```
+   git clone <repository-url>
+   cd tourist_guide_bot
+   ```
 
-2. Create a virtual environment and activate it:
-    ```sh
-    python -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-    ```
+2. Install required dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
 
-3. Install the required dependencies:
-    ```sh
-    pip install -r requirements.txt
-    ```
+3. Create a `.env` file in the project root with your API keys:
+   ```
+   # Telegram Tokens
+   TG_TOKEN=your_main_bot_token
+   ADMIN_BOT_TOKEN=your_admin_bot_token
 
-4. Create a [.env](http://_vscodecontentref_/1) file in the root directory and add the required environment variables:
-    ```env
-    TG_TOKEN=your_telegram_bot_token
-    YA_TOKEN=your_yandex_api_token
-    YA_MODELURI=your_yandex_model_uri
-    YA_SPEECHKIT_API_KEY=your_yandex_speechkit_api_key
-    HERE_API_KEY=your_here_maps_api_key
-    YA_SEARCH_API_KEY=your_yandex_search_api_key
-    YA_CATALOG_ID=your_yandex_catalog_id
-    ```
+   # API Keys
+   DEEPSEEK_API_KEY=your_deepseek_api_key
+   YA_SPEECHKIT_API_KEY=your_yandex_speechkit_key
+   YA_SEARCH_API_KEY=your_yandex_search_key
+   YA_CATALOG_ID=your_yandex_catalog_id
+
+   # Admin Access
+   ADMIN_PASSWORD=your_secure_password
+
+   # Database
+   DB_PATH=bot_stats.db
+   ```
+
+4. Add your Telegram user ID to `app/__init__.py` in the `AUTHORIZED_ADMIN_IDS` list for automatic admin access.
+
+## Running the Bots
+
+### Running Both Bots Together
+
+```
+python run_all.py
+```
+
+### Running Bots Separately
+
+Start the main Tourist Guide Bot:
+```
+python run.py
+```
+
+Start the Admin Bot:
+```
+python admin_bot.py
+```
 
 ## Usage
 
-1. Run the bot:
-    ```sh
-    python run.py
-    ```
+### Main Bot
 
-2. Open Telegram and start a chat with your bot. Use the `/start` command to begin interacting with the bot.
+1. Start a chat with your bot on Telegram
+2. Send the `/start` command
+3. Share your location to find nearby attractions
+4. Receive information about the closest attraction
+5. Continue sharing different locations to discover more places
 
-3. Share your location or send an address to receive information about nearby tourist attractions.
+### Admin Bot
 
-## Contributing
+1. Start a chat with your admin bot on Telegram
+2. Send the `/start` command
+3. If your Telegram user ID is in the authorized list, you'll get immediate access
+4. Otherwise, enter the admin password from your `.env` file
+5. Use these commands to manage the bot:
+   - `/stats` - View basic usage statistics
+   - `/users` - View recent active users
+   - `/cities` - View cities where the bot has searched
+   - `/backup` - Create a database backup
+   - `/test_api` - Test API connections
+   - `/debug` - Show technical debugging information
+   - `/help` - Show available commands
 
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+## APIs Used
+
+- **DeepSeek API**: For generating historical descriptions and translations
+- **Yandex SpeechKit**: For text-to-speech conversion
+- **Yandex Search**: For finding images of attractions
+- **Overpass API**: For finding nearby points of interest
+- **Nominatim API**: For reverse geocoding (getting addresses from coordinates)
+
+## Performance Optimization
+
+If you experience slow response times from the DeepSeek API, you can try:
+
+1. Reducing the `max_tokens` value in `generators.py` to get faster responses (at the cost of less detailed descriptions)
+2. Implementing caching for frequently requested locations
+3. Using parallel processing with `asyncio.gather()` to fetch data concurrently
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+[Add your preferred license information here]
+
+## Credits
+
+[Add credits and acknowledgements here]
