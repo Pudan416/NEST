@@ -61,10 +61,10 @@ async def handle_start_command(message: Message, db=None):
             db.add_or_update_user(user_id, username, first_name, last_name)
 
         await message.answer(
-            "🐦 Coo-coo! Street Spirit at your service! \n\n"
-            "I'm the pigeon who knows every nook and cranny in this concrete jungle!\n"
-            "Been on these streets since forever, seen it all! \n\n"
-            "📍 Just drop your location pin and I'll flap over to scout the area!\n\n"
+            "🐦 Coo-coo-COOOO! Nesty is here! \n\n"
+            "Welcome to NEST - Navigate, Explore, See, Travel!\n"
+            "I've fluttered over every inch of this city. You might've spotted me perched overhead! \n\n"
+            "📍 Drop your location and I'll find the best nearby spots worth your attention!\n\n"
             "Let's spread our wings and explore together!"
         )
     except Exception as e:
