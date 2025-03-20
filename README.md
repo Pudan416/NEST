@@ -140,4 +140,4 @@ If you experience slow response times from the DeepSeek API, you can try:
 
 ## Credits
 
-[Add credits and acknowledgements here]
+Konstantin Pudan pudan.me
