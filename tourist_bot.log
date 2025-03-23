@@ -1622,3 +1622,57 @@ inline_keyboard
 2025-03-14 13:43:43,495 - aiogram.event - INFO - Update id=221670280 is not handled. Duration 0 ms by bot id=7851967492
 2025-03-14 13:43:57,455 - tourist_bot - INFO - Admin bot: Cities command from user 113872890
 2025-03-14 13:43:57,572 - aiogram.event - INFO - Update id=221670281 is handled. Duration 117 ms by bot id=7851967492
+2025-03-19 17:44:05,271 - tourist_bot - INFO - Database initialized successfully
+2025-03-19 17:44:06,274 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-19 17:44:06,417 - tourist_bot - INFO - Bot is running...
+2025-03-19 17:44:06,417 - aiogram.dispatcher - INFO - Start polling
+2025-03-19 17:44:06,560 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-19 17:44:06,720 - tourist_bot - INFO - Database initialized successfully
+2025-03-19 17:44:06,721 - tourist_bot - INFO - Starting admin bot...
+2025-03-19 17:44:06,868 - tourist_bot - INFO - Admin bot started as @street_spirit_admin_bot (ID: 7851967492)
+2025-03-19 17:44:06,921 - aiogram.dispatcher - INFO - Start polling
+2025-03-19 17:44:06,955 - aiogram.dispatcher - INFO - Run polling for bot @street_spirit_admin_bot id=7851967492 - 'NEST | ADMIN'
+2025-03-19 17:44:21,174 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-19 17:44:21,174 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-19 17:44:21,175 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-19 17:44:21,175 - aiogram.dispatcher - INFO - Polling stopped for bot @street_spirit_admin_bot id=7851967492 - 'NEST | ADMIN'
+2025-03-19 17:44:21,175 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-19 17:44:21,175 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-19 17:44:21,175 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-21 09:05:05,965 - tourist_bot - INFO - Database initialized successfully
+2025-03-21 09:05:05,967 - tourist_bot - INFO - Starting admin bot...
+2025-03-21 09:05:19,446 - tourist_bot - INFO - Admin bot started as @nesttestadmin_bot (ID: 7884310233)
+2025-03-21 09:05:19,592 - aiogram.dispatcher - INFO - Start polling
+2025-03-21 09:05:19,737 - aiogram.dispatcher - INFO - Run polling for bot @nesttestadmin_bot id=7884310233 - 'nest-test-admin'
+2025-03-21 09:19:18,840 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-21 09:19:18,842 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-21 09:19:18,843 - aiogram.dispatcher - INFO - Polling stopped for bot @nesttestadmin_bot id=7884310233 - 'nest-test-admin'
+2025-03-21 09:19:18,843 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-23 16:29:44,318 - tourist_bot - INFO - Database initialized successfully
+2025-03-23 16:29:44,588 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-23 16:29:44,630 - tourist_bot - INFO - Bot is running...
+2025-03-23 16:29:44,630 - aiogram.dispatcher - INFO - Start polling
+2025-03-23 16:29:44,672 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-23 16:29:45,873 - tourist_bot - INFO - Database initialized successfully
+2025-03-23 16:29:45,873 - tourist_bot - INFO - Starting admin bot...
+2025-03-23 16:29:46,027 - tourist_bot - INFO - Admin bot started as @nesttestadmin_bot (ID: 7884310233)
+2025-03-23 16:29:46,068 - aiogram.dispatcher - INFO - Start polling
+2025-03-23 16:29:46,108 - aiogram.dispatcher - INFO - Run polling for bot @nesttestadmin_bot id=7884310233 - 'nest-test-admin'
+2025-03-23 16:29:56,436 - tourist_bot - INFO - Received '/start' command from user: 113872890
+2025-03-23 16:29:56,606 - aiogram.event - INFO - Update id=935111649 is handled. Duration 171 ms by bot id=7656254605
+2025-03-23 16:30:02,844 - tourist_bot - INFO - Received location from user 113872890: 44.803149, 20.477873
+2025-03-23 16:30:03,197 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.803149&lon=20.477873&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-23 16:30:04,638 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-23 16:30:05,067 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-23 16:30:05,127 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-23 16:30:16,338 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.8031862&lon=20.4767847&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-23 16:30:16,757 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-23 16:30:16,763 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-23 16:30:30,631 - aiogram.event - INFO - Update id=935111650 is handled. Duration 27787 ms by bot id=7656254605
+2025-03-23 16:30:36,338 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-23 16:30:36,339 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-23 16:30:36,339 - aiogram.dispatcher - WARNING - Received SIGTERM signal
+2025-03-23 16:30:36,340 - aiogram.dispatcher - INFO - Polling stopped for bot @nesttestadmin_bot id=7884310233 - 'nest-test-admin'
+2025-03-23 16:30:36,340 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-23 16:30:36,340 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-23 16:30:36,340 - aiogram.dispatcher - INFO - Polling stopped

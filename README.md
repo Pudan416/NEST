@@ -9,7 +9,6 @@ A Telegram bot that helps users discover interesting places nearby. The bot incl
 - Get detailed information about places including:
   - Historical descriptions
   - Audio narration
-  - Images
   - Distance information
   - Address details
 - Automatic translation of place names and descriptions to English
