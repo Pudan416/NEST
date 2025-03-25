@@ -1,7 +1,3 @@
-"""
-Admin Bot for Tourist Guide Bot statistics and management.
-"""
-
 import asyncio
 import logging
 import os
@@ -286,10 +282,15 @@ async def cmd_test_api(message: Message, state: FSMContext):
     
     try:
         from app.generators import test_deepseek_connection
+        from app.google_maps import test_google_maps_connection
         
         await message.answer("Testing DeepSeek API connection...")
-        result = await test_deepseek_connection()
-        await message.answer(f"DeepSeek API test result: {result}")
+        deepseek_result = await test_deepseek_connection()
+        await message.answer(f"DeepSeek API test result: {deepseek_result}")
+        
+        await message.answer("Testing Google Maps API connection...")
+        google_maps_result = await test_google_maps_connection()
+        await message.answer(f"Google Maps API test result: {google_maps_result}")
     except Exception as e:
         logger.error(f"Error in API test handler: {e}", exc_info=True)
         await message.answer(f"Error testing API: {str(e)}")

@@ -1676,3 +1676,1363 @@ inline_keyboard
 2025-03-23 16:30:36,340 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
 2025-03-23 16:30:36,340 - aiogram.dispatcher - INFO - Polling stopped
 2025-03-23 16:30:36,340 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-23 16:49:22,093 - tourist_bot - INFO - Database initialized successfully
+2025-03-23 16:49:22,389 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-23 16:49:22,428 - tourist_bot - INFO - Bot is running...
+2025-03-23 16:49:22,429 - aiogram.dispatcher - INFO - Start polling
+2025-03-23 16:49:22,469 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-23 16:49:26,365 - aiogram.event - INFO - Update id=935111651 is handled. Duration 330 ms by bot id=7656254605
+2025-03-23 16:49:28,100 - tourist_bot - INFO - Received '/start' command from user: 113872890
+2025-03-23 16:49:28,246 - aiogram.event - INFO - Update id=935111652 is handled. Duration 147 ms by bot id=7656254605
+2025-03-23 16:49:37,151 - tourist_bot - INFO - Received location from user 113872890: 44.80221, 20.47307
+2025-03-23 16:49:37,488 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.80221&lon=20.47307&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-23 16:49:38,712 - httpx - INFO - HTTP Request: POST https://overpass-api.de/api/interpreter "HTTP/1.1 200 OK"
+2025-03-23 16:49:39,227 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-23 16:49:39,235 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-23 16:49:53,192 - httpx - INFO - HTTP Request: GET https://nominatim.openstreetmap.org/reverse?lat=44.8018403&lon=20.4720577&format=json&addressdetails=1&accept-language=en "HTTP/1.1 200 OK"
+2025-03-23 16:49:53,500 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-23 16:49:53,539 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-23 16:50:03,915 - aiogram.event - INFO - Update id=935111653 is handled. Duration 26765 ms by bot id=7656254605
+2025-03-23 16:52:29,116 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-23 16:52:29,117 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-23 16:52:29,117 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-23 17:21:00,819 - tourist_bot - ERROR - Missing required environment variables: GOOGLE_MAPS_API_KEY
+2025-03-23 17:21:00,913 - tourist_bot - INFO - Database initialized successfully
+2025-03-23 17:21:01,217 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-23 17:21:01,259 - tourist_bot - INFO - Bot is running...
+2025-03-23 17:21:01,259 - aiogram.dispatcher - INFO - Start polling
+2025-03-23 17:21:01,302 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-23 17:21:10,555 - tourist_bot - INFO - Received '/start' command from user: 113872890
+2025-03-23 17:21:10,732 - aiogram.event - INFO - Update id=935111654 is handled. Duration 176 ms by bot id=7656254605
+2025-03-23 17:21:19,778 - tourist_bot - INFO - Received location from user 113872890: 44.812978, 20.465352
+2025-03-23 17:21:19,862 - tourist_bot - ERROR - Error in location handler: name 'get_http_client' is not defined
+Traceback (most recent call last):
+  File "/Users/kpudan/dev/street spirit/app/handlers.py", line 102, in handle_location
+    http_client = await get_http_client()
+                        ^^^^^^^^^^^^^^^
+NameError: name 'get_http_client' is not defined
+2025-03-23 17:21:19,955 - aiogram.event - INFO - Update id=935111655 is handled. Duration 177 ms by bot id=7656254605
+2025-03-23 17:24:32,059 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-23 17:24:32,060 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-23 17:24:32,060 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-23 17:24:35,244 - tourist_bot - ERROR - Missing required environment variables: GOOGLE_MAPS_API_KEY
+2025-03-23 17:24:35,321 - tourist_bot - INFO - Database initialized successfully
+2025-03-23 17:24:35,648 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-23 17:24:35,688 - tourist_bot - INFO - Bot is running...
+2025-03-23 17:24:35,688 - aiogram.dispatcher - INFO - Start polling
+2025-03-23 17:24:35,728 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-23 17:24:40,811 - tourist_bot - INFO - Received '/start' command from user: 113872890
+2025-03-23 17:24:41,023 - aiogram.event - INFO - Update id=935111656 is handled. Duration 212 ms by bot id=7656254605
+2025-03-23 17:24:57,447 - tourist_bot - INFO - Received location from user 113872890: 44.804126, 20.470435
+2025-03-23 17:24:57,514 - tourist_bot - ERROR - GOOGLE_MAPS_API_KEY is not set in environment variables
+2025-03-23 17:24:57,514 - tourist_bot - ERROR - GOOGLE_MAPS_API_KEY is not set in environment variables
+2025-03-23 17:24:57,582 - tourist_bot - ERROR - GOOGLE_MAPS_API_KEY is not set in environment variables
+2025-03-23 17:24:57,994 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-23 17:24:58,002 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-23 17:25:11,483 - tourist_bot - ERROR - GOOGLE_MAPS_API_KEY is not set in environment variables
+2025-03-23 17:25:11,549 - aiogram.event - INFO - Update id=935111657 is handled. Duration 14102 ms by bot id=7656254605
+2025-03-23 17:25:36,935 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-23 17:25:36,936 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-23 17:25:36,936 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-23 17:25:39,696 - tourist_bot - INFO - Database initialized successfully
+2025-03-23 17:25:39,953 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-23 17:25:40,003 - tourist_bot - INFO - Bot is running...
+2025-03-23 17:25:40,004 - aiogram.dispatcher - INFO - Start polling
+2025-03-23 17:25:40,048 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-23 17:25:43,475 - tourist_bot - INFO - Received '/start' command from user: 113872890
+2025-03-23 17:25:43,652 - aiogram.event - INFO - Update id=935111658 is handled. Duration 177 ms by bot id=7656254605
+2025-03-23 17:25:52,873 - tourist_bot - INFO - Received location from user 113872890: 44.805857, 20.47103
+2025-03-23 17:25:53,284 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805857%2C20.47103&radius=1000&type=tourist_attraction&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:25:53,285 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:25:53,300 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/geocode/json?latlng=44.805857%2C20.47103&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:25:53,336 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805857%2C20.47103&radius=1000&type=museum&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:25:53,338 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:25:53,494 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805857%2C20.47103&radius=1000&type=church&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:25:53,496 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:25:53,550 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805857%2C20.47103&radius=1000&type=art_gallery&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:25:53,552 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:25:53,652 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805857%2C20.47103&radius=1000&type=park&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:25:53,654 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:25:53,709 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805857%2C20.47103&radius=1000&type=point_of_interest&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:25:53,710 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:25:53,813 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805857%2C20.47103&radius=1000&type=landmark&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:25:53,817 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:25:53,868 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805857%2C20.47103&radius=1000&type=monument&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:25:53,870 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:25:53,962 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805857%2C20.47103&radius=1000&type=place_of_worship&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:25:53,963 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:25:54,112 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805857%2C20.47103&radius=5000&type=tourist_attraction&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:25:54,113 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:25:54,219 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805857%2C20.47103&radius=5000&type=museum&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:25:54,221 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:25:54,275 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805857%2C20.47103&radius=5000&type=church&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:25:54,277 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:25:54,379 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805857%2C20.47103&radius=5000&type=art_gallery&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:25:54,381 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:25:54,383 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-23 17:25:54,385 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-23 17:25:54,435 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805857%2C20.47103&radius=5000&type=park&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:25:54,436 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:25:54,480 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805857%2C20.47103&radius=5000&type=point_of_interest&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:25:54,481 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:25:54,522 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805857%2C20.47103&radius=5000&type=landmark&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:25:54,523 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:25:54,564 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805857%2C20.47103&radius=5000&type=monument&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:25:54,566 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:25:54,608 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805857%2C20.47103&radius=5000&type=place_of_worship&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:25:54,609 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:26:03,912 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805857%2C20.47103&radius=10000&type=tourist_attraction&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:26:03,914 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:26:03,955 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805857%2C20.47103&radius=10000&type=museum&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:26:03,957 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:26:04,062 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805857%2C20.47103&radius=10000&type=church&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:26:04,064 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:26:04,106 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805857%2C20.47103&radius=10000&type=art_gallery&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:26:04,107 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:26:04,208 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805857%2C20.47103&radius=10000&type=park&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:26:04,210 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:26:04,257 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805857%2C20.47103&radius=10000&type=point_of_interest&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:26:04,259 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:26:04,356 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805857%2C20.47103&radius=10000&type=landmark&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:26:04,358 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:26:04,407 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805857%2C20.47103&radius=10000&type=monument&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:26:04,408 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:26:04,516 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805857%2C20.47103&radius=10000&type=place_of_worship&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:26:04,518 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:26:04,580 - aiogram.event - INFO - Update id=935111659 is handled. Duration 11707 ms by bot id=7656254605
+2025-03-23 17:30:45,571 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-23 17:30:45,572 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-23 17:30:45,572 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-23 17:30:49,219 - tourist_bot - INFO - Database initialized successfully
+2025-03-23 17:30:49,487 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-23 17:30:49,528 - tourist_bot - INFO - Bot is running...
+2025-03-23 17:30:49,528 - aiogram.dispatcher - INFO - Start polling
+2025-03-23 17:30:49,568 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-23 17:30:58,258 - tourist_bot - INFO - Received location from user 113872890: 44.804958, 20.466634
+2025-03-23 17:30:58,708 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804958%2C20.466634&radius=1000&type=tourist_attraction&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:30:58,710 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:30:58,733 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/geocode/json?latlng=44.804958%2C20.466634&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:30:58,753 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804958%2C20.466634&radius=1000&type=museum&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:30:58,755 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:30:58,857 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804958%2C20.466634&radius=1000&type=church&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:30:58,859 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:30:58,901 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804958%2C20.466634&radius=1000&type=art_gallery&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:30:58,902 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:30:59,005 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804958%2C20.466634&radius=1000&type=park&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:30:59,006 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:30:59,056 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804958%2C20.466634&radius=1000&type=point_of_interest&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:30:59,059 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:30:59,155 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804958%2C20.466634&radius=1000&type=landmark&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:30:59,157 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:30:59,203 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804958%2C20.466634&radius=1000&type=monument&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:30:59,204 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:30:59,247 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804958%2C20.466634&radius=1000&type=place_of_worship&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:30:59,248 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:30:59,420 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804958%2C20.466634&radius=5000&type=tourist_attraction&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:30:59,421 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:30:59,459 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804958%2C20.466634&radius=5000&type=museum&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:30:59,459 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:30:59,499 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804958%2C20.466634&radius=5000&type=church&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:30:59,500 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:30:59,539 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804958%2C20.466634&radius=5000&type=art_gallery&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:30:59,540 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:30:59,580 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804958%2C20.466634&radius=5000&type=park&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:30:59,580 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:30:59,620 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804958%2C20.466634&radius=5000&type=point_of_interest&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:30:59,621 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:30:59,661 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804958%2C20.466634&radius=5000&type=landmark&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:30:59,661 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:30:59,685 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-23 17:30:59,686 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-23 17:30:59,707 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804958%2C20.466634&radius=5000&type=monument&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:30:59,708 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:30:59,748 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804958%2C20.466634&radius=5000&type=place_of_worship&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:30:59,749 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:31:08,567 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804958%2C20.466634&radius=10000&type=tourist_attraction&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:31:08,569 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:31:08,611 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804958%2C20.466634&radius=10000&type=museum&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:31:08,612 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:31:08,712 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804958%2C20.466634&radius=10000&type=church&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:31:08,712 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:31:08,754 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804958%2C20.466634&radius=10000&type=art_gallery&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:31:08,755 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:31:08,868 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804958%2C20.466634&radius=10000&type=park&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:31:08,869 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:31:08,911 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804958%2C20.466634&radius=10000&type=point_of_interest&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:31:08,912 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:31:09,014 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804958%2C20.466634&radius=10000&type=landmark&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:31:09,016 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:31:09,059 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804958%2C20.466634&radius=10000&type=monument&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:31:09,061 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:31:09,165 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804958%2C20.466634&radius=10000&type=place_of_worship&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:31:09,167 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:31:09,288 - aiogram.event - INFO - Update id=935111660 is handled. Duration 11029 ms by bot id=7656254605
+2025-03-23 17:33:04,507 - tourist_bot - INFO - Received location from user 113872890: 44.80354, 20.473209
+2025-03-23 17:33:04,805 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.80354%2C20.473209&radius=1000&type=tourist_attraction&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:33:04,806 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:33:04,849 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.80354%2C20.473209&radius=1000&type=museum&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:33:04,849 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:33:04,914 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.80354%2C20.473209&radius=1000&type=church&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:33:04,915 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:33:04,958 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.80354%2C20.473209&radius=1000&type=art_gallery&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:33:04,959 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:33:04,972 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/geocode/json?latlng=44.80354%2C20.473209&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:33:05,059 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.80354%2C20.473209&radius=1000&type=park&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:33:05,060 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:33:05,206 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.80354%2C20.473209&radius=1000&type=point_of_interest&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:33:05,207 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:33:05,249 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.80354%2C20.473209&radius=1000&type=landmark&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:33:05,251 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:33:05,354 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.80354%2C20.473209&radius=1000&type=monument&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:33:05,356 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:33:05,405 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.80354%2C20.473209&radius=1000&type=place_of_worship&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:33:05,406 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:33:05,630 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.80354%2C20.473209&radius=5000&type=tourist_attraction&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:33:05,631 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:33:05,734 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.80354%2C20.473209&radius=5000&type=museum&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:33:05,734 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:33:05,774 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.80354%2C20.473209&radius=5000&type=church&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:33:05,775 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:33:05,878 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.80354%2C20.473209&radius=5000&type=art_gallery&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:33:05,879 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:33:05,919 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.80354%2C20.473209&radius=5000&type=park&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:33:05,919 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:33:05,933 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-23 17:33:05,935 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-23 17:33:06,025 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.80354%2C20.473209&radius=5000&type=point_of_interest&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:33:06,027 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:33:06,072 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.80354%2C20.473209&radius=5000&type=landmark&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:33:06,075 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:33:06,118 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.80354%2C20.473209&radius=5000&type=monument&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:33:06,120 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:33:06,166 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.80354%2C20.473209&radius=5000&type=place_of_worship&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:33:06,168 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:33:14,681 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.80354%2C20.473209&radius=10000&type=tourist_attraction&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:33:14,682 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:33:14,791 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.80354%2C20.473209&radius=10000&type=museum&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:33:14,793 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:33:14,835 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.80354%2C20.473209&radius=10000&type=church&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:33:14,837 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:33:14,940 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.80354%2C20.473209&radius=10000&type=art_gallery&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:33:14,943 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:33:14,987 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.80354%2C20.473209&radius=10000&type=park&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:33:14,988 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:33:15,089 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.80354%2C20.473209&radius=10000&type=point_of_interest&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:33:15,091 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:33:15,139 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.80354%2C20.473209&radius=10000&type=landmark&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:33:15,141 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:33:15,254 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.80354%2C20.473209&radius=10000&type=monument&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:33:15,256 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:33:15,307 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.80354%2C20.473209&radius=10000&type=place_of_worship&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:33:15,309 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:33:15,367 - aiogram.event - INFO - Update id=935111661 is handled. Duration 10859 ms by bot id=7656254605
+2025-03-23 17:41:18,197 - tourist_bot - INFO - Received location from user 113872890: 44.804649, 20.47043
+2025-03-23 17:41:18,509 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804649%2C20.47043&radius=1000&type=tourist_attraction&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:41:18,510 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:41:18,518 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/geocode/json?latlng=44.804649%2C20.47043&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:41:18,560 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804649%2C20.47043&radius=1000&type=museum&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:41:18,561 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:41:18,726 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804649%2C20.47043&radius=1000&type=church&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:41:18,727 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:41:18,780 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804649%2C20.47043&radius=1000&type=art_gallery&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:41:18,782 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:41:18,882 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804649%2C20.47043&radius=1000&type=park&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:41:18,884 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:41:18,939 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804649%2C20.47043&radius=1000&type=point_of_interest&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:41:18,940 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:41:19,040 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804649%2C20.47043&radius=1000&type=landmark&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:41:19,041 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:41:19,088 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804649%2C20.47043&radius=1000&type=monument&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:41:19,090 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:41:19,198 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804649%2C20.47043&radius=1000&type=place_of_worship&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:41:19,200 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:41:19,312 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804649%2C20.47043&radius=5000&type=tourist_attraction&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:41:19,312 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:41:19,418 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804649%2C20.47043&radius=5000&type=museum&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:41:19,418 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:41:19,474 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804649%2C20.47043&radius=5000&type=church&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:41:19,475 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:41:19,573 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804649%2C20.47043&radius=5000&type=art_gallery&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:41:19,575 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:41:19,626 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-23 17:41:19,629 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804649%2C20.47043&radius=5000&type=park&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:41:19,631 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:41:19,635 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-23 17:41:19,677 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804649%2C20.47043&radius=5000&type=point_of_interest&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:41:19,679 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:41:19,729 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804649%2C20.47043&radius=5000&type=landmark&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:41:19,731 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:41:19,782 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804649%2C20.47043&radius=5000&type=monument&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:41:19,783 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:41:19,826 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804649%2C20.47043&radius=5000&type=place_of_worship&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:41:19,828 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:41:28,056 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804649%2C20.47043&radius=10000&type=tourist_attraction&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:41:28,059 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:41:28,103 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804649%2C20.47043&radius=10000&type=museum&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:41:28,105 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:41:28,208 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804649%2C20.47043&radius=10000&type=church&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:41:28,210 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:41:28,254 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804649%2C20.47043&radius=10000&type=art_gallery&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:41:28,255 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:41:28,358 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804649%2C20.47043&radius=10000&type=park&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:41:28,360 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:41:28,402 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804649%2C20.47043&radius=10000&type=point_of_interest&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:41:28,404 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:41:28,514 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804649%2C20.47043&radius=10000&type=landmark&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:41:28,516 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:41:28,559 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804649%2C20.47043&radius=10000&type=monument&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:41:28,560 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:41:28,661 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804649%2C20.47043&radius=10000&type=place_of_worship&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:41:28,663 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:41:28,807 - aiogram.event - INFO - Update id=935111662 is handled. Duration 10610 ms by bot id=7656254605
+2025-03-23 17:48:53,487 - tourist_bot - INFO - Received location from user 113872890: 44.804987, 20.470748
+2025-03-23 17:48:53,791 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/geocode/json?latlng=44.804987%2C20.470748&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:48:53,794 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804987%2C20.470748&radius=1000&type=tourist_attraction&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:48:53,795 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:48:53,844 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804987%2C20.470748&radius=1000&type=museum&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:48:53,846 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:48:53,896 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804987%2C20.470748&radius=1000&type=church&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:48:53,900 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:48:54,003 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804987%2C20.470748&radius=1000&type=art_gallery&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:48:54,005 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:48:54,056 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804987%2C20.470748&radius=1000&type=park&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:48:54,057 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:48:54,150 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804987%2C20.470748&radius=1000&type=point_of_interest&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:48:54,152 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:48:54,200 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804987%2C20.470748&radius=1000&type=landmark&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:48:54,203 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:48:54,256 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804987%2C20.470748&radius=1000&type=monument&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:48:54,259 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:48:54,301 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804987%2C20.470748&radius=1000&type=place_of_worship&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:48:54,303 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:48:54,456 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804987%2C20.470748&radius=5000&type=tourist_attraction&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:48:54,457 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:48:54,509 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804987%2C20.470748&radius=5000&type=museum&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:48:54,509 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:48:54,558 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804987%2C20.470748&radius=5000&type=church&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:48:54,559 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:48:54,610 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804987%2C20.470748&radius=5000&type=art_gallery&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:48:54,611 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:48:54,658 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804987%2C20.470748&radius=5000&type=park&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:48:54,658 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:48:54,708 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804987%2C20.470748&radius=5000&type=point_of_interest&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:48:54,709 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:48:54,760 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-23 17:48:54,763 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804987%2C20.470748&radius=5000&type=landmark&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:48:54,764 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:48:54,775 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-23 17:48:54,814 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804987%2C20.470748&radius=5000&type=monument&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:48:54,815 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:48:54,863 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804987%2C20.470748&radius=5000&type=place_of_worship&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:48:54,865 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:49:02,093 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804987%2C20.470748&radius=10000&type=tourist_attraction&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:49:02,095 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:49:02,138 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804987%2C20.470748&radius=10000&type=museum&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:49:02,143 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:49:02,188 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804987%2C20.470748&radius=10000&type=church&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:49:02,190 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:49:02,234 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804987%2C20.470748&radius=10000&type=art_gallery&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:49:02,236 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:49:02,279 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804987%2C20.470748&radius=10000&type=park&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:49:02,280 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:49:02,321 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804987%2C20.470748&radius=10000&type=point_of_interest&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:49:02,321 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:49:02,360 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804987%2C20.470748&radius=10000&type=landmark&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:49:02,361 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:49:02,399 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804987%2C20.470748&radius=10000&type=monument&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:49:02,401 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:49:02,453 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.804987%2C20.470748&radius=10000&type=place_of_worship&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-23 17:49:02,454 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-23 17:49:02,511 - aiogram.event - INFO - Update id=935111663 is handled. Duration 9025 ms by bot id=7656254605
+2025-03-23 18:13:38,885 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 60] Operation timed out
+2025-03-23 18:13:38,886 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7656254605)
+2025-03-23 18:13:50,002 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7656254605)
+2025-03-23 18:43:46,838 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-23 18:43:46,841 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-23 18:43:46,841 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-24 09:31:08,038 - tourist_bot - INFO - Database initialized successfully
+2025-03-24 09:31:08,908 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-24 09:31:09,055 - tourist_bot - INFO - Bot is running...
+2025-03-24 09:31:09,055 - aiogram.dispatcher - INFO - Start polling
+2025-03-24 09:31:09,205 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-24 09:32:24,819 - tourist_bot - INFO - Received location from user 113872890: 44.805088, 20.472903
+2025-03-24 09:32:25,458 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805088%2C20.472903&radius=1000&type=tourist_attraction&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:32:25,459 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:32:25,544 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/geocode/json?latlng=44.805088%2C20.472903&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:32:25,599 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805088%2C20.472903&radius=1000&type=museum&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:32:25,600 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:32:25,740 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805088%2C20.472903&radius=1000&type=church&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:32:25,741 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:32:25,869 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805088%2C20.472903&radius=1000&type=art_gallery&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:32:25,869 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:32:25,993 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805088%2C20.472903&radius=1000&type=park&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:32:25,994 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:32:26,132 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805088%2C20.472903&radius=1000&type=point_of_interest&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:32:26,134 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:32:26,260 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805088%2C20.472903&radius=1000&type=landmark&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:32:26,261 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:32:26,403 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805088%2C20.472903&radius=1000&type=monument&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:32:26,404 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:32:26,530 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805088%2C20.472903&radius=1000&type=place_of_worship&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:32:26,531 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:32:26,735 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805088%2C20.472903&radius=5000&type=tourist_attraction&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:32:26,736 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:32:26,862 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805088%2C20.472903&radius=5000&type=museum&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:32:26,862 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:32:26,993 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805088%2C20.472903&radius=5000&type=church&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:32:26,994 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:32:27,121 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805088%2C20.472903&radius=5000&type=art_gallery&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:32:27,122 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:32:27,250 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805088%2C20.472903&radius=5000&type=park&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:32:27,252 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:32:27,379 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805088%2C20.472903&radius=5000&type=point_of_interest&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:32:27,381 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:32:27,506 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805088%2C20.472903&radius=5000&type=landmark&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:32:27,507 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:32:27,632 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805088%2C20.472903&radius=5000&type=monument&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:32:27,634 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:32:27,761 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805088%2C20.472903&radius=5000&type=place_of_worship&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:32:27,763 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:32:27,920 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 09:32:27,969 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 09:32:57,923 - tourist_bot - ERROR - Read timeout from DeepSeek API (attempt 1/3)
+2025-03-24 09:32:57,972 - tourist_bot - ERROR - Read timeout from DeepSeek API (attempt 1/3)
+2025-03-24 09:33:00,028 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 09:33:00,073 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 09:33:30,032 - tourist_bot - ERROR - Read timeout from DeepSeek API (attempt 2/3)
+2025-03-24 09:33:30,076 - tourist_bot - ERROR - Read timeout from DeepSeek API (attempt 2/3)
+2025-03-24 09:33:33,095 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 09:33:33,164 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 09:34:03,098 - tourist_bot - ERROR - Read timeout from DeepSeek API (attempt 3/3)
+2025-03-24 09:34:03,099 - tourist_bot - ERROR - Translation error: Error: Read timeout. The request took too long to process.
+2025-03-24 09:34:03,167 - tourist_bot - ERROR - Read timeout from DeepSeek API (attempt 3/3)
+2025-03-24 09:34:03,167 - tourist_bot - ERROR - Translation error: Error: Read timeout. The request took too long to process.
+2025-03-24 09:34:03,696 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805088%2C20.472903&radius=10000&type=tourist_attraction&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:34:03,697 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:34:03,820 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805088%2C20.472903&radius=10000&type=museum&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:34:03,822 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:34:03,943 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805088%2C20.472903&radius=10000&type=church&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:34:03,944 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:34:04,064 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805088%2C20.472903&radius=10000&type=art_gallery&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:34:04,066 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:34:04,184 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805088%2C20.472903&radius=10000&type=park&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:34:04,184 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:34:04,303 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805088%2C20.472903&radius=10000&type=point_of_interest&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:34:04,304 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:34:04,422 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805088%2C20.472903&radius=10000&type=landmark&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:34:04,423 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:34:04,542 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805088%2C20.472903&radius=10000&type=monument&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:34:04,543 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:34:04,664 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805088%2C20.472903&radius=10000&type=place_of_worship&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:34:04,664 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:34:04,830 - aiogram.event - INFO - Update id=935111664 is handled. Duration 100012 ms by bot id=7656254605
+2025-03-24 09:45:10,452 - tourist_bot - INFO - Received location from user 113872890: 44.805966, 20.46846
+2025-03-24 09:45:11,037 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805966%2C20.46846&radius=1000&type=tourist_attraction&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:45:11,038 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:45:11,142 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/geocode/json?latlng=44.805966%2C20.46846&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:45:11,228 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805966%2C20.46846&radius=1000&type=museum&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:45:11,229 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:45:11,416 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805966%2C20.46846&radius=1000&type=church&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:45:11,418 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:45:11,709 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805966%2C20.46846&radius=1000&type=art_gallery&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:45:11,711 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:45:11,897 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805966%2C20.46846&radius=1000&type=park&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:45:11,898 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:45:12,086 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805966%2C20.46846&radius=1000&type=point_of_interest&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:45:12,088 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:45:12,277 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805966%2C20.46846&radius=1000&type=landmark&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:45:12,279 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:45:12,458 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805966%2C20.46846&radius=1000&type=monument&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:45:12,460 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:45:12,646 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805966%2C20.46846&radius=1000&type=place_of_worship&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:45:12,647 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:45:12,898 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805966%2C20.46846&radius=5000&type=tourist_attraction&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:45:12,901 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:45:13,086 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805966%2C20.46846&radius=5000&type=museum&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:45:13,087 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:45:13,266 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805966%2C20.46846&radius=5000&type=church&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:45:13,268 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:45:13,359 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 09:45:13,445 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805966%2C20.46846&radius=5000&type=art_gallery&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:45:13,448 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:45:13,637 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805966%2C20.46846&radius=5000&type=park&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:45:13,638 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:45:13,827 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805966%2C20.46846&radius=5000&type=point_of_interest&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:45:13,828 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:45:13,979 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 09:45:14,007 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805966%2C20.46846&radius=5000&type=landmark&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:45:14,009 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:45:14,189 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805966%2C20.46846&radius=5000&type=monument&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:45:14,190 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:45:14,374 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805966%2C20.46846&radius=5000&type=place_of_worship&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:45:14,376 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:45:26,847 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805966%2C20.46846&radius=10000&type=tourist_attraction&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:45:26,848 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:45:27,024 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805966%2C20.46846&radius=10000&type=museum&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:45:27,026 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:45:27,200 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805966%2C20.46846&radius=10000&type=church&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:45:27,201 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:45:27,374 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805966%2C20.46846&radius=10000&type=art_gallery&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:45:27,376 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:45:27,559 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805966%2C20.46846&radius=10000&type=park&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:45:27,561 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:45:27,735 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805966%2C20.46846&radius=10000&type=point_of_interest&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:45:27,736 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:45:27,910 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805966%2C20.46846&radius=10000&type=landmark&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:45:27,910 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:45:28,083 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805966%2C20.46846&radius=10000&type=monument&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:45:28,084 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:45:28,259 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805966%2C20.46846&radius=10000&type=place_of_worship&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:45:28,260 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:45:28,430 - aiogram.event - INFO - Update id=935111665 is handled. Duration 17979 ms by bot id=7656254605
+2025-03-24 09:59:13,980 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-24 09:59:13,982 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-24 09:59:13,982 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-24 09:59:17,123 - tourist_bot - INFO - Database initialized successfully
+2025-03-24 09:59:17,774 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-24 09:59:17,816 - tourist_bot - INFO - Bot is running...
+2025-03-24 09:59:17,817 - aiogram.dispatcher - INFO - Start polling
+2025-03-24 09:59:17,858 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-24 09:59:26,606 - tourist_bot - INFO - Received location from user 113872890: 44.805747, 20.469851
+2025-03-24 09:59:27,629 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805747%2C20.469851&radius=1000&type=tourist_attraction&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:59:27,630 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:59:27,692 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/geocode/json?latlng=44.805747%2C20.469851&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:59:27,759 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805747%2C20.469851&radius=1000&type=museum&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:59:27,760 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:59:27,893 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805747%2C20.469851&radius=1000&type=church&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:59:27,894 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:59:28,038 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805747%2C20.469851&radius=1000&type=art_gallery&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:59:28,040 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:59:28,166 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805747%2C20.469851&radius=1000&type=park&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:59:28,168 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:59:28,306 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805747%2C20.469851&radius=1000&type=point_of_interest&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:59:28,309 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:59:28,432 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805747%2C20.469851&radius=1000&type=landmark&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:59:28,433 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:59:28,560 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805747%2C20.469851&radius=1000&type=monument&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:59:28,561 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:59:28,688 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805747%2C20.469851&radius=1000&type=place_of_worship&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:59:28,689 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:59:29,012 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805747%2C20.469851&radius=5000&type=tourist_attraction&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:59:29,014 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:59:29,138 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805747%2C20.469851&radius=5000&type=museum&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:59:29,139 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:59:29,261 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805747%2C20.469851&radius=5000&type=church&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:59:29,262 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:59:29,386 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805747%2C20.469851&radius=5000&type=art_gallery&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:59:29,388 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:59:29,514 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805747%2C20.469851&radius=5000&type=park&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:59:29,515 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:59:29,639 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805747%2C20.469851&radius=5000&type=point_of_interest&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:59:29,641 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:59:29,678 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 09:59:29,765 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805747%2C20.469851&radius=5000&type=landmark&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:59:29,766 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:59:29,888 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805747%2C20.469851&radius=5000&type=monument&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:59:29,889 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:59:30,012 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805747%2C20.469851&radius=5000&type=place_of_worship&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 09:59:30,013 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 09:59:30,342 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 09:59:59,677 - tourist_bot - ERROR - Read timeout from DeepSeek API (attempt 1/3)
+2025-03-24 10:00:00,340 - tourist_bot - ERROR - Read timeout from DeepSeek API (attempt 1/3)
+2025-03-24 10:00:01,822 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 10:00:02,565 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 10:00:17,299 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 54] Connection reset by peer
+2025-03-24 10:00:17,299 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7656254605)
+2025-03-24 10:00:28,389 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7656254605)
+2025-03-24 10:00:31,825 - tourist_bot - ERROR - Read timeout from DeepSeek API (attempt 2/3)
+2025-03-24 10:00:32,567 - tourist_bot - ERROR - Read timeout from DeepSeek API (attempt 2/3)
+2025-03-24 10:00:34,258 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 10:00:35,658 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-24 10:01:04,261 - tourist_bot - ERROR - Read timeout from DeepSeek API (attempt 3/3)
+2025-03-24 10:01:04,261 - tourist_bot - ERROR - Translation error: Error: Read timeout. The request took too long to process.
+2025-03-24 10:01:04,834 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805747%2C20.469851&radius=10000&type=tourist_attraction&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 10:01:04,835 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 10:01:04,958 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805747%2C20.469851&radius=10000&type=museum&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 10:01:04,960 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 10:01:05,082 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805747%2C20.469851&radius=10000&type=church&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 10:01:05,084 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 10:01:05,204 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805747%2C20.469851&radius=10000&type=art_gallery&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 10:01:05,205 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 10:01:05,324 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805747%2C20.469851&radius=10000&type=park&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 10:01:05,324 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 10:01:05,443 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805747%2C20.469851&radius=10000&type=point_of_interest&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 10:01:05,445 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 10:01:05,570 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805747%2C20.469851&radius=10000&type=landmark&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 10:01:05,572 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 10:01:05,692 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805747%2C20.469851&radius=10000&type=monument&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 10:01:05,694 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 10:01:05,816 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805747%2C20.469851&radius=10000&type=place_of_worship&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-24 10:01:05,817 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-24 10:01:05,919 - aiogram.event - INFO - Update id=935111666 is handled. Duration 99321 ms by bot id=7656254605
+2025-03-24 10:01:25,585 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-24 10:01:25,587 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-24 10:01:25,587 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-25 08:50:03,195 - tourist_bot - INFO - Database initialized successfully
+2025-03-25 08:50:03,503 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-25 08:50:03,541 - tourist_bot - INFO - Bot is running...
+2025-03-25 08:50:03,542 - aiogram.dispatcher - INFO - Start polling
+2025-03-25 08:50:03,584 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-25 08:50:05,001 - tourist_bot - INFO - Received '/start' command from user: 113872890
+2025-03-25 08:50:05,233 - aiogram.event - INFO - Update id=935111667 is handled. Duration 233 ms by bot id=7656254605
+2025-03-25 08:50:20,190 - tourist_bot - INFO - Received location from user 113872890: 44.803777, 20.472878
+2025-03-25 08:50:20,501 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/geocode/json?latlng=44.803777%2C20.472878&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-25 08:50:20,511 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.803777%2C20.472878&radius=1000&type=tourist_attraction&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-25 08:50:20,512 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 08:50:20,564 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.803777%2C20.472878&radius=1000&type=museum&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-25 08:50:20,564 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 08:50:20,614 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.803777%2C20.472878&radius=1000&type=church&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-25 08:50:20,615 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 08:50:20,721 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.803777%2C20.472878&radius=1000&type=art_gallery&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-25 08:50:20,723 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 08:50:20,786 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.803777%2C20.472878&radius=1000&type=park&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-25 08:50:20,786 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 08:50:20,878 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.803777%2C20.472878&radius=1000&type=point_of_interest&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-25 08:50:20,880 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 08:50:20,932 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.803777%2C20.472878&radius=1000&type=landmark&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-25 08:50:20,933 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 08:50:21,038 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.803777%2C20.472878&radius=1000&type=monument&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-25 08:50:21,040 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 08:50:21,119 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.803777%2C20.472878&radius=1000&type=place_of_worship&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-25 08:50:21,121 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 08:50:21,276 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.803777%2C20.472878&radius=5000&type=tourist_attraction&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-25 08:50:21,276 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 08:50:21,380 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.803777%2C20.472878&radius=5000&type=museum&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-25 08:50:21,381 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 08:50:21,436 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.803777%2C20.472878&radius=5000&type=church&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-25 08:50:21,437 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 08:50:21,540 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.803777%2C20.472878&radius=5000&type=art_gallery&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-25 08:50:21,549 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 08:50:21,604 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.803777%2C20.472878&radius=5000&type=park&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-25 08:50:21,605 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 08:50:21,645 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.803777%2C20.472878&radius=5000&type=point_of_interest&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-25 08:50:21,646 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 08:50:21,664 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 08:50:21,685 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.803777%2C20.472878&radius=5000&type=landmark&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-25 08:50:21,685 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 08:50:21,726 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.803777%2C20.472878&radius=5000&type=monument&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-25 08:50:21,726 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 08:50:21,766 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.803777%2C20.472878&radius=5000&type=place_of_worship&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-25 08:50:21,766 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 08:50:22,244 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 08:50:26,799 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.803777%2C20.472878&radius=10000&type=tourist_attraction&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-25 08:50:26,800 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 08:50:26,842 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.803777%2C20.472878&radius=10000&type=museum&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-25 08:50:26,843 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 08:50:26,884 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.803777%2C20.472878&radius=10000&type=church&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-25 08:50:26,885 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 08:50:26,926 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.803777%2C20.472878&radius=10000&type=art_gallery&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-25 08:50:26,927 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 08:50:26,968 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.803777%2C20.472878&radius=10000&type=park&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-25 08:50:26,969 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 08:50:27,009 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.803777%2C20.472878&radius=10000&type=point_of_interest&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-25 08:50:27,010 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 08:50:27,050 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.803777%2C20.472878&radius=10000&type=landmark&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-25 08:50:27,051 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 08:50:27,090 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.803777%2C20.472878&radius=10000&type=monument&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-25 08:50:27,091 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 08:50:27,131 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.803777%2C20.472878&radius=10000&type=place_of_worship&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-25 08:50:27,131 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 08:50:27,214 - aiogram.event - INFO - Update id=935111668 is handled. Duration 7025 ms by bot id=7656254605
+2025-03-25 08:59:24,962 - tourist_bot - INFO - Database initialized successfully
+2025-03-25 08:59:25,275 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-25 08:59:25,326 - tourist_bot - INFO - Bot is running...
+2025-03-25 08:59:25,327 - aiogram.dispatcher - INFO - Start polling
+2025-03-25 08:59:25,375 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-25 08:59:26,014 - tourist_bot - INFO - Received '/start' command from user: 113872890
+2025-03-25 08:59:26,197 - aiogram.event - INFO - Update id=935111669 is handled. Duration 184 ms by bot id=7656254605
+2025-03-25 08:59:35,178 - tourist_bot - INFO - Received location from user 113872890: 44.806758, 20.470348
+2025-03-25 08:59:35,403 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.806758%2C20.470348&radius=1000&type=tourist_attraction&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-25 09:00:17,891 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 09:00:42,233 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/geocode/json?latlng=44.806758%2C20.470348&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-25 09:00:42,350 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.806758%2C20.470348&radius=1000&type=museum&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-25 09:00:58,523 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 13:51:05,718 - tourist_bot - INFO - Database initialized successfully
+2025-03-25 13:51:06,570 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-25 13:51:06,713 - tourist_bot - INFO - Bot is running...
+2025-03-25 13:51:06,713 - aiogram.dispatcher - INFO - Start polling
+2025-03-25 13:51:06,864 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-25 13:51:08,625 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-25 13:51:08,626 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-25 13:51:08,626 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-25 13:51:16,707 - tourist_bot - INFO - Database initialized successfully
+2025-03-25 13:51:16,989 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-25 13:51:17,023 - tourist_bot - INFO - Bot is running...
+2025-03-25 13:51:17,023 - aiogram.dispatcher - INFO - Start polling
+2025-03-25 13:51:17,062 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-25 13:58:08,264 - tourist_bot - INFO - Received location from user 113872890: 44.805384, 20.469906
+2025-03-25 13:58:09,305 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805384%2C20.469906&radius=1000&type=tourist_attraction&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-25 14:00:56,897 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 14:00:56,904 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/geocode/json?latlng=44.805384%2C20.469906&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-25 14:00:56,907 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-25 14:00:56,907 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7656254605)
+2025-03-25 14:00:57,295 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805384%2C20.469906&radius=1000&type=museum&key=AIzaSyDy8Nl9ev03HTx3zsQmfrQ95P4YQY4VN8w&language=en "HTTP/1.1 200 OK"
+2025-03-25 14:03:21,839 - tourist_bot - INFO - Database initialized successfully
+2025-03-25 14:03:22,636 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-25 14:03:22,779 - tourist_bot - INFO - Bot is running...
+2025-03-25 14:03:22,781 - aiogram.dispatcher - INFO - Start polling
+2025-03-25 14:03:22,931 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-25 14:03:26,016 - tourist_bot - INFO - Received location from user 113872890: 44.805309, 20.473194
+2025-03-25 14:03:26,674 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805309%2C20.473194&radius=1000&type=tourist_attraction&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4&language=en "HTTP/1.1 200 OK"
+2025-03-25 14:03:35,773 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 14:03:35,779 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/geocode/json?latlng=44.805309%2C20.473194&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4&language=en "HTTP/1.1 200 OK"
+2025-03-25 14:03:36,154 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805309%2C20.473194&radius=1000&type=museum&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4&language=en "HTTP/1.1 200 OK"
+2025-03-25 14:03:39,246 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 14:03:39,370 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805309%2C20.473194&radius=1000&type=church&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4&language=en "HTTP/1.1 200 OK"
+2025-03-25 14:03:40,618 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 14:03:40,749 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805309%2C20.473194&radius=1000&type=art_gallery&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4&language=en "HTTP/1.1 200 OK"
+2025-03-25 14:03:41,589 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 14:03:41,712 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805309%2C20.473194&radius=1000&type=park&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4&language=en "HTTP/1.1 200 OK"
+2025-03-25 14:03:53,196 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 14:03:53,571 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805309%2C20.473194&radius=1000&type=point_of_interest&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4&language=en "HTTP/1.1 200 OK"
+2025-03-25 14:03:54,398 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 14:03:54,532 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805309%2C20.473194&radius=1000&type=landmark&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4&language=en "HTTP/1.1 200 OK"
+2025-03-25 14:03:55,353 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 14:03:55,484 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805309%2C20.473194&radius=1000&type=monument&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4&language=en "HTTP/1.1 200 OK"
+2025-03-25 14:03:56,304 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 14:03:56,438 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805309%2C20.473194&radius=1000&type=place_of_worship&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4&language=en "HTTP/1.1 200 OK"
+2025-03-25 14:03:57,257 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 14:03:57,475 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805309%2C20.473194&radius=5000&type=tourist_attraction&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4&language=en "HTTP/1.1 200 OK"
+2025-03-25 14:03:58,293 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 14:03:58,410 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805309%2C20.473194&radius=5000&type=museum&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4&language=en "HTTP/1.1 200 OK"
+2025-03-25 14:03:59,430 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 14:03:59,433 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 14:03:59,433 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 14:03:59,550 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805309%2C20.473194&radius=5000&type=church&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4&language=en "HTTP/1.1 200 OK"
+2025-03-25 14:04:00,573 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 14:04:00,696 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805309%2C20.473194&radius=5000&type=art_gallery&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4&language=en "HTTP/1.1 200 OK"
+2025-03-25 14:04:01,719 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 14:04:01,840 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805309%2C20.473194&radius=5000&type=park&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4&language=en "HTTP/1.1 200 OK"
+2025-03-25 14:04:02,860 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 14:04:02,980 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805309%2C20.473194&radius=5000&type=point_of_interest&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4&language=en "HTTP/1.1 200 OK"
+2025-03-25 14:04:04,610 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 14:04:04,750 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805309%2C20.473194&radius=5000&type=landmark&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4&language=en "HTTP/1.1 200 OK"
+2025-03-25 14:04:05,772 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 14:04:05,895 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805309%2C20.473194&radius=5000&type=monument&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4&language=en "HTTP/1.1 200 OK"
+2025-03-25 14:04:07,738 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 14:04:08,320 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805309%2C20.473194&radius=10000&type=tourist_attraction&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4&language=en "HTTP/1.1 200 OK"
+2025-03-25 14:04:09,547 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 14:04:09,673 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805309%2C20.473194&radius=10000&type=museum&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4&language=en "HTTP/1.1 200 OK"
+2025-03-25 14:04:11,111 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 14:04:11,239 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=44.805309%2C20.473194&radius=10000&type=church&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4&language=en "HTTP/1.1 200 OK"
+2025-03-25 14:04:12,260 - tourist_bot - ERROR - Google Places API error: REQUEST_DENIED
+2025-03-25 14:04:12,452 - aiogram.event - INFO - Update id=935111672 is handled. Duration 46438 ms by bot id=7656254605
+2025-03-25 15:29:36,391 - tourist_bot - INFO - Database initialized successfully
+2025-03-25 15:29:37,352 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-25 15:29:37,497 - tourist_bot - INFO - Bot is running...
+2025-03-25 15:29:37,498 - aiogram.dispatcher - INFO - Start polling
+2025-03-25 15:29:37,650 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-25 15:29:47,946 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 54] Connection reset by peer
+2025-03-25 15:29:47,949 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7656254605)
+2025-03-25 15:29:58,557 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7656254605)
+2025-03-25 15:29:58,560 - tourist_bot - INFO - Received location from user 113872890: 44.804831, 20.472557
+2025-03-25 15:29:59,715 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/geocode/json?latlng=44.804831%2C20.472557&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4&language=en "HTTP/1.1 200 OK"
+2025-03-25 15:29:59,732 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 15:30:00,362 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 15:30:00,802 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 15:30:01,176 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 15:30:01,529 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 15:30:01,808 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 400 Bad Request"
+2025-03-25 15:30:01,809 - tourist_bot - ERROR - New Places API error for point_of_interest: 400 - {
+  "error": {
+    "code": 400,
+    "message": "Unsupported types: point_of_interest.",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+2025-03-25 15:30:02,079 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 400 Bad Request"
+2025-03-25 15:30:02,082 - tourist_bot - ERROR - New Places API error for landmark: 400 - {
+  "error": {
+    "code": 400,
+    "message": "Unsupported types: landmark.",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+2025-03-25 15:30:02,430 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 15:30:02,707 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 400 Bad Request"
+2025-03-25 15:30:02,709 - tourist_bot - ERROR - New Places API error for place_of_worship: 400 - {
+  "error": {
+    "code": 400,
+    "message": "Unsupported types: place_of_worship.",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+2025-03-25 15:30:03,415 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 15:30:03,981 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 15:30:10,148 - httpx - INFO - HTTP Request: GET https://places.googleapis.com/v1/places/ChIJ9VslRq96WkcRfkyjdB9Jdqs "HTTP/1.1 200 OK"
+2025-03-25 15:30:10,512 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 15:30:10,550 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 15:30:15,373 - aiogram.event - INFO - Update id=935111673 is handled. Duration 16813 ms by bot id=7656254605
+2025-03-25 15:32:15,398 - aiogram.event - INFO - Update id=935111674 is not handled. Duration 1 ms by bot id=7656254605
+2025-03-25 15:32:23,770 - aiogram.event - INFO - Update id=935111675 is not handled. Duration 1 ms by bot id=7656254605
+2025-03-25 15:35:00,813 - aiogram.event - INFO - Update id=935111676 is not handled. Duration 0 ms by bot id=7656254605
+2025-03-25 15:40:50,671 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/geocode/json?latlng=44.8035073%2C20.4728931&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4&language=en "HTTP/1.1 200 OK"
+2025-03-25 15:40:51,209 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 15:40:51,751 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 15:40:56,582 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 15:41:13,228 - httpx - INFO - HTTP Request: POST https://tts.api.cloud.yandex.net/speech/v1/tts:synthesize "HTTP/1.1 200 OK"
+2025-03-25 15:41:18,393 - aiogram.event - INFO - Update id=935111677 is handled. Duration 28650 ms by bot id=7656254605
+2025-03-25 15:41:25,062 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-25 15:41:25,064 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-25 15:41:25,064 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-25 15:45:46,483 - tourist_bot - INFO - Database initialized successfully
+2025-03-25 15:45:47,507 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-25 15:45:47,645 - tourist_bot - INFO - Bot is running...
+2025-03-25 15:45:47,646 - aiogram.dispatcher - INFO - Start polling
+2025-03-25 15:45:47,784 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-25 15:46:03,266 - tourist_bot - INFO - Received location from user 113872890: 44.804637, 20.47235
+2025-03-25 15:46:03,950 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/geocode/json?latlng=44.804637%2C20.47235&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4&language=en "HTTP/1.1 200 OK"
+2025-03-25 15:46:04,140 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 15:46:04,501 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 15:46:04,877 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 15:46:05,247 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 15:46:05,580 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 15:46:05,861 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 15:46:06,152 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 15:46:06,490 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 15:46:06,783 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 15:46:07,082 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 15:46:07,409 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 15:46:07,687 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 400 Bad Request"
+2025-03-25 15:46:07,689 - tourist_bot - ERROR - Places API error for gallery: 400 - {
+  "error": {
+    "code": 400,
+    "message": "Unsupported types: gallery.",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+2025-03-25 15:46:07,973 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 400 Bad Request"
+2025-03-25 15:46:07,975 - tourist_bot - ERROR - Places API error for natural_feature: 400 - {
+  "error": {
+    "code": 400,
+    "message": "Unsupported types: natural_feature.",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+2025-03-25 15:46:08,263 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 15:46:09,463 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 15:46:09,468 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 15:46:14,642 - httpx - INFO - HTTP Request: GET https://places.googleapis.com/v1/places/ChIJ9VslRq96WkcRfkyjdB9Jdqs "HTTP/1.1 200 OK"
+2025-03-25 15:46:14,987 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 15:46:14,995 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 15:46:19,795 - aiogram.event - INFO - Update id=935111678 is handled. Duration 16529 ms by bot id=7656254605
+2025-03-25 15:47:14,339 - aiogram.event - INFO - Update id=935111679 is not handled. Duration 0 ms by bot id=7656254605
+2025-03-25 15:48:09,447 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-25 15:48:09,449 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-25 15:48:09,449 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-25 15:48:40,976 - tourist_bot - INFO - Database initialized successfully
+2025-03-25 15:48:42,201 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-25 15:48:42,407 - tourist_bot - INFO - Bot is running...
+2025-03-25 15:48:42,409 - aiogram.dispatcher - INFO - Start polling
+2025-03-25 15:48:42,553 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-25 15:48:54,602 - tourist_bot - INFO - Received location from user 113872890: 44.809785, 20.474218
+2025-03-25 15:48:55,230 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/geocode/json?latlng=44.809785%2C20.474218&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4&language=en "HTTP/1.1 200 OK"
+2025-03-25 15:48:55,343 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 15:48:55,704 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 15:48:56,042 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 15:48:56,386 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 15:48:56,703 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 15:48:57,000 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 15:48:57,323 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 15:48:57,655 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 15:48:57,953 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 15:48:58,235 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 15:48:58,551 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 15:48:58,825 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 400 Bad Request"
+2025-03-25 15:48:58,827 - tourist_bot - ERROR - Places API error for gallery: 400 - {
+  "error": {
+    "code": 400,
+    "message": "Unsupported types: gallery.",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+2025-03-25 15:48:59,095 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 400 Bad Request"
+2025-03-25 15:48:59,098 - tourist_bot - ERROR - Places API error for natural_feature: 400 - {
+  "error": {
+    "code": 400,
+    "message": "Unsupported types: natural_feature.",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+2025-03-25 15:48:59,382 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 15:49:00,312 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 15:49:00,333 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 15:49:05,738 - httpx - INFO - HTTP Request: GET https://places.googleapis.com/v1/places/ChIJaevJLnZ7WkcRXJ44SIifab8 "HTTP/1.1 200 OK"
+2025-03-25 15:49:05,740 - tourist_bot - ERROR - Error in Places API place details: unsupported operand type(s) for +: 'int' and 'str'
+Traceback (most recent call last):
+  File "/Users/kpudan/dev/street spirit/app/google_maps.py", line 308, in get_place_details
+    open_time = period["open"].get("hour", "00") + ":" + period["open"].get("minute", "00")
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+2025-03-25 15:49:06,095 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 15:49:06,108 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 15:49:14,870 - aiogram.event - INFO - Update id=935111680 is handled. Duration 20269 ms by bot id=7656254605
+2025-03-25 15:49:26,573 - httpx - INFO - HTTP Request: GET https://places.googleapis.com/v1/places/ChIJ9R_d_kN7WkcRiNmPVN62Afs "HTTP/1.1 200 OK"
+2025-03-25 15:49:26,576 - tourist_bot - ERROR - Error in Places API place details: unsupported operand type(s) for +: 'int' and 'str'
+Traceback (most recent call last):
+  File "/Users/kpudan/dev/street spirit/app/google_maps.py", line 308, in get_place_details
+    open_time = period["open"].get("hour", "00") + ":" + period["open"].get("minute", "00")
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+2025-03-25 15:49:26,998 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 15:49:27,491 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 15:49:32,482 - aiogram.event - INFO - Update id=935111681 is handled. Duration 6658 ms by bot id=7656254605
+2025-03-25 15:49:37,339 - httpx - INFO - HTTP Request: GET https://places.googleapis.com/v1/places/ChIJMaIecpJ7WkcRqA4VJtMwVKI "HTTP/1.1 200 OK"
+2025-03-25 15:49:37,341 - tourist_bot - ERROR - Error in Places API place details: unsupported operand type(s) for +: 'int' and 'str'
+Traceback (most recent call last):
+  File "/Users/kpudan/dev/street spirit/app/google_maps.py", line 308, in get_place_details
+    open_time = period["open"].get("hour", "00") + ":" + period["open"].get("minute", "00")
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+2025-03-25 15:49:37,731 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 15:49:37,746 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 15:49:44,171 - aiogram.event - INFO - Update id=935111682 is handled. Duration 7571 ms by bot id=7656254605
+2025-03-25 15:49:51,615 - httpx - INFO - HTTP Request: GET https://places.googleapis.com/v1/places/ChIJ8fgqaaR6WkcRt1dT1nFmKUQ "HTTP/1.1 200 OK"
+2025-03-25 15:49:51,620 - tourist_bot - ERROR - Error in Places API place details: unsupported operand type(s) for +: 'int' and 'str'
+Traceback (most recent call last):
+  File "/Users/kpudan/dev/street spirit/app/google_maps.py", line 308, in get_place_details
+    open_time = period["open"].get("hour", "00") + ":" + period["open"].get("minute", "00")
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+2025-03-25 15:49:52,032 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 15:49:52,936 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 15:49:58,378 - aiogram.event - INFO - Update id=935111683 is handled. Duration 7526 ms by bot id=7656254605
+2025-03-25 15:50:09,945 - httpx - INFO - HTTP Request: GET https://places.googleapis.com/v1/places/ChIJk5k5FQB7WkcRI3mzsrb_mUk "HTTP/1.1 200 OK"
+2025-03-25 15:50:10,342 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 15:50:10,847 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 15:50:16,040 - aiogram.event - INFO - Update id=935111684 is handled. Duration 7029 ms by bot id=7656254605
+2025-03-25 15:57:25,903 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-25 15:57:25,904 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-25 15:57:25,905 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-25 16:00:58,363 - tourist_bot - INFO - Database initialized successfully
+2025-03-25 16:00:59,351 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-25 16:00:59,500 - tourist_bot - INFO - Bot is running...
+2025-03-25 16:00:59,502 - aiogram.dispatcher - INFO - Start polling
+2025-03-25 16:00:59,655 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-25 16:01:11,277 - tourist_bot - INFO - Received location from user 113872890: 44.806408, 20.471671
+2025-03-25 16:01:11,917 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/geocode/json?latlng=44.806408%2C20.471671&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4&language=en "HTTP/1.1 200 OK"
+2025-03-25 16:01:12,234 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:01:12,599 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:01:12,948 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:01:13,308 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:01:13,624 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:01:13,919 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:01:14,239 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:01:14,584 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:01:14,880 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:01:15,163 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:01:15,479 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:01:15,754 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 400 Bad Request"
+2025-03-25 16:01:15,758 - tourist_bot - ERROR - Places API error for gallery: 400 - {
+  "error": {
+    "code": 400,
+    "message": "Unsupported types: gallery.",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+2025-03-25 16:01:16,019 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 400 Bad Request"
+2025-03-25 16:01:16,024 - tourist_bot - ERROR - Places API error for natural_feature: 400 - {
+  "error": {
+    "code": 400,
+    "message": "Unsupported types: natural_feature.",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+2025-03-25 16:01:16,314 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:01:16,954 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:01:17,549 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:01:23,277 - httpx - INFO - HTTP Request: GET https://places.googleapis.com/v1/places/ChIJc63z4aB6WkcRGu4Aewl9Xsk "HTTP/1.1 200 OK"
+2025-03-25 16:01:23,279 - tourist_bot - ERROR - Error in Places API place details: unsupported operand type(s) for +: 'int' and 'str'
+Traceback (most recent call last):
+  File "/Users/kpudan/dev/street spirit/app/google_maps.py", line 308, in get_place_details
+    open_time = period["open"].get("hour", "00") + ":" + period["open"].get("minute", "00")
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+2025-03-25 16:01:23,633 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:01:23,653 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:01:28,326 - tourist_bot - ERROR - Error in show_place: name 'os' is not defined
+Traceback (most recent call last):
+  File "/Users/kpudan/dev/street spirit/app/handlers.py", line 444, in show_place
+    google_maps_api_key = os.getenv("GOOGLE_MAPS_API_KEY")
+                          ^^
+NameError: name 'os' is not defined. Did you forget to import 'os'?
+2025-03-25 16:01:28,498 - aiogram.event - INFO - Update id=935111685 is handled. Duration 17221 ms by bot id=7656254605
+2025-03-25 16:01:36,745 - httpx - INFO - HTTP Request: GET https://places.googleapis.com/v1/places/ChIJH6yZ8Pt7WkcRpfZuQv6LuMw "HTTP/1.1 200 OK"
+2025-03-25 16:01:36,748 - tourist_bot - ERROR - Error in Places API place details: unsupported operand type(s) for +: 'int' and 'str'
+Traceback (most recent call last):
+  File "/Users/kpudan/dev/street spirit/app/google_maps.py", line 308, in get_place_details
+    open_time = period["open"].get("hour", "00") + ":" + period["open"].get("minute", "00")
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+2025-03-25 16:01:37,145 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:01:37,180 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:01:43,505 - tourist_bot - ERROR - Error in show_place: name 'os' is not defined
+Traceback (most recent call last):
+  File "/Users/kpudan/dev/street spirit/app/handlers.py", line 444, in show_place
+    google_maps_api_key = os.getenv("GOOGLE_MAPS_API_KEY")
+                          ^^
+NameError: name 'os' is not defined. Did you forget to import 'os'?
+2025-03-25 16:01:43,681 - aiogram.event - INFO - Update id=935111686 is handled. Duration 7664 ms by bot id=7656254605
+2025-03-25 16:03:20,280 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-25 16:03:20,282 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-25 16:03:20,282 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-25 16:03:48,952 - tourist_bot - INFO - Database initialized successfully
+2025-03-25 16:03:49,782 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-25 16:03:49,929 - tourist_bot - INFO - Bot is running...
+2025-03-25 16:03:49,930 - aiogram.dispatcher - INFO - Start polling
+2025-03-25 16:03:50,079 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-25 16:03:59,299 - tourist_bot - INFO - Received location from user 113872890: 44.805493, 20.472591
+2025-03-25 16:03:59,889 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/geocode/json?latlng=44.805493%2C20.472591&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4&language=en "HTTP/1.1 200 OK"
+2025-03-25 16:04:00,029 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:04:00,363 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:04:00,697 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:04:01,063 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:04:01,386 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:04:01,674 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:04:02,004 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:04:02,340 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:04:02,626 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:04:02,917 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:04:03,242 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:04:03,517 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 400 Bad Request"
+2025-03-25 16:04:03,520 - tourist_bot - ERROR - Places API error for gallery: 400 - {
+  "error": {
+    "code": 400,
+    "message": "Unsupported types: gallery.",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+2025-03-25 16:04:03,795 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 400 Bad Request"
+2025-03-25 16:04:03,797 - tourist_bot - ERROR - Places API error for natural_feature: 400 - {
+  "error": {
+    "code": 400,
+    "message": "Unsupported types: natural_feature.",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+2025-03-25 16:04:04,079 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:04:04,453 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:04:04,469 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:04:10,852 - httpx - INFO - HTTP Request: GET https://places.googleapis.com/v1/places/ChIJc63z4aB6WkcRGu4Aewl9Xsk "HTTP/1.1 200 OK"
+2025-03-25 16:04:11,210 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:04:11,214 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:04:16,435 - tourist_bot - ERROR - Error sending map image: name 'os' is not defined
+Traceback (most recent call last):
+  File "/Users/kpudan/dev/street spirit/app/handlers.py", line 445, in show_place
+    google_maps_api_key = os.getenv("GOOGLE_MAPS_API_KEY")
+                          ^^
+NameError: name 'os' is not defined. Did you forget to import 'os'?
+2025-03-25 16:04:16,437 - aiogram.event - INFO - Update id=935111687 is handled. Duration 17138 ms by bot id=7656254605
+2025-03-25 16:04:36,762 - httpx - INFO - HTTP Request: GET https://places.googleapis.com/v1/places/ChIJ4RH6got7WkcRdAcwgTijeyI "HTTP/1.1 200 OK"
+2025-03-25 16:04:37,180 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:04:37,695 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:04:42,779 - tourist_bot - ERROR - Error sending map image: name 'os' is not defined
+Traceback (most recent call last):
+  File "/Users/kpudan/dev/street spirit/app/handlers.py", line 445, in show_place
+    google_maps_api_key = os.getenv("GOOGLE_MAPS_API_KEY")
+                          ^^
+NameError: name 'os' is not defined. Did you forget to import 'os'?
+2025-03-25 16:04:42,780 - aiogram.event - INFO - Update id=935111688 is handled. Duration 6767 ms by bot id=7656254605
+2025-03-25 16:05:55,707 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-25 16:05:55,708 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-25 16:05:55,709 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-25 16:05:58,197 - tourist_bot - INFO - Database initialized successfully
+2025-03-25 16:05:58,494 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-25 16:05:58,530 - tourist_bot - INFO - Bot is running...
+2025-03-25 16:05:58,530 - aiogram.dispatcher - INFO - Start polling
+2025-03-25 16:05:58,565 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-25 16:06:07,322 - tourist_bot - INFO - Received location from user 113872890: 44.804926, 20.471731
+2025-03-25 16:06:08,388 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/geocode/json?latlng=44.804926%2C20.471731&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4&language=en "HTTP/1.1 200 OK"
+2025-03-25 16:06:08,462 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:06:08,810 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:06:09,185 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:06:09,519 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:06:09,833 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:06:10,117 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:06:10,407 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:06:10,736 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:06:11,033 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:06:11,322 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:06:11,628 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:06:11,898 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 400 Bad Request"
+2025-03-25 16:06:11,902 - tourist_bot - ERROR - Places API error for gallery: 400 - {
+  "error": {
+    "code": 400,
+    "message": "Unsupported types: gallery.",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+2025-03-25 16:06:12,168 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 400 Bad Request"
+2025-03-25 16:06:12,171 - tourist_bot - ERROR - Places API error for natural_feature: 400 - {
+  "error": {
+    "code": 400,
+    "message": "Unsupported types: natural_feature.",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+2025-03-25 16:06:12,468 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:06:12,830 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:06:12,873 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:06:18,622 - httpx - INFO - HTTP Request: GET https://places.googleapis.com/v1/places/ChIJc63z4aB6WkcRGu4Aewl9Xsk "HTTP/1.1 200 OK"
+2025-03-25 16:06:18,978 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:06:19,007 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:06:27,460 - tourist_bot - ERROR - Error sending map image: Telegram server says - Bad Request: failed to get HTTP URL content
+Traceback (most recent call last):
+  File "/Users/kpudan/dev/street spirit/app/handlers.py", line 455, in show_place
+    await message.answer_photo(
+    ...<2 lines>...
+    )
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/aiogram/client/bot.py", line 498, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/aiogram/client/session/aiohttp.py", line 185, in make_request
+    response = self.check_response(
+        bot=bot, method=method, status_code=resp.status, content=raw_result
+    )
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: failed to get HTTP URL content
+2025-03-25 16:06:27,468 - aiogram.event - INFO - Update id=935111689 is handled. Duration 20145 ms by bot id=7656254605
+2025-03-25 16:06:32,787 - httpx - INFO - HTTP Request: GET https://places.googleapis.com/v1/places/ChIJAfrKa2J7WkcRtOYTW3Yxw3E "HTTP/1.1 200 OK"
+2025-03-25 16:06:33,174 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:06:33,699 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:06:39,579 - tourist_bot - ERROR - Error sending map image: Telegram server says - Bad Request: failed to get HTTP URL content
+Traceback (most recent call last):
+  File "/Users/kpudan/dev/street spirit/app/handlers.py", line 455, in show_place
+    await message.answer_photo(
+    ...<2 lines>...
+    )
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/aiogram/client/bot.py", line 498, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/aiogram/client/session/aiohttp.py", line 185, in make_request
+    response = self.check_response(
+        bot=bot, method=method, status_code=resp.status, content=raw_result
+    )
+  File "/Users/kpudan/dev/street spirit/.venv/lib/python3.13/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: failed to get HTTP URL content
+2025-03-25 16:06:39,582 - aiogram.event - INFO - Update id=935111690 is handled. Duration 7458 ms by bot id=7656254605
+2025-03-25 16:11:12,842 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-25 16:11:12,844 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-25 16:11:12,845 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-25 16:11:16,140 - tourist_bot - INFO - Database initialized successfully
+2025-03-25 16:11:16,596 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-25 16:11:16,631 - tourist_bot - INFO - Bot is running...
+2025-03-25 16:11:16,631 - aiogram.dispatcher - INFO - Start polling
+2025-03-25 16:11:16,667 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-25 16:11:30,679 - tourist_bot - INFO - Received location from user 113872890: 44.805556, 20.472448
+2025-03-25 16:11:31,649 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/geocode/json?latlng=44.805556%2C20.472448&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4&language=en "HTTP/1.1 200 OK"
+2025-03-25 16:11:31,881 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:11:32,248 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:11:32,615 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:11:32,966 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:11:33,316 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:11:33,605 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:11:33,930 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:11:34,292 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:11:34,593 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:11:34,872 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:11:35,192 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:11:35,458 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 400 Bad Request"
+2025-03-25 16:11:35,461 - tourist_bot - ERROR - Places API error for gallery: 400 - {
+  "error": {
+    "code": 400,
+    "message": "Unsupported types: gallery.",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+2025-03-25 16:11:35,734 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 400 Bad Request"
+2025-03-25 16:11:35,736 - tourist_bot - ERROR - Places API error for natural_feature: 400 - {
+  "error": {
+    "code": 400,
+    "message": "Unsupported types: natural_feature.",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+2025-03-25 16:11:36,013 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:11:36,565 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:11:37,083 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:11:42,968 - httpx - INFO - HTTP Request: GET https://places.googleapis.com/v1/places/ChIJc63z4aB6WkcRGu4Aewl9Xsk "HTTP/1.1 200 OK"
+2025-03-25 16:11:43,319 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:11:43,360 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:11:48,517 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/staticmap?center=44.8050907,20.4706899&zoom=16&size=600x300&maptype=roadmap&markers=color:red%7C44.8050907,20.4706899&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4 "HTTP/1.1 403 Forbidden"
+2025-03-25 16:11:48,518 - aiogram.event - INFO - Update id=935111691 is handled. Duration 17840 ms by bot id=7656254605
+2025-03-25 16:12:18,239 - httpx - INFO - HTTP Request: GET https://places.googleapis.com/v1/places/ChIJ4RH6got7WkcRdAcwgTijeyI "HTTP/1.1 200 OK"
+2025-03-25 16:12:18,636 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:12:18,649 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:12:24,156 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/staticmap?center=44.8060893,20.474620299999998&zoom=16&size=600x300&maptype=roadmap&markers=color:red%7C44.8060893,20.474620299999998&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4 "HTTP/1.1 403 Forbidden"
+2025-03-25 16:12:24,157 - aiogram.event - INFO - Update id=935111692 is handled. Duration 6532 ms by bot id=7656254605
+2025-03-25 16:17:20,510 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 54] Connection reset by peer
+2025-03-25 16:17:20,512 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7656254605)
+2025-03-25 16:17:31,558 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7656254605)
+2025-03-25 16:18:39,019 - httpx - INFO - HTTP Request: GET https://places.googleapis.com/v1/places/ChIJAfrKa2J7WkcRtOYTW3Yxw3E "HTTP/1.1 200 OK"
+2025-03-25 16:18:40,030 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:18:40,037 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:18:45,517 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/staticmap?center=44.804563599999994,20.4699729&zoom=16&size=600x300&maptype=roadmap&markers=color:red%7C44.804563599999994,20.4699729&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4 "HTTP/1.1 403 Forbidden"
+2025-03-25 16:18:45,519 - aiogram.event - INFO - Update id=935111693 is handled. Duration 7501 ms by bot id=7656254605
+2025-03-25 16:22:14,408 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-25 16:22:14,409 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-25 16:22:14,409 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-25 16:25:34,831 - tourist_bot - INFO - Database initialized successfully
+2025-03-25 16:25:35,512 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-25 16:25:35,657 - tourist_bot - INFO - Bot is running...
+2025-03-25 16:25:35,661 - aiogram.dispatcher - INFO - Start polling
+2025-03-25 16:25:35,813 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-25 16:25:52,744 - tourist_bot - INFO - Received location from user 113872890: 44.80705, 20.470467
+2025-03-25 16:25:53,456 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/geocode/json?latlng=44.80705%2C20.470467&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4&language=en "HTTP/1.1 200 OK"
+2025-03-25 16:25:53,928 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:25:54,384 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:25:54,897 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:25:55,295 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:25:55,661 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:25:55,984 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:25:56,340 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:25:56,752 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:25:57,088 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:25:57,421 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:25:57,772 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:25:58,076 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 400 Bad Request"
+2025-03-25 16:25:58,079 - tourist_bot - ERROR - Places API error for gallery: 400 - {
+  "error": {
+    "code": 400,
+    "message": "Unsupported types: gallery.",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+2025-03-25 16:25:58,384 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 400 Bad Request"
+2025-03-25 16:25:58,386 - tourist_bot - ERROR - Places API error for natural_feature: 400 - {
+  "error": {
+    "code": 400,
+    "message": "Unsupported types: natural_feature.",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+2025-03-25 16:25:58,706 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:25:59,697 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:25:59,699 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:26:06,041 - httpx - INFO - HTTP Request: GET https://places.googleapis.com/v1/places/ChIJH6yZ8Pt7WkcRpfZuQv6LuMw "HTTP/1.1 200 OK"
+2025-03-25 16:26:06,307 - httpx - INFO - HTTP Request: GET https://places.googleapis.com/v1/places/ChIJH6yZ8Pt7WkcRpfZuQv6LuMw/photos/AUy1YQ1u6Vbtk2Ta7iwEErBbx-rP_m1Ne3tlT7U1u9f_shCHqKoKEwudYYC6cCWouWunffUGHHIpFlZLqMYAASwL0_cVwHtTmO1IQx93dMPt68tCpuhZqg_ZykZvkTW76XLSqErJtsb7juEU0vNnzsBkmMjha3CJMvWyvQGtmSYWhcDsQJp1APPEhWSnnKDlOGDOz9JpFOibqFUQ7VWxscfwMUHpG2B0ds-PRfXLXP-CKd_mbw09Jn3In0d_DZwmIzDb-ntD4Lo8nRChW0zS2a3nZfl3LOLUPY7FpRgKqjL9znD8CA/media?maxWidthPx=600 "HTTP/1.1 302 Found"
+2025-03-25 16:26:06,310 - tourist_bot - ERROR - Place Photo API error: 302 - {
+  "name": "places/ChIJH6yZ8Pt7WkcRpfZuQv6LuMw/photos/AUy1YQ1u6Vbtk2Ta7iwEErBbx-rP_m1Ne3tlT7U1u9f_shCHqKoKEwudYYC6cCWouWunffUGHHIpFlZLqMYAASwL0_cVwHtTmO1IQx93dMPt68tCpuhZqg_ZykZvkTW76XLSqErJtsb7juEU0
+2025-03-25 16:26:06,879 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:26:06,881 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:26:18,484 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/staticmap?center=44.8059419,20.469075699999998&zoom=16&size=600x300&maptype=roadmap&markers=color:red%7C44.8059419,20.469075699999998&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4 "HTTP/1.1 403 Forbidden"
+2025-03-25 16:26:18,486 - aiogram.event - INFO - Update id=935111694 is handled. Duration 25742 ms by bot id=7656254605
+2025-03-25 16:26:34,763 - httpx - INFO - HTTP Request: GET https://places.googleapis.com/v1/places/ChIJhTmOl6Z6WkcRHNmXojbnd3E "HTTP/1.1 200 OK"
+2025-03-25 16:26:34,957 - httpx - INFO - HTTP Request: GET https://places.googleapis.com/v1/places/ChIJhTmOl6Z6WkcRHNmXojbnd3E/photos/AUy1YQ1vSrWCc6HOwD33XhslvmdolNREoEAT1C9y5GssqPu0Mxsb-9RXrQ6zRvBusLgKZBhggBEk3lC4NJQd6DDNtDKIrBTEzw62XzMZJ-SHDYhYpZN0PD4pxR3UCn3dAOKTl76NwjLxzhdWIgP-mHg6FHydWZsoxtUd9qt_ZtaKkOXDjWq1vlcjtt10nnuRLeNJ3wi6hfowsHYcQAjM-HxdSXJde6FxobarFiBS3dZ2Tpa42UtG_tY-F4GVtCoEGbofqmcioa94g6DxiTevw-xwvKb2DjoocPQ5ZvKGCwdpM0Kh3GfXquYJxj6JfG7QJgXpOYs1t4gG2b_9CK4td4DLOxJYuUDQ6QgmhaZqk_Nl6FQ1h8wJEAL1F9l0KI012nuHJNhm2RsiBua49RgkMGoX7eN3XrmUkSaFyfWp4TlSqFWBlH7m/media?maxWidthPx=600 "HTTP/1.1 302 Found"
+2025-03-25 16:26:34,963 - tourist_bot - ERROR - Place Photo API error: 302 - {
+  "name": "places/ChIJhTmOl6Z6WkcRHNmXojbnd3E/photos/AUy1YQ1vSrWCc6HOwD33XhslvmdolNREoEAT1C9y5GssqPu0Mxsb-9RXrQ6zRvBusLgKZBhggBEk3lC4NJQd6DDNtDKIrBTEzw62XzMZJ-SHDYhYpZN0PD4pxR3UCn3dAOKTl76NwjLxzhdWI
+2025-03-25 16:26:35,447 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:26:35,857 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:26:41,937 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/staticmap?center=44.8072904,20.4681496&zoom=16&size=600x300&maptype=roadmap&markers=color:red%7C44.8072904,20.4681496&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4 "HTTP/1.1 403 Forbidden"
+2025-03-25 16:26:41,939 - aiogram.event - INFO - Update id=935111695 is handled. Duration 8239 ms by bot id=7656254605
+2025-03-25 16:26:43,884 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 54] Connection reset by peer
+2025-03-25 16:26:43,885 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7656254605)
+2025-03-25 16:26:54,928 - aiogram.dispatcher - INFO - Connection established (tryings = 1, bot id = 7656254605)
+2025-03-25 16:50:31,804 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-25 16:50:31,807 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-25 16:50:31,807 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-25 16:50:35,098 - tourist_bot - INFO - Database initialized successfully
+2025-03-25 16:50:35,602 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-25 16:50:35,636 - tourist_bot - INFO - Bot is running...
+2025-03-25 16:50:35,637 - aiogram.dispatcher - INFO - Start polling
+2025-03-25 16:50:35,671 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-25 16:56:23,202 - tourist_bot - INFO - Received location from user 113872890: 44.805067, 20.471666
+2025-03-25 16:56:24,444 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/geocode/json?latlng=44.805067%2C20.471666&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4&language=en "HTTP/1.1 200 OK"
+2025-03-25 16:56:24,663 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:56:25,026 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:56:25,512 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:56:25,923 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:56:26,276 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:56:26,563 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:56:26,858 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:56:27,224 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:56:27,522 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:56:27,806 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:56:28,176 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:56:28,451 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 400 Bad Request"
+2025-03-25 16:56:28,454 - tourist_bot - ERROR - Places API error for gallery: 400 - {
+  "error": {
+    "code": 400,
+    "message": "Unsupported types: gallery.",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+2025-03-25 16:56:28,729 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 400 Bad Request"
+2025-03-25 16:56:28,730 - tourist_bot - ERROR - Places API error for natural_feature: 400 - {
+  "error": {
+    "code": 400,
+    "message": "Unsupported types: natural_feature.",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+2025-03-25 16:56:29,019 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:56:30,041 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:56:30,064 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:56:37,200 - httpx - INFO - HTTP Request: GET https://places.googleapis.com/v1/places/ChIJc63z4aB6WkcRGu4Aewl9Xsk "HTTP/1.1 200 OK"
+2025-03-25 16:56:37,336 - httpx - INFO - HTTP Request: GET https://places.googleapis.com/v1/places/ChIJc63z4aB6WkcRGu4Aewl9Xsk/photos/AUy1YQ3JCv2R1orvBLueqoUSQa9ptPhUtJvAneZHLqJY9az-SmTJPws9H1Zu46oR6ZlI_DAgYlTtj6BmmTATG4XZ-hK09sr4SuTSOitnh-mgqjOnhymdr8Pv2wEYVP8djvqD0qG9uz05B5Evvui6iN01ORMhjD26cvTqXTCHU7lhLj80X8u-58Ge28luTT5cDfpKZrgcXJLxrn3S2-lolAw8RVPmbeUapxf-S3oBjlR58t-4wvGGQVH0yo0y50RJoqQFdIkR-2HwE1FKboNFWVZj9BbGKkv2Xz80H1H-CEz0SjP9aQ/media?maxWidthPx=600 "HTTP/1.1 302 Found"
+2025-03-25 16:56:37,339 - tourist_bot - ERROR - Place Photo API error: 302 - {
+  "name": "places/ChIJc63z4aB6WkcRGu4Aewl9Xsk/photos/AUy1YQ3JCv2R1orvBLueqoUSQa9ptPhUtJvAneZHLqJY9az-SmTJPws9H1Zu46oR6ZlI_DAgYlTtj6BmmTATG4XZ-hK09sr4SuTSOitnh-mgqjOnhymdr8Pv2wEYVP8djvqD0qG9uz05B5Evv
+2025-03-25 16:56:37,680 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:56:37,681 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:56:42,076 - aiogram.event - INFO - Update id=935111696 is handled. Duration 18874 ms by bot id=7656254605
+2025-03-25 16:58:56,819 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-03-25 16:58:56,820 - aiogram.dispatcher - INFO - Polling stopped for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-25 16:58:56,820 - aiogram.dispatcher - INFO - Polling stopped
+2025-03-25 16:59:00,053 - tourist_bot - INFO - Database initialized successfully
+2025-03-25 16:59:00,418 - tourist_bot - INFO - Starting bot as @Streetspirittest_bot (ID: 7656254605)
+2025-03-25 16:59:00,455 - tourist_bot - INFO - Bot is running...
+2025-03-25 16:59:00,455 - aiogram.dispatcher - INFO - Start polling
+2025-03-25 16:59:00,490 - aiogram.dispatcher - INFO - Run polling for bot @Streetspirittest_bot id=7656254605 - 'NEST | TEST'
+2025-03-25 16:59:17,557 - tourist_bot - INFO - Received location from user 113872890: 44.804325, 20.470715
+2025-03-25 16:59:18,652 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:59:18,661 - httpx - INFO - HTTP Request: GET https://maps.googleapis.com/maps/api/geocode/json?latlng=44.804325%2C20.470715&key=AIzaSyCPtTDc6cWc83TFAcfHThRpC0h9cdzu-c4&language=en "HTTP/1.1 200 OK"
+2025-03-25 16:59:19,020 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:59:19,399 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:59:19,775 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:59:20,094 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:59:20,380 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:59:20,663 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:59:21,023 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:59:21,322 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:59:21,599 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:59:21,956 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:59:22,245 - httpx - INFO - HTTP Request: POST https://places.googleapis.com/v1/places:searchNearby "HTTP/1.1 200 OK"
+2025-03-25 16:59:23,147 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:59:23,179 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:59:29,277 - httpx - INFO - HTTP Request: GET https://places.googleapis.com/v1/places/ChIJAfrKa2J7WkcRtOYTW3Yxw3E "HTTP/1.1 200 OK"
+2025-03-25 16:59:29,621 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:59:29,655 - httpx - INFO - HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-25 16:59:34,249 - aiogram.event - INFO - Update id=935111697 is handled. Duration 16691 ms by bot id=7656254605

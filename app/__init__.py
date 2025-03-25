@@ -29,7 +29,8 @@ required_vars = [
     "ADMIN_BOT_TOKEN",
     "DEEPSEEK_API_KEY",
     "YA_SPEECHKIT_API_KEY",
-    "YA_SEARCH_API_KEY"
+    "YA_SEARCH_API_KEY",
+    "GOOGLE_MAPS_API_KEY"  # Add this line
 ]
 
 missing_vars = [var for var in required_vars if not os.getenv(var)]

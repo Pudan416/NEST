@@ -149,7 +149,7 @@ async def test_deepseek_connection():
     return result
 
 
-async def overpass_nearby_places(latitude: float, longitude: float, radius: int = 1000):
+#async def overpass_nearby_places(latitude: float, longitude: float, radius: int = 1000):
     """
     Fetch nearby tourist destinations using Overpass API with an expanded query
     to include more types of attractions.
@@ -292,7 +292,7 @@ async def overpass_nearby_places(latitude: float, longitude: float, radius: int 
         return []
 
 
-async def get_detailed_address(latitude: float, longitude: float):
+# async def get_detailed_address(latitude: float, longitude: float):
     """Get a detailed address using Nominatim reverse geocoding."""
     nominatim_url = "https://nominatim.openstreetmap.org/reverse"
     params = {
