@@ -1,7 +1,6 @@
 import sqlite3
 import os
 from datetime import datetime
-import logging
 from app import logger
 
 
@@ -11,7 +10,6 @@ class BotDatabase:
         self.init_db()
 
     def init_db(self):
-        """Create database tables if they don't exist"""
         try:
             with sqlite3.connect(self.db_path) as conn:
                 cursor = conn.cursor()
@@ -40,7 +38,7 @@ class BotDatabase:
                     place_type TEXT,
                     latitude REAL,
                     longitude REAL,
-                    city TEXT,  -- Added city field
+                    city TEXT,
                     search_time TIMESTAMP,
                     FOREIGN KEY (user_id) REFERENCES users(user_id)
                 )
@@ -73,27 +71,21 @@ class BotDatabase:
         except sqlite3.Error as e:
             logger.error(f"Database initialization error: {e}")
 
-    def add_or_update_user(
-        self, user_id, username=None, first_name=None, last_name=None
-    ):
-        """Add a new user or update an existing user's information"""
+    def add_or_update_user(self, user_id, username=None, first_name=None, last_name=None):
         now = datetime.now().isoformat()
         try:
             with sqlite3.connect(self.db_path) as conn:
                 cursor = conn.cursor()
-                # Check if user exists
                 cursor.execute(
                     "SELECT user_id FROM users WHERE user_id = ?", (user_id,)
                 )
                 if cursor.fetchone():
-                    # Update last active
                     cursor.execute(
                         "UPDATE users SET last_active = ?, username = ?, first_name = ?, last_name = ? WHERE user_id = ?",
                         (now, username, first_name, last_name, user_id),
                     )
                     logger.debug(f"Updated user: {user_id}")
                 else:
-                    # Add new user
                     cursor.execute(
                         "INSERT INTO users VALUES (?, ?, ?, ?, ?, ?)",
                         (user_id, username, first_name, last_name, now, now),
@@ -105,10 +97,7 @@ class BotDatabase:
             logger.error(f"Error adding/updating user {user_id}: {e}")
             return False
 
-    def log_search(
-        self, user_id, place_name, place_type, latitude, longitude, city=None
-    ):
-        """Log a place search by a user"""
+    def log_search(self, user_id, place_name, place_type, latitude, longitude, city=None):
         now = datetime.now().isoformat()
         try:
             with sqlite3.connect(self.db_path) as conn:
@@ -118,16 +107,13 @@ class BotDatabase:
                     (user_id, place_name, place_type, latitude, longitude, city, now),
                 )
                 conn.commit()
-                logger.debug(
-                    f"Logged search for {place_name} in {city} by user {user_id}"
-                )
+                logger.debug(f"Logged search for {place_name} in {city} by user {user_id}")
                 return True
         except sqlite3.Error as e:
             logger.error(f"Error logging search: {e}")
             return False
 
     def get_user_count(self):
-        """Get the total number of users"""
         try:
             with sqlite3.connect(self.db_path) as conn:
                 cursor = conn.cursor()
@@ -138,7 +124,6 @@ class BotDatabase:
             return 0
 
     def get_search_count(self):
-        """Get the total number of searches"""
         try:
             with sqlite3.connect(self.db_path) as conn:
                 cursor = conn.cursor()
@@ -149,7 +134,6 @@ class BotDatabase:
             return 0
 
     def get_active_users_today(self):
-        """Get the count of users active today"""
         today = datetime.now().date().isoformat()
         try:
             with sqlite3.connect(self.db_path) as conn:
@@ -164,7 +148,6 @@ class BotDatabase:
             return 0
 
     def get_popular_places(self, limit=10):
-        """Get the most popular places based on search count"""
         try:
             with sqlite3.connect(self.db_path) as conn:
                 cursor = conn.cursor()
@@ -184,7 +167,6 @@ class BotDatabase:
             return []
 
     def get_cities(self, limit=20):
-        """Get cities where searches have been performed, with counts"""
         try:
             with sqlite3.connect(self.db_path) as conn:
                 cursor = conn.cursor()
@@ -205,7 +187,6 @@ class BotDatabase:
             return []
 
     def add_authorized_admin(self, user_id, username=None):
-        """Add a user to the authorized admins list"""
         now = datetime.now().isoformat()
         try:
             with sqlite3.connect(self.db_path) as conn:
@@ -222,7 +203,6 @@ class BotDatabase:
             return False
 
     def is_authorized_admin(self, user_id):
-        """Check if a user is an authorized admin"""
         try:
             with sqlite3.connect(self.db_path) as conn:
                 cursor = conn.cursor()
@@ -236,7 +216,6 @@ class BotDatabase:
             return False
 
     def get_searches_by_date(self, days=7):
-        """Get search counts grouped by date for the last X days"""
         try:
             with sqlite3.connect(self.db_path) as conn:
                 conn.row_factory = sqlite3.Row
@@ -257,7 +236,6 @@ class BotDatabase:
             return []
 
     def get_recent_users(self, limit=10):
-        """Get the most recent active users"""
         try:
             with sqlite3.connect(self.db_path) as conn:
                 conn.row_factory = sqlite3.Row
@@ -278,7 +256,6 @@ class BotDatabase:
             return []
 
     def get_place_types(self):
-        """Get distribution of place types"""
         try:
             with sqlite3.connect(self.db_path) as conn:
                 cursor = conn.cursor()
@@ -296,15 +273,12 @@ class BotDatabase:
             return []
 
     def backup_database(self, backup_path=None):
-        """Create a backup of the database"""
         if backup_path is None:
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
             backup_path = f"{self.db_path}.backup_{timestamp}"
 
         try:
-            with sqlite3.connect(self.db_path) as src, sqlite3.connect(
-                backup_path
-            ) as dst:
+            with sqlite3.connect(self.db_path) as src, sqlite3.connect(backup_path) as dst:
                 src.backup(dst)
             logger.info(f"Database backup created at {backup_path}")
             return backup_path
