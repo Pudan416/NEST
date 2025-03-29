@@ -50,6 +50,7 @@ async def handle_start_command(message: Message, db=None):
         if db:
             db.add_or_update_user(user_id, username, first_name, last_name)
 
+
         await message.answer(MESSAGES['start'])
     except Exception as e:
         logger.error(f"Error in '/start' command handler: {e}", exc_info=True)
