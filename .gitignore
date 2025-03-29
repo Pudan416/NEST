@@ -5,7 +5,6 @@ __pycache__
 .env
 .venv
 
-
 # Pytest and code coverage:
 .pytest_cache
 .coverage
@@ -21,3 +20,25 @@ pyrightconfig.json
 .ipynb_checkpoints
 .python-version
 .vscode/*
+
+# Bot logs
+**/logs/
+*.log
+bot_logs/
+admin_bot/logs/
+tourist_bot/logs/
+admin_bot/*.log
+tourist_bot/*.log
+
+# Specific log file patterns (if you have specific naming conventions)
+*_log.txt
+admin_*.log
+tourist_*.log
+
+# Environment-specific logs
+dev_logs/
+prod_logs/
+
+# Debug files that might contain logs
+debug/
+debug.txt

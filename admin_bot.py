@@ -165,8 +165,6 @@ async def cmd_users(message: Message, state: FSMContext):
         logger.error(error_msg)
         await message.answer(f"Error: {error_msg}")
 
-## Popular places command removed as requested
-
 # Create database backup
 @router.message(Command("backup"))
 async def cmd_backup(message: Message, state: FSMContext):
@@ -218,9 +216,7 @@ async def cmd_help(message: Message, state: FSMContext):
         "Available commands:\n\n"
         "/stats - View basic statistics (total users, searches, etc.)\n"
         "/users - View list of recent active users\n"
-        "/popular - View most popular searched places\n"
         "/backup - Create a database backup\n"
-        "/debug - Show technical debugging information\n"
         "/help - Show this help message"
     )
     
@@ -262,38 +258,6 @@ async def cmd_cities(message: Message, state: FSMContext):
         error_msg = f"Error retrieving cities: {str(e)}"
         logger.error(error_msg)
         await message.answer(f"Error: {error_msg}")
-
-# Add test_api command to admin bot
-@router.message(Command("test_api"))
-async def cmd_test_api(message: Message, state: FSMContext):
-    """Test API connections."""
-    user_id = message.from_user.id
-    logger.info(f"Admin bot: Test API command from user {user_id}")
-    
-    # Check authorization
-    current_state = await state.get_state()
-    if current_state is not None:
-        await message.answer("Please complete authentication first.")
-        return
-    
-    if not is_authorized(user_id) and current_state is None:
-        await message.answer("You are not authorized to use this command.")
-        return
-    
-    try:
-        from app.generators import test_deepseek_connection
-        from app.google_maps import test_google_maps_connection
-        
-        await message.answer("Testing DeepSeek API connection...")
-        deepseek_result = await test_deepseek_connection()
-        await message.answer(f"DeepSeek API test result: {deepseek_result}")
-        
-        await message.answer("Testing Google Maps API connection...")
-        google_maps_result = await test_google_maps_connection()
-        await message.answer(f"Google Maps API test result: {google_maps_result}")
-    except Exception as e:
-        logger.error(f"Error in API test handler: {e}", exc_info=True)
-        await message.answer(f"Error testing API: {str(e)}")
 
 # Handle debug command
 @router.message(Command("debug"))
