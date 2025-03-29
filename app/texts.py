@@ -1,8 +1,8 @@
 MESSAGES = {
     # Start command message
-    'start': "🐦 Coo-coo-COOOO! Nesty is here! \n\n"
+    'start': "🐦 Coo-coo-COOO! \n\n"
              "Welcome to NEST - Navigate, Explore, See, Travel!\n"
-             "I've fluttered over every inch of this city. You might've spotted me perched overhead! \n\n"
+             "I am Nesty, a pigeon-expert of whatever concrete jungles you are in.\n\n"
              "📍 Drop your location and I'll find the best nearby spots worth your attention!\n\n"
              "Let's spread our wings and explore together!",
     
