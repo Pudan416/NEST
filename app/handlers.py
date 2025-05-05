@@ -10,6 +10,7 @@ from app.generators import (
     get_http_client,
 )
 from app.google_maps import get_nearby_places, get_detailed_address
+from app.maps_static import get_static_map_image  # Import the new module
 from typing import Dict, Any, Callable, Awaitable
 from geopy.distance import geodesic
 import asyncio
@@ -49,6 +50,7 @@ async def handle_start_command(message: Message, db=None):
 
         if db:
             db.add_or_update_user(user_id, username, first_name, last_name)
+
 
         await message.answer(MESSAGES['start'])
     except Exception as e:
@@ -158,6 +160,13 @@ async def handle_location(message: Message, db=None):
         valid_places.sort(key=lambda x: x["distance"])
         closest_places = valid_places[:5] if len(valid_places) >= 5 else valid_places
 
+        # Update status message to indicate we're generating a map
+        await status_message.edit_text(MESSAGES['generating_map'])
+        
+        # Generate the static map for all places
+        map_image = await get_static_map_image(closest_places, latitude, longitude, http_client)
+
+        # Store the user data
         user_data[user_id] = {
             "places": closest_places,
             "current_index": 0,
@@ -167,11 +176,24 @@ async def handle_location(message: Message, db=None):
             "city": english_city,
             "db": db,
             "last_message": None,
+            "map_image": map_image  # Store the map image in user data
         }
 
+        # First send the message about found places
         places_count_message = MESSAGES['places_found'].format(count=len(closest_places))
         await status_message.edit_text(places_count_message)
+        
+        # Then send the map image
+        if map_image:
+            try:
+                photo = BufferedInputFile(map_image, filename="map.png")
+                map_caption = MESSAGES['map_caption'].format(count=len(closest_places))
+                await message.answer_photo(photo=photo, caption=map_caption)
+            except Exception as map_error:
+                logger.error(f"Error sending map image: {map_error}")
+                # If we can't send the map, still continue with text
 
+        # Show the first place details
         await show_place(message, user_id, 0)
 
     except Exception as e:
@@ -252,7 +274,7 @@ async def show_place(message, user_id, place_index):
                         text=next_text,
                         callback_data=f"next_{(place_index + 1) % len(places)}",
                     )
-                ],
+                ]
             ]
         )
 
@@ -263,7 +285,8 @@ async def show_place(message, user_id, place_index):
             )
             place["logged"] = True
 
-        message_text = f"<b>{place_name.upper()}</b> ({place_index + 1}/{len(places)})"
+        # Include the marker number in the message title
+        message_text = f"<b>#{place_index + 1}: {place_name.upper()}</b> ({place_index + 1}/{len(places)})"
 
         if original_name != place_name:
             message_text += f" (<i>{original_name}</i>)"

@@ -8,7 +8,7 @@ import io
 
 from dotenv import load_dotenv
 from aiogram import Bot, Dispatcher, Router
-from aiogram.types import Message
+from aiogram.types import Message, BufferedInputFile
 from aiogram.filters import Command, CommandStart
 from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.fsm.context import FSMContext
@@ -16,6 +16,8 @@ from aiogram.fsm.state import State, StatesGroup
 
 from app import logger, ADMIN_PASSWORD, AUTHORIZED_ADMIN_IDS, DB_PATH
 from app.database import BotDatabase
+from app.google_maps import test_connection as test_google_maps_api
+from app.maps_static import create_static_map_url, get_static_map_image
 
 # States for authentication FSM
 class AuthStates(StatesGroup):
@@ -46,6 +48,7 @@ async def cmd_start(message: Message, state: FSMContext):
             f"/users - View recent users\n"
             f"/cities - View cities where the bot has searched\n"
             f"/backup - Create database backup\n"
+            f"/test_api - Test API connections\n"
             f"/help - See all available commands"
         )
     else:
@@ -70,6 +73,7 @@ async def process_password(message: Message, state: FSMContext):
             "/users - View recent users\n"
             "/cities - View cities where the bot has searched\n"
             "/backup - Create database backup\n"
+            "/test_api - Test API connections\n"
             "/help - See all available commands"
         )
     else:
@@ -216,7 +220,9 @@ async def cmd_help(message: Message, state: FSMContext):
         "Available commands:\n\n"
         "/stats - View basic statistics (total users, searches, etc.)\n"
         "/users - View list of recent active users\n"
+        "/cities - View cities where searches have been performed\n"
         "/backup - Create a database backup\n"
+        "/test_api - Test API connections\n"
         "/help - Show this help message"
     )
     
@@ -259,6 +265,95 @@ async def cmd_cities(message: Message, state: FSMContext):
         logger.error(error_msg)
         await message.answer(f"Error: {error_msg}")
 
+# Test API connections
+@router.message(Command("test_api"))
+async def cmd_test_api(message: Message, state: FSMContext):
+    """Test API connections."""
+    user_id = message.from_user.id
+    logger.info(f"Admin bot: Test API command from user {user_id}")
+    
+    # Check authorization
+    current_state = await state.get_state()
+    if current_state is not None:
+        await message.answer("Please complete authentication first.")
+        return
+    
+    if not is_authorized(user_id) and current_state is None:
+        await message.answer("You are not authorized to use this command.")
+        return
+    
+    status_message = await message.answer("🔍 Testing API connections, please wait...")
+    
+    # Test Google Maps API
+    try:
+        google_maps_result = await test_google_maps_api()
+        
+        # Test Static Maps API
+        import httpx
+        from app.maps_static import create_static_map_url
+        
+        # Test data for static map
+        test_places = [
+            {
+                "position": {"lat": 44.802416, "lng": 20.465601},
+                "title": "Test Location 1"
+            },
+            {
+                "position": {"lat": 44.804, "lng": 20.467},
+                "title": "Test Location 2"
+            }
+        ]
+        
+        map_url = create_static_map_url(test_places)
+        
+        if map_url:
+            static_map_status = "✅ Google Maps Static API: Working"
+            
+            # Fetch map and send as photo
+            try:
+                async with httpx.AsyncClient() as client:
+                    response = await client.get(map_url)
+                    
+                    if response.status_code == 200:
+                        map_image = response.content
+                        await status_message.edit_text("🔍 API tests complete. See results below:")
+                        
+                        # Send test results as text
+                        api_status = (
+                            "🔌 <b>API Connection Tests</b>\n\n"
+                            f"{google_maps_result}\n\n"
+                            f"{static_map_status}"
+                        )
+                        await message.answer(api_status, parse_mode="HTML")
+                        
+                        # Send test map image
+                        photo = BufferedInputFile(map_image, filename="test_map.png")
+                        await message.answer_photo(
+                            photo=photo,
+                            caption="Test static map with two markers"
+                        )
+                        return
+                    else:
+                        static_map_status = f"❌ Google Maps Static API: Error (Status code: {response.status_code})"
+            except Exception as e:
+                static_map_status = f"❌ Google Maps Static API: Error fetching map image - {str(e)}"
+        else:
+            static_map_status = "❌ Google Maps Static API: Failed to create URL"
+        
+        # If we get here, something went wrong with the map image
+        api_status = (
+            "🔌 <b>API Connection Tests</b>\n\n"
+            f"{google_maps_result}\n\n"
+            f"{static_map_status}"
+        )
+        await status_message.edit_text(api_status, parse_mode="HTML")
+        
+    except Exception as e:
+        error_msg = f"Error testing APIs: {str(e)}"
+        logger.error(error_msg, exc_info=True)
+        await status_message.edit_text(f"⚠️ Error testing APIs: {error_msg}")
+
+
 # Handle debug command
 @router.message(Command("debug"))
 async def cmd_debug(message: Message):
@@ -276,7 +371,8 @@ async def cmd_debug(message: Message):
         f"Current directory: {os.getcwd()}\n"
         f"Authorized IDs: {AUTHORIZED_ADMIN_IDS}\n"
         f"User ID: {user_id}\n"
-        f"Is admin: {is_authorized(user_id)}"
+        f"Is admin: {is_authorized(user_id)}\n"
+        f"Google Maps API key set: {'Yes' if os.getenv('GOOGLE_MAPS_API_KEY') else 'No'}"
     )
     
     await message.answer(debug_info, parse_mode="HTML")

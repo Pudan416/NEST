@@ -17,12 +17,14 @@ MESSAGES = {
     'scouting': "🐦 Taking off to scout the area!",
     'searching_wider': "🐦 Found a few spots nearby, but searching wider for more options...",
     'searching_farthest': "🐦 Just a few more seconds while I search farther away...",
+    'generating_map': "🐦 Creating a map of all the spots I found...",
     'no_places': "🐦 Well... Even us city birds don't hang around here much. Try dropping your pin somewhere else!",
     'places_found': "🐦 Spotted {count} cool spots nearby! Swooping down to check them out...",
     'lost_track': "🐦 Sorry, I lost track of our journey! Can you share your location again?",
     'lost_track_alert': "I lost track of our journey! Please share your location again.",
     'reading_signs': "🐦 Reading the signposts and street names...",
     'need_location': "🐦 I need coordinates to fly to, friend! Share your location or coo '/start' to begin our urban adventure!",
+    'map_caption': "🗺️ Map showing all {count} locations near you. The numbers correspond to each location, and the blue dot is your position.",
     
     # Button text
     'tell_more_btn': "💬 Tell me more",
@@ -97,7 +99,7 @@ GOOGLE_MAPS_MESSAGES = {
     'test_failed': "❌ API test failed: {error}",
     
     # Test results template
-    'test_results': """
+    "test_results": """
 Google Maps API Connection Test Results:
 ---------------------------------------
 1. {text_result}
@@ -106,5 +108,5 @@ Google Maps API Connection Test Results:
 4. {geocoding_result}
 
 Test location: Belgrade city center ({test_lat}, {test_lng})
-            """
+            """,
 }
