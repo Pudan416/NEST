@@ -10,6 +10,7 @@ from app.generators import (
     get_http_client,
 )
 from app.google_maps import get_nearby_places, get_detailed_address
+from app.maps_static import get_static_map_image  # Import the new module
 from typing import Dict, Any, Callable, Awaitable
 from geopy.distance import geodesic
 import asyncio
@@ -50,11 +51,10 @@ async def handle_start_command(message: Message, db=None):
         if db:
             db.add_or_update_user(user_id, username, first_name, last_name)
 
-
-        await message.answer(MESSAGES['start'])
+        await message.answer(MESSAGES["start"])
     except Exception as e:
         logger.error(f"Error in '/start' command handler: {e}", exc_info=True)
-        await message.answer(MESSAGES['error'])
+        await message.answer(MESSAGES["error"])
 
 
 @router.message(F.location)
@@ -72,13 +72,15 @@ async def handle_location(message: Message, db=None):
                 message.from_user.last_name,
             )
 
-        status_message = await message.answer(MESSAGES['scouting'])
+        status_message = await message.answer(MESSAGES["scouting"])
 
         http_client = await get_http_client()
 
         tasks = [
             get_detailed_address(latitude, longitude, http_client),
-            get_nearby_places(latitude, longitude, radius=1000, http_client=http_client),
+            get_nearby_places(
+                latitude, longitude, radius=1000, http_client=http_client
+            ),
         ]
 
         results = await asyncio.gather(*tasks)
@@ -93,9 +95,11 @@ async def handle_location(message: Message, db=None):
 
         wider_search_task = None
         if len(places) < 5:
-            await status_message.edit_text(MESSAGES['searching_wider'])
+            await status_message.edit_text(MESSAGES["searching_wider"])
             wider_search_task = asyncio.create_task(
-                get_nearby_places(latitude, longitude, radius=5000, http_client=http_client)
+                get_nearby_places(
+                    latitude, longitude, radius=5000, http_client=http_client
+                )
             )
 
         english_street, english_city = await asyncio.gather(*translation_tasks)
@@ -133,10 +137,12 @@ async def handle_location(message: Message, db=None):
                     pass
 
         if len(valid_places) < 2:
-            await status_message.edit_text(MESSAGES['searching_farthest'])
+            await status_message.edit_text(MESSAGES["searching_farthest"])
             try:
                 widest_places = await asyncio.wait_for(
-                    get_nearby_places(latitude, longitude, radius=10000, http_client=http_client),
+                    get_nearby_places(
+                        latitude, longitude, radius=10000, http_client=http_client
+                    ),
                     timeout=4,
                 )
 
@@ -153,12 +159,21 @@ async def handle_location(message: Message, db=None):
                 pass
 
         if not valid_places:
-            await status_message.edit_text(MESSAGES['no_places'])
+            await status_message.edit_text(MESSAGES["no_places"])
             return
 
         valid_places.sort(key=lambda x: x["distance"])
         closest_places = valid_places[:5] if len(valid_places) >= 5 else valid_places
 
+        # Update status message to indicate we're generating a map
+        await status_message.edit_text(MESSAGES["generating_map"])
+
+        # Generate the static map for all places
+        map_image = await get_static_map_image(
+            closest_places, latitude, longitude, http_client
+        )
+
+        # Store the user data
         user_data[user_id] = {
             "places": closest_places,
             "current_index": 0,
@@ -168,22 +183,37 @@ async def handle_location(message: Message, db=None):
             "city": english_city,
             "db": db,
             "last_message": None,
+            "map_image": map_image,  # Store the map image in user data
         }
 
-        places_count_message = MESSAGES['places_found'].format(count=len(closest_places))
+        # First send the message about found places
+        places_count_message = MESSAGES["places_found"].format(
+            count=len(closest_places)
+        )
         await status_message.edit_text(places_count_message)
 
+        # Then send the map image
+        if map_image:
+            try:
+                photo = BufferedInputFile(map_image, filename="map.png")
+                map_caption = MESSAGES["map_caption"].format(count=len(closest_places))
+                await message.answer_photo(photo=photo, caption=map_caption)
+            except Exception as map_error:
+                logger.error(f"Error sending map image: {map_error}")
+                # If we can't send the map, still continue with text
+
+        # Show the first place details
         await show_place(message, user_id, 0)
 
     except Exception as e:
         logger.error(f"Error in location handler: {e}", exc_info=True)
-        await message.answer(MESSAGES['try_again'])
+        await message.answer(MESSAGES["try_again"])
 
 
 async def show_place(message, user_id, place_index):
     try:
         if user_id not in user_data:
-            await message.answer(MESSAGES['lost_track'])
+            await message.answer(MESSAGES["lost_track"])
             return
 
         data = user_data[user_id]
@@ -201,11 +231,12 @@ async def show_place(message, user_id, place_index):
         needs_processing = (
             not "original_title" in place
             or place["address"].get("label") == "Address will be fetched"
-            or "title" in place and place["title"] == place.get("original_title")
+            or "title" in place
+            and place["title"] == place.get("original_title")
         )
 
         if needs_processing:
-            processing_message = await message.answer(MESSAGES['reading_signs'])
+            processing_message = await message.answer(MESSAGES["reading_signs"])
 
             detailed_address, _ = await get_detailed_address(place_lat, place_lng)
 
@@ -234,18 +265,25 @@ async def show_place(message, user_id, place_index):
         place_address = place["address"]["label"]
         distance_km = place["distance"] / 1000
         place_type = place.get("type", "point of interest")
-        google_maps_url = f"https://www.google.com/maps/search/?api=1&query={place_lat},{place_lng}"
+        google_maps_url = (
+            f"https://www.google.com/maps/search/?api=1&query={place_lat},{place_lng}"
+        )
 
-        next_text = MESSAGES['next_location'] if place_index < len(places) - 1 else MESSAGES['back_to_first']
-        
+        next_text = (
+            MESSAGES["next_location"]
+            if place_index < len(places) - 1
+            else MESSAGES["back_to_first"]
+        )
+
         keyboard = InlineKeyboardMarkup(
             inline_keyboard=[
                 [
                     InlineKeyboardButton(
-                        text=MESSAGES['tell_more_btn'], callback_data=f"more_{place_index}"
+                        text=MESSAGES["tell_more_btn"],
+                        callback_data=f"more_{place_index}",
                     ),
                     InlineKeyboardButton(
-                        text=MESSAGES['show_maps_btn'], url=google_maps_url
+                        text=MESSAGES["show_maps_btn"], url=google_maps_url
                     ),
                 ],
                 [
@@ -264,7 +302,8 @@ async def show_place(message, user_id, place_index):
             )
             place["logged"] = True
 
-        message_text = f"<b>{place_name.upper()}</b> ({place_index + 1}/{len(places)})"
+        # Include the marker number in the message title
+        message_text = f"<b>#{place_index + 1}: {place_name.upper()}</b> ({place_index + 1}/{len(places)})"
 
         if original_name != place_name:
             message_text += f" (<i>{original_name}</i>)"
@@ -285,29 +324,23 @@ async def show_place(message, user_id, place_index):
         if "last_message" in data and data["last_message"]:
             try:
                 await data["last_message"].edit_text(
-                    message_text, 
-                    parse_mode="HTML", 
-                    reply_markup=keyboard
+                    message_text, parse_mode="HTML", reply_markup=keyboard
                 )
             except Exception as edit_error:
                 logger.error(f"Error editing message: {edit_error}")
                 sent_message = await message.answer(
-                    message_text, 
-                    parse_mode="HTML", 
-                    reply_markup=keyboard
+                    message_text, parse_mode="HTML", reply_markup=keyboard
                 )
                 data["last_message"] = sent_message
         else:
             sent_message = await message.answer(
-                message_text, 
-                parse_mode="HTML", 
-                reply_markup=keyboard
+                message_text, parse_mode="HTML", reply_markup=keyboard
             )
             data["last_message"] = sent_message
 
     except Exception as e:
         logger.error(f"Error in show_place: {e}", exc_info=True)
-        await message.answer(MESSAGES['error_showing_place'])
+        await message.answer(MESSAGES["error_showing_place"])
 
 
 @router.callback_query(F.data.startswith("next_"))
@@ -319,14 +352,14 @@ async def handle_next_location(callback: CallbackQuery):
         index = int(index)
 
         if user_id not in user_data:
-            await callback.message.answer(MESSAGES['lost_track'])
+            await callback.message.answer(MESSAGES["lost_track"])
             return
 
         await show_place(callback.message, user_id, index)
 
     except Exception as e:
         logger.error(f"Error in next location handler: {e}", exc_info=True)
-        await callback.message.answer(MESSAGES['error_next_place'])
+        await callback.message.answer(MESSAGES["error_next_place"])
 
 
 @router.callback_query(F.data.startswith("more_"))
@@ -341,14 +374,14 @@ async def handle_tell_more(callback: CallbackQuery):
         index = int(index)
 
         if user_id not in user_data:
-            await callback.answer(MESSAGES['lost_track_alert'], show_alert=True)
+            await callback.answer(MESSAGES["lost_track_alert"], show_alert=True)
             return
 
         request_key = f"{user_id}_{index}"
 
         if request_key in active_deepseek_requests:
             if active_deepseek_requests[request_key]["active"]:
-                await callback.answer(MESSAGES['request_in_progress'], show_alert=True)
+                await callback.answer(MESSAGES["request_in_progress"], show_alert=True)
                 return
 
             last_request_time = active_deepseek_requests[request_key]["timestamp"]
@@ -357,11 +390,11 @@ async def handle_tell_more(callback: CallbackQuery):
             if current_time - last_request_time < 300:
                 remaining = int(300 - (current_time - last_request_time))
                 await callback.answer(
-                    MESSAGES['cooldown'].format(seconds=remaining), show_alert=True
+                    MESSAGES["cooldown"].format(seconds=remaining), show_alert=True
                 )
                 return
 
-        await callback.answer(MESSAGES['gathering_thoughts'])
+        await callback.answer(MESSAGES["gathering_thoughts"])
 
         data = user_data[user_id]
         place = data["places"][index]
@@ -376,7 +409,7 @@ async def handle_tell_more(callback: CallbackQuery):
             inline_keyboard=[
                 [
                     InlineKeyboardButton(
-                        text=MESSAGES['tell_more_btn'], callback_data=f"more_{index}"
+                        text=MESSAGES["tell_more_btn"], callback_data=f"more_{index}"
                     ),
                 ]
             ]
@@ -391,7 +424,7 @@ async def handle_tell_more(callback: CallbackQuery):
             or place["title"] == place.get("original_title")
             or place["address"].get("label") == "Address will be fetched"
         ):
-            status_msg = await callback.message.answer(MESSAGES['checking_details'])
+            status_msg = await callback.message.answer(MESSAGES["checking_details"])
             place_lat = place["position"]["lat"]
             place_lng = place["position"]["lng"]
             detailed_address, _ = await get_detailed_address(place_lat, place_lng)
@@ -420,15 +453,17 @@ async def handle_tell_more(callback: CallbackQuery):
 
         if "history" in place and place["history"]:
             history = place["history"]
-            history_msg = await callback.message.answer(MESSAGES['remembered_place'])
+            history_msg = await callback.message.answer(MESSAGES["remembered_place"])
         else:
-            history_msg = await callback.message.answer(MESSAGES['digging_memories'])
+            history_msg = await callback.message.answer(MESSAGES["digging_memories"])
             history = await deepseek_location_info(
                 data["city"], data["street"], place_name, place_address, original_name
             )
             place["history"] = history
 
-        history_message = MESSAGES['about_place'].format(place_name=place_name, history=history)
+        history_message = MESSAGES["about_place"].format(
+            place_name=place_name, history=history
+        )
         await callback.message.answer(history_message, parse_mode="HTML")
 
         try:
@@ -441,7 +476,7 @@ async def handle_tell_more(callback: CallbackQuery):
 
             if audio_bytes:
                 if len(audio_bytes) > 50 * 1024 * 1024:
-                    await callback.message.answer(MESSAGES['audio_too_large'])
+                    await callback.message.answer(MESSAGES["audio_too_large"])
                 else:
                     for attempt in range(3):
                         try:
@@ -453,8 +488,10 @@ async def handle_tell_more(callback: CallbackQuery):
                             break
                         except Exception as e:
                             if attempt == 2:
-                                logger.error(f"Failed to send audio after 3 attempts: {e}")
-                                await callback.message.answer(MESSAGES['voice_tired'])
+                                logger.error(
+                                    f"Failed to send audio after 3 attempts: {e}"
+                                )
+                                await callback.message.answer(MESSAGES["voice_tired"])
                             await asyncio.sleep(2)
 
         active_deepseek_requests[request_key]["active"] = False
@@ -467,17 +504,19 @@ async def handle_tell_more(callback: CallbackQuery):
             }
 
         logger.error(f"Error in tell more handler: {e}", exc_info=True)
-        await callback.message.answer(MESSAGES['forgot_to_say'])
+        await callback.message.answer(MESSAGES["forgot_to_say"])
 
         if place_name and history:
-            history_message = MESSAGES['about_place'].format(place_name=place_name, history=history)
+            history_message = MESSAGES["about_place"].format(
+                place_name=place_name, history=history
+            )
             await callback.message.answer(history_message, parse_mode="HTML")
 
             audio_bytes = await yandex_speechkit_tts(history)
 
             if audio_bytes:
                 if len(audio_bytes) > 50 * 1024 * 1024:
-                    await callback.message.answer(MESSAGES['audio_too_large'])
+                    await callback.message.answer(MESSAGES["audio_too_large"])
                 else:
                     for attempt in range(3):
                         try:
@@ -488,8 +527,10 @@ async def handle_tell_more(callback: CallbackQuery):
                             break
                         except Exception as e:
                             if attempt == 2:
-                                logger.error(f"Failed to send audio after 3 attempts: {e}")
-                                await callback.message.answer(MESSAGES['voice_tired'])
+                                logger.error(
+                                    f"Failed to send audio after 3 attempts: {e}"
+                                )
+                                await callback.message.answer(MESSAGES["voice_tired"])
                             await asyncio.sleep(2)
 
 
@@ -506,7 +547,7 @@ async def handle_unknown(message: Message, db=None):
                 message.from_user.last_name,
             )
 
-        await message.answer(MESSAGES['need_location'])
+        await message.answer(MESSAGES["need_location"])
     except Exception as e:
         logger.error(f"Error in unknown message handler: {e}", exc_info=True)
-        await message.answer(MESSAGES['error'])
+        await message.answer(MESSAGES["error"])
