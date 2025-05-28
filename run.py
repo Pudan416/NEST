@@ -3,8 +3,6 @@ Main entry point for the Tourist Guide Bot.
 """
 
 import asyncio
-import logging
-import os
 from aiogram import Bot, Dispatcher
 from aiogram.types import BotCommand
 from aiogram.fsm.storage.memory import MemoryStorage
@@ -78,7 +76,12 @@ async def main():
         await bot.set_my_commands(
             [
                 BotCommand(
-                    command="start", description="Start interacting with the bot"
+                    command="places",
+                    description="Choose your preferred Points of Interest types",
+                ),
+                BotCommand(
+                    command="languages",
+                    description="Change language / Изменить язык",
                 ),
             ]
         )
