@@ -4,6 +4,7 @@ __pycache__
 *tmp*
 .env
 .venv
+*.egg-info/
 
 # Pytest and code coverage:
 .pytest_cache
