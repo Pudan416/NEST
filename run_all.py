@@ -1,13 +1,17 @@
 """
 Script to run both the Tourist Guide Bot and Admin Bot simultaneously.
+Optimized for cloud deployment platforms like Railway.
 """
 
-import subprocess
+import asyncio
 import sys
 import os
-import time
 import signal
 import logging
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # Set up logging
 logging.basicConfig(
@@ -17,102 +21,89 @@ logging.basicConfig(
 )
 logger = logging.getLogger("run_all")
 
-# Store process objects
-processes = []
+
+async def run_main_bot():
+    """Run the main tourist guide bot."""
+    try:
+        from run import main as main_bot_main
+        logger.info("Starting main tourist guide bot...")
+        await main_bot_main()
+    except Exception as e:
+        logger.error(f"Main bot error: {e}", exc_info=True)
+
+
+async def run_admin_bot():
+    """Run the admin bot."""
+    try:
+        from admin_bot import main as admin_bot_main
+        logger.info("Starting admin bot...")
+        await admin_bot_main()
+    except Exception as e:
+        logger.error(f"Admin bot error: {e}", exc_info=True)
+
+
+async def main():
+    """Run both bots concurrently."""
+    logger.info("Starting both bots...")
+    
+    # Check for required environment variables (минимальный набор для запуска)
+    required_vars = ["TG_TOKEN", "ADMIN_BOT_TOKEN"]
+    missing_vars = [var for var in required_vars if not os.getenv(var)]
+    
+    if missing_vars:
+        logger.error(f"Missing critical environment variables: {', '.join(missing_vars)}")
+        logger.error("Please set these variables in Railway Dashboard or your environment")
+        sys.exit(1)
+    
+    # Проверяем дополнительные переменные (предупреждения, не критичные ошибки)
+    optional_vars = ["GOOGLE_MAPS_API_KEY", "DEEPSEEK_API_KEY", "YA_SPEECHKIT_API_KEY", "YA_SEARCH_API_KEY"]
+    missing_optional = [var for var in optional_vars if not os.getenv(var)]
+    
+    if missing_optional:
+        logger.warning(f"Missing optional environment variables: {', '.join(missing_optional)}")
+        logger.warning("Some features may not work properly without these variables")
+    
+    # Показываем какие переменные установлены
+    logger.info("Environment variables status:")
+    all_vars = required_vars + optional_vars + ["ADMIN_PASSWORD", "DB_PATH"]
+    for var in all_vars:
+        value = os.getenv(var)
+        if value:
+            # Маскируем значения для безопасности
+            masked_value = f"{value[:4]}***{value[-4:]}" if len(value) > 8 else "***"
+            logger.info(f"  {var}: {masked_value}")
+        else:
+            logger.info(f"  {var}: NOT SET")
+    
+    try:
+        # Run both bots concurrently
+        await asyncio.gather(
+            run_main_bot(),
+            run_admin_bot(),
+            return_exceptions=True
+        )
+    except KeyboardInterrupt:
+        logger.info("Received interrupt signal. Shutting down...")
+    except Exception as e:
+        logger.error(f"Unexpected error: {e}", exc_info=True)
+        sys.exit(1)
 
 
 def signal_handler(sig, frame):
-    """Handle Ctrl+C gracefully."""
-    logger.info("Received signal to stop. Shutting down bots...")
-    for proc, name in processes:
-        if proc.poll() is None:  # If process is still running
-            logger.info(f"Stopping {name}...")
-            proc.terminate()
-            try:
-                proc.wait(timeout=5)
-                logger.info(f"{name} stopped gracefully.")
-            except subprocess.TimeoutExpired:
-                logger.warning(f"{name} did not stop gracefully. Forcing...")
-                proc.kill()
-    logger.info("All bots stopped.")
+    """Handle shutdown signals gracefully."""
+    logger.info("Received shutdown signal. Stopping bots...")
     sys.exit(0)
 
 
-def start_bot(script_name, bot_name):
-    """Start a bot process and return the process object."""
-    try:
-        logger.info(f"Starting {bot_name}...")
-        process = subprocess.Popen(
-            [sys.executable, script_name],
-            stdout=subprocess.PIPE,
-            stderr=subprocess.STDOUT,
-            text=True,
-            bufsize=1,
-        )
-        processes.append((process, bot_name))
-        logger.info(f"{bot_name} started with PID {process.pid}")
-        return process
-    except Exception as e:
-        logger.error(f"Failed to start {bot_name}: {str(e)}")
-        return None
-
-
-def monitor_process_output(process, name):
-    """Check if a process has output to display."""
-    if process.poll() is not None:
-        # Process has terminated
-        logger.error(
-            f"{name} has stopped unexpectedly with return code {process.returncode}"
-        )
-        return False
-
-    # Check for output
-    output = process.stdout.readline()
-    if output:
-        logger.info(f"{name}: {output.strip()}")
-
-    return True
-
-
 if __name__ == "__main__":
-    # Register signal handler for Ctrl+C
+    # Register signal handlers
     signal.signal(signal.SIGINT, signal_handler)
-
-    # Check for environment variables
-    if not os.getenv("TG_TOKEN") or not os.getenv("ADMIN_BOT_TOKEN"):
-        logger.error(
-            "Missing required environment variables. Please check your .env file."
-        )
-        sys.exit(1)
-
-    # Start main bot
-    main_bot = start_bot("run.py", "Main Tourist Guide Bot")
-
-    # Give the main bot a moment to initialize
-    time.sleep(2)
-
-    # Start admin bot
-    admin_bot = start_bot("admin_bot.py", "Admin Bot")
-
-    # Monitor output from both bots
-    logger.info("Both bots are running. Press Ctrl+C to stop.")
-
+    signal.signal(signal.SIGTERM, signal_handler)
+    
     try:
-        # Simple loop to monitor both processes
-        while True:
-            if main_bot and not monitor_process_output(main_bot, "Main Bot"):
-                main_bot = None
-
-            if admin_bot and not monitor_process_output(admin_bot, "Admin Bot"):
-                admin_bot = None
-
-            # If both bots have stopped, exit
-            if not main_bot and not admin_bot:
-                logger.error("Both bots have stopped. Exiting.")
-                break
-
-            # Brief pause to prevent CPU overuse
-            time.sleep(0.1)
+        asyncio.run(main())
     except KeyboardInterrupt:
-        # This should be handled by the signal handler
-        pass
+        logger.info("Bots stopped manually.")
+    except Exception as e:
+        logger.error(f"Critical error: {e}", exc_info=True)
+        sys.exit(1)
